@@ -19,8 +19,21 @@ public enum FujiError: Error, CustomStringConvertible {
     }
 }
 
+/// Cờ "chỉ kích 1 lần" an toàn luồng — để resume continuation đúng 1 lần từ các
+/// callback @Sendable của Network.framework (tránh capture `var` trong closure).
+final class OnceFlag: @unchecked Sendable {
+    private let lock = NSLock()
+    private var fired = false
+    func fire() -> Bool {
+        lock.lock(); defer { lock.unlock() }
+        if fired { return false }
+        fired = true
+        return true
+    }
+}
+
 /// Bọc NWConnection theo kiểu async/await + đọc đúng số byte (cho framing PTP).
-final class TCPConn {
+final class TCPConn: @unchecked Sendable {
     let conn: NWConnection
     private let queue = DispatchQueue(label: "fuji.tcp")
 
@@ -30,18 +43,17 @@ final class TCPConn {
     init(adopting c: NWConnection) { conn = c }
 
     func start() async throws {
-        conn.start(queue: queue)
         try await withCheckedThrowingContinuation { (cont: CheckedContinuation<Void, Error>) in
-            var done = false
+            let once = OnceFlag()
             conn.stateUpdateHandler = { state in
-                guard !done else { return }
                 switch state {
-                case .ready: done = true; cont.resume()
-                case .failed(let e): done = true; cont.resume(throwing: e)
-                case .cancelled: done = true; cont.resume(throwing: FujiError.connectionClosed)
+                case .ready: if once.fire() { cont.resume() }
+                case .failed(let e): if once.fire() { cont.resume(throwing: e) }
+                case .cancelled: if once.fire() { cont.resume(throwing: FujiError.connectionClosed) }
                 default: break
                 }
             }
+            conn.start(queue: queue)
         }
         conn.stateUpdateHandler = nil
     }

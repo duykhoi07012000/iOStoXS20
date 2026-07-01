@@ -39,7 +39,7 @@ enum Prop: UInt16 {
 }
 
 // Kiểu dữ liệu value truyền qua PTP (khớp datatype máy trả trong GetDevicePropDesc).
-enum PropType { case u16, i16 }
+public enum PropType { case u16, i16 }
 
 public enum FilmSimulation: UInt16, Codable, CaseIterable {
     case provia = 1, velvia = 2, astia = 3, proNegHi = 4, proNegStd = 5

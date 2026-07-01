@@ -16,29 +16,28 @@ enum PCSS {
 
         // Chờ kết nối NOTIFY từ máy, có timeout — một continuation, guard 'resumed' trên queue q.
         let incoming: TCPConn = try await withCheckedThrowingContinuation { (cont: CheckedContinuation<TCPConn, Error>) in
-            var resumed = false
-            func finish(_ result: Result<TCPConn, Error>) {
-                if resumed { return }
-                resumed = true
-                switch result {
-                case .success(let c): cont.resume(returning: c)
-                case .failure(let e): cont.resume(throwing: e)
-                }
+            let once = OnceFlag()
+            listener.newConnectionHandler = { c in
+                if once.fire() { cont.resume(returning: TCPConn(adopting: c)) }
             }
-            listener.newConnectionHandler = { c in q.async { finish(.success(TCPConn(adopting: c))) } }
             listener.stateUpdateHandler = { st in
-                if case .failed(let e) = st { q.async { finish(.failure(e)) } }
-                if case .ready = st {
+                switch st {
+                case .failed(let e):
+                    if once.fire() { cont.resume(throwing: e) }
+                case .ready:
                     // listener đã lên → gửi DISCOVERY (UDP)
                     Task {
                         let msg = "DISCOVERY * HTTP/1.1\r\nHOST: \(localIP)\r\nMX: 5\r\nSERVICE: PCSS/1.0\r\n\u{0}"
                         try? await sendUDP(Data(msg.utf8), host: cameraIP, port: cameraUDPPort)
                     }
+                default: break
                 }
             }
             q.asyncAfter(deadline: .now() + timeout) {
-                finish(.failure(FujiError.discoveryFailed(
-                    "hết giờ chờ NOTIFY — máy ở tether standby (đèn cam)? Firewall cổng \(listenTCPPort)?")))
+                if once.fire() {
+                    cont.resume(throwing: FujiError.discoveryFailed(
+                        "hết giờ chờ NOTIFY — máy ở tether standby (đèn cam)? Firewall cổng \(listenTCPPort)?"))
+                }
             }
             listener.start(queue: q)
         }
