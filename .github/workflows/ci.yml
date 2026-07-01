@@ -20,6 +20,10 @@ jobs:
     needs: test-fujikit
     steps:
       - uses: actions/checkout@v4
+      - name: Chọn Xcode mới nhất (đọc được project format của XcodeGen)
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
       - name: Cài XcodeGen
         run: brew install xcodegen
       - name: Sinh project
