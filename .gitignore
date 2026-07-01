@@ -1,0 +1,23 @@
+# Fujifilm SDK — KHÔNG commit (proprietary, không phân phối lại DLL/redistributable)
+SDK13410/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+prototype-python/**/*.egg-info/
+
+# Swift / Xcode
+.build/
+DerivedData/
+ios/build/
+ios/*.xcodeproj/       # sinh bằng xcodegen trên CI, không commit
+*.xcuserstate
+
+# macOS / OS
+.DS_Store
+Thumbs.db
+
+# Capture / dữ liệu tạm
+*.pcapng
+scratchpad/

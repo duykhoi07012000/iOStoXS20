@@ -1,0 +1,30 @@
+# XcodeGen — sinh RecipeFlash.xcodeproj trên cloud Mac (`xcodegen generate`).
+# Không cần commit file .xcodeproj; CI tự tạo.
+name: RecipeFlash
+options:
+  bundleIdPrefix: com.iostoxs20
+  deploymentTarget:
+    iOS: "14.0"
+  createIntermediateGroups: true
+
+packages:
+  FujiKit:
+    path: ../swift/FujiKit
+
+targets:
+  RecipeFlash:
+    type: application
+    platform: iOS
+    sources:
+      - RecipeFlash/Sources
+    dependencies:
+      - package: FujiKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.iostoxs20.recipeflash
+        INFOPLIST_FILE: RecipeFlash/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1"          # iPhone
+        SWIFT_VERSION: "5.9"
+        MARKETING_VERSION: "0.1"
+        CURRENT_PROJECT_VERSION: "1"

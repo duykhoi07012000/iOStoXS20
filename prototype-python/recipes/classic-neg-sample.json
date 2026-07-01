@@ -1,0 +1,17 @@
+{
+  "name": "Classic Negative (sample)",
+  "film_simulation": "CLASSIC_NEG",
+  "grain": "WEAK_SMALL",
+  "color_chrome_effect": "STRONG",
+  "color_chrome_blue": "WEAK",
+  "white_balance": "AUTO",
+  "wb_shift_red": 2,
+  "wb_shift_blue": -5,
+  "dynamic_range": "DR400",
+  "highlight_tone": 1.5,
+  "shadow_tone": 2.0,
+  "color": 4,
+  "sharpness": 0,
+  "clarity": 0,
+  "noise_reduction": "M4"
+}

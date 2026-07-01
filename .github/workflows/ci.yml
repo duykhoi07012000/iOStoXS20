@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  # 1) Kiểm chứng bản port Swift: chạy unit test đối chiếu byte với Python
+  test-fujikit:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: swift test (FujiKit)
+        run: swift test
+        working-directory: swift/FujiKit
+
+  # 2) Build app iOS ra .ipa CHƯA KÝ (cài bằng SideStore/AltStore + Apple ID free)
+  build-ipa:
+    runs-on: macos-14
+    needs: test-fujikit
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cài XcodeGen
+        run: brew install xcodegen
+      - name: Sinh project
+        run: xcodegen generate
+        working-directory: ios
+      - name: Build (.app, không ký)
+        run: |
+          xcodebuild -project RecipeFlash.xcodeproj -scheme RecipeFlash \
+            -sdk iphoneos -configuration Release \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGNING_IDENTITY=""
+        working-directory: ios
+      - name: Đóng gói .ipa chưa ký
+        run: |
+          cd ios/build/Build/Products/Release-iphoneos
+          mkdir -p Payload
+          cp -R RecipeFlash.app Payload/
+          zip -qr RecipeFlash-unsigned.ipa Payload
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RecipeFlash-unsigned-ipa
+          path: ios/build/Build/Products/Release-iphoneos/RecipeFlash-unsigned.ipa
