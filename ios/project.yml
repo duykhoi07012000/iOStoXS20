@@ -4,7 +4,7 @@ name: RecipeFlash
 options:
   bundleIdPrefix: com.iostoxs20
   deploymentTarget:
-    iOS: "14.0"
+    iOS: "16.0"        # UI dùng NavigationStack (iOS16), safeAreaInset/foregroundStyle (iOS15)
   createIntermediateGroups: true
 
 packages:
