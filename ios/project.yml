@@ -19,11 +19,19 @@ targets:
       - RecipeFlash/Sources
     dependencies:
       - package: FujiKit
+    # XcodeGen TỰ sinh Info.plist đầy đủ (CFBundleIdentifier, CFBundleExecutable,
+    # CFBundlePackageType…) + merge các khóa custom dưới đây → gói app hợp lệ cho AltStore.
+    info:
+      path: RecipeFlash/Info.plist
+      properties:
+        CFBundleDisplayName: Fuji Recipe Flash
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSLocalNetworkUsageDescription: "Ứng dụng cần kết nối tới máy ảnh Fujifilm trong cùng mạng Wi-Fi để đẩy film recipe."
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.iostoxs20.recipeflash
-        INFOPLIST_FILE: RecipeFlash/Info.plist
-        GENERATE_INFOPLIST_FILE: NO
         TARGETED_DEVICE_FAMILY: "1"          # iPhone
         SWIFT_VERSION: "5.9"
         MARKETING_VERSION: "0.1"
