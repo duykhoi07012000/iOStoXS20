@@ -31,10 +31,19 @@ jobs:
         working-directory: ios
       - name: Build (.app, không ký)
         run: |
+          set -o pipefail
           xcodebuild -project RecipeFlash.xcodeproj -scheme RecipeFlash \
-            -sdk iphoneos -configuration Release \
-            -derivedDataPath build \
-            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGNING_IDENTITY=""
+            -sdk iphoneos -configuration Release -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGNING_IDENTITY="" \
+            2>&1 | tee build.log || echo "BUILD_FAILED=1" >> "$GITHUB_ENV"
+          if [ "${BUILD_FAILED:-0}" = "1" ] || grep -q "error:" build.log; then
+            echo "==================== SWIFT ERRORS ===================="
+            grep -E ": error:|error: " build.log | sed 's#.*/RecipeFlash/#RecipeFlash/#' | sort -u | head -60
+            echo "====================================================="
+            grep -E ": error:|error: " build.log | sed 's#.*/RecipeFlash/#RecipeFlash/#' | sort -u | head -60 \
+              | while IFS= read -r l; do echo "::error::$l"; done
+            exit 1
+          fi
         working-directory: ios
       - name: Đóng gói .ipa chưa ký
         run: |
