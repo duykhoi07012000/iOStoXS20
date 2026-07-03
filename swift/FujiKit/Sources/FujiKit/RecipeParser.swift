@@ -92,6 +92,29 @@ public enum RecipeParser {
             .trimmingCharacters(in: CharacterSet(charactersIn: " -–—:·"))
     }
 
+    /// Tìm film sim trong 1 chuỗi (ưu tiên xuất hiện cuối). Trả (film, alias).
+    private static func findFilm(_ text: String) -> (FilmSimulation, String)? {
+        let n = norm(text)
+        var best = -1
+        var result: (FilmSimulation, String)?
+        for (alias, film) in films {
+            if let rng = n.range(of: alias, options: .backwards) {
+                let pos = n.distance(from: n.startIndex, to: rng.lowerBound)
+                if pos >= best { best = pos; result = (film, alias) }
+            }
+        }
+        return result
+    }
+
+    /// Vị trí bắt đầu của lần khớp CUỐI của alias (whitespace linh hoạt) trong orig.
+    private static func lastAliasStart(_ alias: String, in orig: String) -> String.Index? {
+        let pat = alias.split(separator: " ").map { NSRegularExpression.escapedPattern(for: String($0)) }.joined(separator: "\\s+")
+        guard let re = try? NSRegularExpression(pattern: pat, options: [.caseInsensitive]) else { return nil }
+        let ns = NSRange(orig.startIndex..., in: orig)
+        guard let last = re.matches(in: orig, range: ns).last, let rr = Range(last.range, in: orig) else { return nil }
+        return rr.lowerBound
+    }
+
     // ---- main ----
     public static func parse(_ text: String) -> Recipe {
         var sections: [String: [String]] = [:]
@@ -100,6 +123,17 @@ public enum RecipeParser {
         for raw in text.split(whereSeparator: \.isNewline) {
             let line = raw.trimmingCharacters(in: .whitespaces)
             if line.isEmpty { continue }
+            // "Header: value" cùng dòng
+            if let colon = line.firstIndex(of: ":") {
+                let left = String(line[..<colon])
+                let right = String(line[line.index(after: colon)...]).trimmingCharacters(in: .whitespaces)
+                if let k = matchHeader(left) {
+                    if sections[k] == nil { sections[k] = [] }
+                    if !right.isEmpty { sections[k]?.append(right) }
+                    current = k
+                    continue
+                }
+            }
             if let key = matchHeader(line) { current = key; sections[key] = sections[key] ?? [] }
             else if let c = current { sections[c, default: []].append(line) }
             else { preamble.append(line) }
@@ -107,31 +141,22 @@ public enum RecipeParser {
 
         var r = Recipe()
 
-        // FILM + tên
-        if let lines = sections["film"] {
+        // FILM + tên: thử section (format cũ), rồi preamble (format mới: tên + film sim đứng riêng)
+        if let lines = sections["film"], let (film, alias) = findFilm(lines.joined(separator: " ")) {
+            r.filmSimulation = film
             let orig = lines.joined(separator: " ")
-            let n = norm(orig)
-            var found: (String, FilmSimulation)?
-            var idx = n.startIndex
-            var best = -1
-            for (alias, film) in films {
-                if let rng = n.range(of: alias, options: .backwards) {
-                    let pos = n.distance(from: n.startIndex, to: rng.lowerBound)
-                    if pos >= best { best = pos; found = (alias, film); idx = rng.lowerBound }
-                }
+            if let start = lastAliasStart(alias, in: orig) {
+                let nm = cleanName(String(orig[orig.startIndex..<start]))
+                if !nm.isEmpty { r.name = nm }
             }
-            _ = idx
-            if let (alias, film) = found {
-                r.filmSimulation = film
-                let pat = alias.split(separator: " ").map { NSRegularExpression.escapedPattern(for: String($0)) }.joined(separator: "\\s+")
-                if let re = try? NSRegularExpression(pattern: pat, options: [.caseInsensitive]) {
-                    let ns = NSRange(orig.startIndex..., in: orig)
-                    if let last = re.matches(in: orig, range: ns).last, let rr = Range(last.range, in: orig) {
-                        let nm = cleanName(String(orig[orig.startIndex..<rr.lowerBound]))
-                        if !nm.isEmpty { r.name = nm }
-                    }
-                }
-            }
+        }
+        if r.filmSimulation == nil, !preamble.isEmpty,
+           let (film, alias) = findFilm(preamble.joined(separator: " ")) {
+            r.filmSimulation = film
+            let words = alias.split(separator: " ").map { NSRegularExpression.escapedPattern(for: String($0)) }.joined(separator: "\\s+")
+            let nameLines = preamble.filter { firstMatch(words, $0, caseInsensitive: true) == nil }
+            let nm = cleanName(nameLines.joined(separator: " "))
+            if !nm.isEmpty { r.name = nm }
         }
         if r.name == "Untitled", !preamble.isEmpty {
             let nm = cleanName(preamble.joined(separator: " "))

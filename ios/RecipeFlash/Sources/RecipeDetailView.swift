@@ -5,6 +5,7 @@ import FujiKit
 struct RecipeDetailView: View {
     let recipe: Recipe
     @EnvironmentObject var store: RecipeStore
+    @Environment(\.dismiss) private var dismiss
     @AppStorage("cameraIP") private var cameraIP = ""   // trống = tự dò máy (broadcast)
 
     @State private var status = ""
@@ -60,8 +61,10 @@ struct RecipeDetailView: View {
         .fujiBackground()
         .navigationTitle(recipe.displayName).navigationBarTitleDisplayMode(.inline)
         .toolbar { ToolbarItem(placement: .navigationBarTrailing) {
-            Button { showEdit = true } label: { Image(systemName: "slider.horizontal.3") }
-                .tint(Theme.text)
+            Menu {
+                Button { showEdit = true } label: { Label("Sửa", systemImage: "slider.horizontal.3") }
+                Button(role: .destructive) { store.delete(recipe); dismiss() } label: { Label("Xoá recipe", systemImage: "trash") }
+            } label: { Image(systemName: "ellipsis.circle").tint(Theme.text) }
         } }
         .safeAreaInset(edge: .bottom) { applyButton }
         .sheet(isPresented: $showEdit) {

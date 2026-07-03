@@ -97,7 +97,10 @@ def _clean_name(s: str) -> str:
 
 
 def parse(text: str) -> dict:
-    # 1) tách section theo header; lines trước header đầu = preamble (tên recipe kiểu tiêu đề)
+    # 1) tách section theo header. Hỗ trợ 2 format:
+    #    - header đứng dòng riêng, value ở dòng sau
+    #    - "Header: value" cùng một dòng
+    #    Lines trước header đầu = preamble (tên recipe / film sim kiểu tiêu đề).
     sections: dict[str, list[str]] = {}
     preamble: list[str] = []
     current: str | None = None
@@ -105,6 +108,17 @@ def parse(text: str) -> dict:
         line = raw.strip()
         if not line:
             continue
+        # "Header: value" cùng dòng?
+        if ":" in line:
+            left, _, right = line.partition(":")
+            k = _match_header(left)
+            if k:
+                sections.setdefault(k, [])
+                if right.strip():
+                    sections[k].append(right.strip())
+                current = k
+                continue
+        # header đứng dòng riêng?
         key = _match_header(line)
         if key:
             current = key
@@ -116,23 +130,41 @@ def parse(text: str) -> dict:
 
     out: dict = {"name": None, "notes": {}}
 
-    # 2) FILM SIMULATION + tên recipe (giữ nguyên hoa/thường của tên)
+    # 2a) FILM SIMULATION từ section (định dạng cũ: có header FILM SIMULATION)
+    out["film_simulation"] = None
     if "film" in sections:
         orig = " ".join(sections["film"])
         norm = _norm(orig)
-        film, alias_found, idx = None, None, -1
+        alias_found, idx = None, -1
         for alias, enum in _FILM:
             p = norm.rfind(alias)           # ưu tiên xuất hiện CUỐI (film sim đứng sau tên)
             if p != -1 and p >= idx:
-                film, alias_found, idx = enum, alias, p
-        out["film_simulation"] = film
+                out["film_simulation"], alias_found, idx = enum, alias, p
         if alias_found:
             pat = re.compile(r"\s+".join(re.escape(w) for w in alias_found.split(" ")), re.I)
             matches = list(pat.finditer(orig))
             if matches:
-                out["name"] = _clean_name(orig[:matches[-1].start()]) or None
+                nm = _clean_name(orig[:matches[-1].start()])
+                if nm:
+                    out["name"] = nm
 
-    # tên kiểu tiêu đề đứng đầu (nếu section film không cho tên)
+    # 2b) film sim là dòng RIÊNG trong preamble (định dạng mới: tên rồi film sim)
+    if out["film_simulation"] is None and preamble:
+        joined = " ".join(preamble)
+        norm = _norm(joined)
+        alias_found, idx = None, -1
+        for alias, enum in _FILM:
+            p = norm.rfind(alias)
+            if p != -1 and p >= idx:
+                out["film_simulation"], alias_found, idx = enum, alias, p
+        if alias_found:
+            pat = re.compile(r"\s+".join(re.escape(w) for w in alias_found.split(" ")), re.I)
+            name_lines = [ln for ln in preamble if not pat.search(ln)]
+            nm = _clean_name(" ".join(name_lines))
+            if nm:
+                out["name"] = nm
+
+    # 2c) tên kiểu tiêu đề (nếu vẫn chưa có tên)
     if not out["name"] and preamble:
         out["name"] = _clean_name(" ".join(preamble)) or None
 

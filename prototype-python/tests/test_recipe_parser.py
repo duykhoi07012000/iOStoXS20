@@ -79,6 +79,39 @@ def test_copenhagen_full():
     assert r["notes"]["exposure_compensation"] == "0 to -2/3"
 
 
+KODACHROME = """Kodachrome 64
+Classic Chrome
+Dynamic Range: DR200
+Highlight: 0
+Shadow: 0
+Color: +2
+Noise Reduction: -4
+Sharpening: +1
+Clarity: +3
+Grain Effect: Weak, Small
+Color Chrome Effect: Strong
+Color Chrome Effect Blue: Weak
+White Balance: Daylight, +2 Red & -5 Blue
+ISO: Auto, up to ISO 6400
+Exposure Compensation: 0 to +2/3 (typically)"""
+
+
+def test_kodachrome_inline_format():
+    r = parse(KODACHROME)
+    assert r["name"] == "Kodachrome 64"
+    assert r["film_simulation"] == "classicChrome"
+    assert r["dynamic_range"] == "dr200"
+    assert r["highlight_tone"] == 0 and r["shadow_tone"] == 0
+    assert r["color"] == 2 and r["sharpness"] == 1 and r["clarity"] == 3
+    assert r["noise_reduction"] == "m4"
+    assert r["grain"] == "weakSmall"
+    assert r["color_chrome_effect"] == "strong"
+    assert r["color_chrome_blue"] == "weak"
+    assert r["white_balance"] == "daylight"
+    assert r["wb_shift_red"] == 2 and r["wb_shift_blue"] == -5
+    assert r["notes"]["iso"] == "Auto, up to ISO 6400"
+
+
 def test_cinestill_variants():
     r = parse(CINESTILL)
     assert r["name"] == "CineStill 800T"
@@ -96,4 +129,5 @@ def test_cinestill_variants():
 if __name__ == "__main__":
     test_copenhagen_full()
     test_cinestill_variants()
-    print("OK - parser pass ca 2 ca")
+    test_kodachrome_inline_format()
+    print("OK - parser pass ca 3 ca")

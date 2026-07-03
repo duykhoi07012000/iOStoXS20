@@ -7,15 +7,21 @@ struct LibraryView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVStack(spacing: 12) {
-                    ForEach(store.recipes) { recipe in
-                        NavigationLink { RecipeDetailView(recipe: recipe) } label: { RecipeCard(recipe: recipe) }
-                            .buttonStyle(.plain)
-                    }
+            List {
+                ForEach(store.recipes) { recipe in
+                    NavigationLink { RecipeDetailView(recipe: recipe) } label: { RecipeCard(recipe: recipe) }
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets(top: 6, leading: 14, bottom: 6, trailing: 14))
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive) { store.delete(recipe) } label: {
+                                Label("Xoá", systemImage: "trash")
+                            }
+                        }
                 }
-                .padding()
             }
+            .listStyle(.plain)
+            .scrollContentBackground(.hidden)
             .fujiBackground()
             .navigationTitle("Library")
             .toolbar {
@@ -37,18 +43,14 @@ struct RecipeCard: View {
     let recipe: Recipe
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Text(recipe.displayName).font(Theme.mono(17, .bold)).foregroundColor(Theme.text)
-                Spacer()
-                Image(systemName: "chevron.right").font(.caption).foregroundColor(Theme.textSoft)
-            }
+            Text(recipe.displayName).font(Theme.mono(17, .bold)).foregroundColor(Theme.text)
             if let f = recipe.filmSimulation {
                 Text(f.display).font(Theme.mono(12, .medium)).foregroundColor(Theme.textSoft)
             }
             HStack(spacing: 6) {
                 if let dr = recipe.dynamicRange { chip(dr.display) }
                 if let g = recipe.grain { chip(g.display) }
-                if recipe.author != nil { chip(recipe.author!) }
+                if let a = recipe.author { chip(a) }
             }
         }
         .padding(16)
