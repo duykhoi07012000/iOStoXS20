@@ -1,0 +1,123 @@
+import SwiftUI
+import FujiKit
+
+/// Màn xem recipe + Apply (giống docs_UI ảnh 1).
+struct RecipeDetailView: View {
+    let recipe: Recipe
+    @EnvironmentObject var store: RecipeStore
+    @AppStorage("cameraIP") private var cameraIP = "192.168.1.50"
+
+    @State private var status = ""
+    @State private var results: [(label: String, ok: Bool)] = []
+    @State private var isFlashing = false
+    @State private var showEdit = false
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                LinearGradient(colors: [Theme.pill, Theme.card], startPoint: .leading, endPoint: .trailing)
+                    .frame(height: 96).clipShape(RoundedRectangle(cornerRadius: 18))
+
+                Text(recipe.displayName).font(Theme.title()).foregroundColor(Theme.text)
+
+                ForEach(RecipeRows.primary(recipe)) { row in
+                    HStack(alignment: .center) {
+                        Text(row.label).font(Theme.mono(14)).foregroundColor(Theme.text)
+                        Spacer(minLength: 12)
+                        ValuePill(icon: row.icon, text: row.value)
+                    }
+                }
+
+                ForEach(RecipeRows.pairs(recipe).indices, id: \.self) { i in
+                    let pair = RecipeRows.pairs(recipe)[i]
+                    HStack(spacing: 12) {
+                        pairCell(pair.0); pairCell(pair.1)
+                    }
+                }
+
+                if let iso = recipe.notes["iso"] { noteRow("ISO", iso) }
+                if let ec = recipe.notes["exposure_compensation"] { noteRow("Exp. Compensation", ec) }
+
+                if let a = recipe.author {
+                    Text("MADE BY : \(a)").font(Theme.mono(13, .semibold)).foregroundColor(Theme.textSoft)
+                        .frame(maxWidth: .infinity).padding(.vertical, 14)
+                        .overlay(RoundedRectangle(cornerRadius: 30).stroke(Theme.card, lineWidth: 1.5))
+                        .padding(.top, 6)
+                }
+
+                if !results.isEmpty {
+                    VStack(alignment: .leading, spacing: 6) {
+                        ForEach(results.indices, id: \.self) { i in
+                            Label(results[i].label, systemImage: results[i].ok ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                .font(Theme.mono(13)).foregroundColor(results[i].ok ? .green : .red)
+                        }
+                    }
+                }
+                if !status.isEmpty { Text(status).font(Theme.mono(13)).foregroundColor(Theme.textSoft) }
+            }
+            .padding()
+        }
+        .fujiBackground()
+        .navigationTitle(recipe.displayName).navigationBarTitleDisplayMode(.inline)
+        .toolbar { ToolbarItem(placement: .navigationBarTrailing) {
+            Button { showEdit = true } label: { Image(systemName: "slider.horizontal.3") }
+                .tint(Theme.text)
+        } }
+        .safeAreaInset(edge: .bottom) { applyButton }
+        .sheet(isPresented: $showEdit) {
+            NavigationStack { RecipeEditView(recipe: recipe) { store.update($0) } }
+        }
+    }
+
+    private func pairCell(_ row: DisplayRow?) -> some View {
+        Group {
+            if let row {
+                HStack {
+                    Text(row.label).font(Theme.mono(13)).foregroundColor(Theme.text)
+                    Spacer()
+                    ValuePill(icon: row.icon, text: row.value)
+                }
+            } else { Color.clear }
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    private func noteRow(_ label: String, _ value: String) -> some View {
+        HStack {
+            Text(label).font(Theme.mono(14)).foregroundColor(Theme.text)
+            Spacer(minLength: 12)
+            Text(value).font(Theme.mono(13)).foregroundColor(Theme.textSoft)
+        }
+    }
+
+    private var applyButton: some View {
+        Button(action: flash) {
+            Group {
+                if isFlashing { ProgressView().tint(Theme.text) }
+                else { Text("Apply Recipe").font(.headline).frame(maxWidth: .infinity) }
+            }.frame(maxWidth: .infinity).padding(.vertical, 4)
+        }
+        .buttonStyle(.borderedProminent).tint(Theme.accent).controlSize(.large)
+        .foregroundColor(Theme.text)
+        .disabled(isFlashing)
+        .padding()
+        .background(Theme.bg)
+    }
+
+    private func flash() {
+        isFlashing = true; results = []; status = "Đang kết nối \(cameraIP)…"
+        Task { @MainActor in
+            let cam = FujiCamera(cameraIP: cameraIP)
+            do {
+                try await cam.connect()
+                status = "Đã kết nối, đang áp recipe…"
+                results = try await cam.apply(recipe)
+                await cam.close()
+                status = results.allSatisfy { $0.ok } ? "Xong — đã áp \(results.count) thông số ✅" : "Xong, có lỗi ❌"
+            } catch {
+                await cam.close(); status = "Lỗi: \(error)"
+            }
+            isFlashing = false
+        }
+    }
+}
