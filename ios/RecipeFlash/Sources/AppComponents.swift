@@ -69,14 +69,16 @@ struct LabeledSlider: View {
 struct WBPad: View {
     @Binding var red: Int
     @Binding var blue: Int
-    private let rangeF = 9.0
+    private let rangeF: CGFloat = 9
 
     var body: some View {
         GeometryReader { geo in
-            let size = min(geo.size.width, geo.size.height)
-            let cx = size / 2, cy = size / 2
-            let px = cx + CGFloat(red) / rangeF * (size/2 - 12)
-            let py = cy - CGFloat(blue) / rangeF * (size/2 - 12)
+            let size: CGFloat = min(geo.size.width, geo.size.height)
+            let cx: CGFloat = size / 2
+            let cy: CGFloat = size / 2
+            let half: CGFloat = size / 2 - 12
+            let px: CGFloat = cx + CGFloat(red) / rangeF * half
+            let py: CGFloat = cy - CGFloat(blue) / rangeF * half
             ZStack {
                 RoundedRectangle(cornerRadius: 14).fill(Theme.bg)
                 RoundedRectangle(cornerRadius: 14).stroke(Theme.card, lineWidth: 2)
@@ -92,9 +94,10 @@ struct WBPad: View {
             }
             .contentShape(Rectangle())
             .gesture(DragGesture(minimumDistance: 0).onChanged { g in
-                let nr = Int(((g.location.x - cx) / (size/2 - 12) * rangeF).rounded())
-                let nb = Int((-(g.location.y - cy) / (size/2 - 12) * rangeF).rounded())
-                red = min(9, max(-9, nr)); blue = min(9, max(-9, nb))
+                let nr: CGFloat = (g.location.x - cx) / half * rangeF
+                let nb: CGFloat = (cy - g.location.y) / half * rangeF
+                red = min(9, max(-9, Int(nr.rounded())))
+                blue = min(9, max(-9, Int(nb.rounded())))
             })
         }
         .aspectRatio(1, contentMode: .fit)
