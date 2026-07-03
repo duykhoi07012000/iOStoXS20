@@ -16,6 +16,14 @@ final class RecipeStore: ObservableObject {
     }
 
     func add(_ r: Recipe) { recipes.insert(r, at: 0); save() }
+
+    /// Thêm các recipe mẫu Fuji X Weekly chưa có (so theo tên).
+    func addSamples() {
+        for r in BundledRecipes.all where !recipes.contains(where: { $0.name == r.name }) {
+            recipes.append(r)
+        }
+        save()
+    }
     func update(_ r: Recipe) {
         if let i = recipes.firstIndex(where: { $0.id == r.id }) { recipes[i] = r; save() }
     }

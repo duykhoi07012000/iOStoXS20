@@ -36,9 +36,17 @@ struct StubView: View {
 
 struct SettingsView: View {
     @AppStorage("cameraIP") private var cameraIP = ""
+    @EnvironmentObject var store: RecipeStore
     var body: some View {
         NavigationStack {
             Form {
+                Section("Recipe mẫu") {
+                    Button { store.addSamples() } label: {
+                        Label("Nạp recipe mẫu (Fuji X Weekly)", systemImage: "square.and.arrow.down")
+                    }
+                    Text("Thêm 7 recipe Fuji X Weekly (Kodachrome 64, Portra 400, Classic Neg, Tri-X 400…) vào Library.")
+                        .font(.caption).foregroundColor(.secondary)
+                }
                 Section("Máy ảnh") {
                     TextField("Để trống = tự dò máy", text: $cameraIP)
                         .font(Theme.mono(15)).keyboardType(.numbersAndPunctuation).autocorrectionDisabled()
