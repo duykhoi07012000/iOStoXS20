@@ -105,6 +105,27 @@ final class TCPConn: @unchecked Sendable {
     func cancel() { conn.cancel() }
 }
 
+/// Gửi 1 gói UDP BROADCAST (255.255.255.255) — để tự dò máy khi không biết IP
+/// (vd mạng hotspot). Dùng BSD socket vì cần cờ SO_BROADCAST.
+func sendUDPBroadcast(_ data: Data, port: UInt16) {
+    let fd = socket(AF_INET, SOCK_DGRAM, 0)
+    guard fd >= 0 else { return }
+    defer { close(fd) }
+    var yes: Int32 = 1
+    setsockopt(fd, SOL_SOCKET, SO_BROADCAST, &yes, socklen_t(MemoryLayout<Int32>.size))
+    var addr = sockaddr_in()
+    addr.sin_family = sa_family_t(AF_INET)
+    addr.sin_port = port.bigEndian
+    addr.sin_addr.s_addr = 0xFFFF_FFFF            // 255.255.255.255
+    _ = data.withUnsafeBytes { raw in
+        withUnsafePointer(to: &addr) { ap in
+            ap.withMemoryRebound(to: sockaddr.self, capacity: 1) { sa in
+                sendto(fd, raw.baseAddress, data.count, 0, sa, socklen_t(MemoryLayout<sockaddr_in>.size))
+            }
+        }
+    }
+}
+
 /// Gửi 1 gói UDP tới host:port rồi đóng.
 func sendUDP(_ data: Data, host: String, port: UInt16) async throws {
     let conn = NWConnection(host: .init(host), port: .init(rawValue: port)!, using: .udp)

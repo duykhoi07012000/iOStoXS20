@@ -2,15 +2,16 @@ import Foundation
 
 /// Client cấp cao đẩy film recipe xuống X-S20 (port trung thực từ prototype-python).
 public final class FujiCamera {
-    let cameraIP: String
+    let cameraIP: String?      // nil → tự dò máy bằng broadcast (du lịch/hotspot)
     let guid: Data
     let clientName: String
     private var tcp: TCPConn?
     private var tid: UInt32 = 0
 
+    /// - cameraIP: nil → broadcast tự tìm máy (không cần biết IP).
     /// - guidHex: GUID đã "pair" với máy (hex 32 ký tự). Hiện dùng identity Tether App;
     ///   pairing GUID riêng cho app = việc Phase 3.
-    public init(cameraIP: String,
+    public init(cameraIP: String? = nil,
                 guidHex: String = "f2e4538fada5485d87b27f0bd3d5ded0",
                 clientName: String = "DESKTOP-SGP1R6M") {
         self.cameraIP = cameraIP
@@ -20,7 +21,7 @@ public final class FujiCamera {
 
     public func connect() async throws {
         let localIP = localIPAddress() ?? "0.0.0.0"
-        let res = try await PCSS.discover(cameraIP: cameraIP, localIP: localIP)
+        let res = try await PCSS.discover(target: cameraIP, localIP: localIP)
 
         let tcp = TCPConn(host: res.dscIP, port: res.dscPort)
         try await tcp.start()

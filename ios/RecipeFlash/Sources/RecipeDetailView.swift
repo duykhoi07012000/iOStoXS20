@@ -5,7 +5,7 @@ import FujiKit
 struct RecipeDetailView: View {
     let recipe: Recipe
     @EnvironmentObject var store: RecipeStore
-    @AppStorage("cameraIP") private var cameraIP = "192.168.1.50"
+    @AppStorage("cameraIP") private var cameraIP = ""   // trống = tự dò máy (broadcast)
 
     @State private var status = ""
     @State private var results: [(label: String, ok: Bool)] = []
@@ -105,9 +105,11 @@ struct RecipeDetailView: View {
     }
 
     private func flash() {
-        isFlashing = true; results = []; status = "Đang kết nối \(cameraIP)…"
+        let ip = cameraIP.trimmingCharacters(in: .whitespaces)
+        isFlashing = true; results = []
+        status = ip.isEmpty ? "Đang tìm máy trên mạng…" : "Đang kết nối \(ip)…"
         Task { @MainActor in
-            let cam = FujiCamera(cameraIP: cameraIP)
+            let cam = FujiCamera(cameraIP: ip.isEmpty ? nil : ip)
             do {
                 try await cam.connect()
                 status = "Đã kết nối, đang áp recipe…"

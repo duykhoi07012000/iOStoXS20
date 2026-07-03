@@ -35,14 +35,14 @@ struct StubView: View {
 }
 
 struct SettingsView: View {
-    @AppStorage("cameraIP") private var cameraIP = "192.168.1.50"
+    @AppStorage("cameraIP") private var cameraIP = ""
     var body: some View {
         NavigationStack {
             Form {
                 Section("Máy ảnh") {
-                    TextField("IP máy ảnh", text: $cameraIP)
+                    TextField("Để trống = tự dò máy", text: $cameraIP)
                         .font(Theme.mono(15)).keyboardType(.numbersAndPunctuation).autocorrectionDisabled()
-                    Text("Nhập IP máy khi biết. Khi du lịch dùng hotspot, xem hướng dẫn bên dưới.")
+                    Text("Để TRỐNG thì app tự tìm máy trên mạng (khuyên dùng, nhất là khi du lịch qua hotspot). Chỉ nhập IP nếu muốn ép cố định.")
                         .font(.caption).foregroundColor(.secondary)
                 }
                 Section("Kết nối") {

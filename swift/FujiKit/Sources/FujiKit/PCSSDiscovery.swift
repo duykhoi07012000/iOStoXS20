@@ -10,7 +10,8 @@ enum PCSS {
 
     struct DiscoveryResult { let dscIP: String; let dscPort: UInt16 }
 
-    static func discover(cameraIP: String, localIP: String, timeout: TimeInterval = 8) async throws -> DiscoveryResult {
+    /// target = nil → broadcast tự dò máy (dùng khi không biết IP, vd hotspot).
+    static func discover(target: String?, localIP: String, timeout: TimeInterval = 8) async throws -> DiscoveryResult {
         let q = DispatchQueue(label: "fuji.pcss")
         let listener = try NWListener(using: .tcp, on: .init(rawValue: listenTCPPort)!)
 
@@ -25,10 +26,12 @@ enum PCSS {
                 case .failed(let e):
                     if once.fire() { cont.resume(throwing: e) }
                 case .ready:
-                    // listener đã lên → gửi DISCOVERY (UDP)
+                    // listener đã lên → gửi DISCOVERY (UDP unicast nếu biết IP, không thì broadcast)
                     Task {
                         let msg = "DISCOVERY * HTTP/1.1\r\nHOST: \(localIP)\r\nMX: 5\r\nSERVICE: PCSS/1.0\r\n\u{0}"
-                        try? await sendUDP(Data(msg.utf8), host: cameraIP, port: cameraUDPPort)
+                        let payload = Data(msg.utf8)
+                        if let t = target { try? await sendUDP(payload, host: t, port: cameraUDPPort) }
+                        else { sendUDPBroadcast(payload, port: cameraUDPPort) }
                     }
                 default: break
                 }
@@ -45,7 +48,7 @@ enum PCSS {
 
         try await incoming.start()
         let notify = String(data: try await incoming.readSome(), encoding: .ascii) ?? ""
-        var dscIP = cameraIP
+        var dscIP = target ?? ""
         var dscPort: UInt16 = 15740
         for line in notify.components(separatedBy: "\r\n") {
             let parts = line.split(separator: ":", maxSplits: 1).map { $0.trimmingCharacters(in: .whitespaces) }
