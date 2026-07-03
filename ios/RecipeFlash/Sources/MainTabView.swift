@@ -44,7 +44,7 @@ struct SettingsView: View {
                     Button { store.addSamples() } label: {
                         Label("Nạp recipe mẫu (Fuji X Weekly)", systemImage: "square.and.arrow.down")
                     }
-                    Text("Thêm 7 recipe Fuji X Weekly (Kodachrome 64, Portra 400, Classic Neg, Tri-X 400…) vào Library.")
+                    Text("Thêm bộ recipe Fuji X Weekly (Kodachrome 64, Velvia, Classic Neg, Tri-X 400… — cả trăm cái) vào Library.")
                         .font(.caption).foregroundColor(.secondary)
                 }
                 Section("Máy ảnh") {
