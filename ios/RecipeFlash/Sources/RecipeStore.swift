@@ -31,24 +31,6 @@ final class RecipeStore: ObservableObject {
         if let data = try? JSONEncoder().encode(recipes) { try? data.write(to: url) }
     }
 
-    // Recipe mẫu ban đầu.
-    static var defaults: [Recipe] {
-        var cn = Recipe(name: "Classic Negative")
-        cn.author = "Fuji X Weekly"
-        cn.filmSimulation = .classicNeg; cn.grain = .weakSmall
-        cn.colorChromeEffect = .strong; cn.colorChromeBlue = .weak
-        cn.dynamicRange = .dr400; cn.highlightTone = 1.5; cn.shadowTone = 2.0
-        cn.color = 4; cn.sharpness = 0; cn.clarity = 0; cn.noiseReduction = .m4
-        cn.whiteBalance = .auto; cn.wbShiftRed = 2; cn.wbShiftBlue = -5
-
-        var cine = Recipe(name: "CineStill 800T")
-        cine.author = "Fuji X Weekly"
-        cine.filmSimulation = .eterna; cine.grain = .strongLarge
-        cine.colorChromeEffect = .off; cine.colorChromeBlue = .strong
-        cine.whiteBalance = .colorTemp; cine.wbKelvin = 3200; cine.wbShiftRed = 2; cine.wbShiftBlue = -4
-        cine.dynamicRange = .dr200; cine.highlightTone = -1; cine.shadowTone = 2
-        cine.color = 4; cine.sharpness = -2; cine.clarity = -3; cine.noiseReduction = .m4
-
-        return [cn, cine]
-    }
+    // Recipe nạp sẵn (Fuji X Weekly).
+    static var defaults: [Recipe] { BundledRecipes.all }
 }
