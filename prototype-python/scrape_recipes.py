@@ -38,6 +38,25 @@ def clean_lines(html: str) -> list[str]:
     return [l.strip() for l in t.splitlines() if l.strip()]
 
 
+def name_from_url(url: str) -> str:
+    """Tên recipe lấy từ URL slug — sạch & nhất quán. Lọc boilerplate trên slug CÓ
+    dấu gạch trước khi đổi thành khoảng trắng (để bắt được 'x-t30', 'x-trans-iv'…)."""
+    slug = url.rstrip("/").split("/")[-1].lower()
+    for pat in [r"\bmy-", r"\bnot-my-", r"\bnot-", r"\bnew-", r"\bthe-", r"\ba-different-approach-",
+                r"fujifilm-?", r"-?film-simulation", r"-?recipes?", r"-?settings?",
+                r"x-?pro\d\w*", r"x-?t\d+\w*", r"x-?e\d+\w*", r"x-?h\d+\w*", r"x-?s\d+\w*",
+                r"x-?a\d+\w*", r"x100\w*", r"gfx\w*", r"x-?trans-?(iv|iii|v)?",
+                r"-a-for-", r"-for-fujifilm", r"-cameras?", r"part-\d+-of-\d+"]:
+        slug = re.sub(pat, "-", slug)
+    slug = re.sub(r"-+", " ", slug).strip()
+    slug = re.sub(r"\b(a|for|cameras?|edition|yes)\b", " ", slug)
+    slug = re.sub(r"^\d+\s+", " ", slug)               # bỏ số đầu (list-cruft)
+    slug = re.sub(r"(?i)\s+(v|iv|iii)$", "", slug)      # bỏ v/iv/iii đuôi
+    slug = re.sub(r"\s+", " ", slug).strip(" -")
+    return " ".join(w if any(c.isupper() for c in w[1:]) else w.capitalize()
+                    for w in slug.split()) if slug else ""
+
+
 def recipe_name(html: str) -> str:
     m = re.search(r"<title>(.*?)</title>", html, re.S)
     title = H.unescape(m.group(1)).strip() if m else ""
@@ -70,11 +89,11 @@ def scrape_one(url: str) -> dict | None:
     block = extract_block(clean_lines(html))
     if not block:
         return None
-    name = recipe_name(html)
+    name = name_from_url(url) or recipe_name(html)
     r = parse(name + "\n" + "\n".join(block))
     if not r.get("film_simulation"):
         return None
-    if name:                       # tên = title trang (tránh trộn film sim vào tên)
+    if name:                       # tên = URL slug (sạch, tránh trộn film sim vào tên)
         r["name"] = name
     r["author"] = "Fuji X Weekly"
     r["source"] = url

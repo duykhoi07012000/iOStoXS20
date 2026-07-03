@@ -40,7 +40,7 @@
 "source": "https://fujixweekly.com/2019/04/12/my-fujifilm-x-t30-eterna-film-simulation-recipe"
 },
 {
-"name": "Acros (Agfa APX 400)",
+"name": "Acros Agfa Apx 400",
 "notes": {
 "iso": "Auto up to ISO 12800",
 "exposure_compensation": "+2/3 to +1-1/3 (typically)"
@@ -78,7 +78,7 @@
 "source": "https://fujixweekly.com/2019/04/25/my-fujifilm-x-t30-velvia-film-simulation-recipe"
 },
 {
-"name": "Ilford HP5 Plus 400 Push-Process",
+"name": "Ilford Hp5 Plus 400 Push Process",
 "notes": {
 "iso": "25600 or 51200",
 "exposure_compensation": "+1/3 (typically)"
@@ -238,7 +238,7 @@
 "source": "https://fujixweekly.com/2019/08/02/my-fujifilm-x-t30-kodachrome-64-film-simulation-recipe"
 },
 {
-"name": "Eterna Low-Contrast",
+"name": "Eterna Low Contrast",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -260,7 +260,7 @@
 "source": "https://fujixweekly.com/2019/08/16/my-fujifilm-x-t30-eterna-low-contrast-film-simulation-recipe"
 },
 {
-"name": "[Not] “Warm Contrast”",
+"name": "Warm Contrast",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -281,7 +281,7 @@
 "source": "https://fujixweekly.com/2019/08/24/not-my-fujifilm-x-t30-warm-contrast-film-simulation-recipe"
 },
 {
-"name": "[Not] Urban Vintage Chrome",
+"name": "X Urban Vintage Chrome",
 "notes": {
 "iso": "Auto, up to ISO 3200",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -326,7 +326,7 @@
 "source": "https://fujixweekly.com/2019/10/26/my-fujifilm-x-t30-color-negative-film-simulation-recipe"
 },
 {
-"name": "Lomography Color 100 Film Simulation Setting",
+"name": "Lomography Color 100",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3"
@@ -347,7 +347,7 @@
 "source": "https://fujixweekly.com/2019/10/31/my-fujifilm-x-t30-lomography-color-100-film-simulation-setting"
 },
 {
-"name": "Provia (Fujichrome Sensia 100)",
+"name": "Provia Fujichrome Sensia 100",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -384,7 +384,7 @@
 "source": "https://fujixweekly.com/2020/02/11/my-fujifilm-x-t30-dramatic-monochrome-film-simulation-recipe"
 },
 {
-"name": "“Bleach Bypass”",
+"name": "Bleach Bypass",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically) Exposure 2 Acros"
@@ -405,7 +405,7 @@
 "source": "https://fujixweekly.com/2020/02/24/my-fujifilm-bleach-bypass-film-simulation-recipe"
 },
 {
-"name": "Split-Toned B&W",
+"name": "Split Toned Bw",
 "notes": {},
 "film_simulation": "acros",
 "dynamic_range": "dr200",
@@ -436,7 +436,7 @@
 "source": "https://fujixweekly.com/2020/02/25/my-fujifilm-x-t30-vintage-color-fade-film-simulation-recipe"
 },
 {
-"name": "Fujicolor Pro 400H Overexposed",
+"name": "Fujicolor Pro 400h Overexposed",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1 2/3 to +2 1/3 (typically)"
@@ -619,7 +619,7 @@
 "source": "https://fujixweekly.com/2020/04/12/my-fujifilm-x-t30-cyanotype-film-simulation-recipe"
 },
 {
-"name": "Polaroid II",
+"name": "Polaroid Ii",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to -1 (typically)"
@@ -661,7 +661,7 @@
 "source": "https://fujixweekly.com/2020/04/16/my-fujifilm-x-t30-kodak-gold-200-film-simulation-recipe"
 },
 {
-"name": "[Not] Ilford Delta Push-Process",
+"name": "Ilford Delta Push Process",
 "notes": {
 "exposure_compensation": "+1/3 to +2/3 (typically) ISO 12800"
 },
@@ -677,7 +677,7 @@
 "source": "https://fujixweekly.com/2020/04/24/not-my-fujifilm-x-t30-ilford-delta-push-process-film-simulation-recipe"
 },
 {
-"name": "Kodacolor II 126",
+"name": "Kodacolor Ii 126",
 "notes": {},
 "film_simulation": "classicChrome",
 "dynamic_range": "dr200",
@@ -713,7 +713,7 @@
 "source": "https://fujixweekly.com/2020/05/10/my-fujifilm-x-t30-kodak-portra-400-film-simulation-recipe"
 },
 {
-"name": "Kodak Vision3 250D",
+"name": "Kodak Vision3 250d",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -734,7 +734,7 @@
 "source": "https://fujixweekly.com/2020/05/11/my-fujifilm-x-t30-kodak-vision3-250d-film-simulation-recipe"
 },
 {
-"name": "[Not] Classic Negative",
+"name": "Classic Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -804,30 +804,7 @@
 "source": "https://fujixweekly.com/2020/06/09/fujifilm-x100v-film-simulation-recipe-fujicolor-superia-100"
 },
 {
-"name": "Film Simulation: Kodak Portra 400",
-"notes": {
-"iso": "Auto, up to ISO 6400",
-"exposure_compensation": "+1/3 to +1 (typically)"
-},
-"film_simulation": "classicChrome",
-"dynamic_range": "auto",
-"grain": "strongSmall",
-"color_chrome_effect": "strong",
-"color_chrome_blue": "weak",
-"white_balance": "daylight",
-"wb_shift_red": 3,
-"wb_shift_blue": -5,
-"highlight_tone": -1,
-"shadow_tone": -2,
-"color": 2,
-"sharpness": -2,
-"clarity": 2,
-"noise_reduction": "m4",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/06/10/fujifilm-x100v-film-simulation-kodak-portra-400"
-},
-{
-"name": "Kodak Tri-X 400",
+"name": "Kodak Tri X 400",
 "notes": {
 "iso": "ISO 1600 – 12800",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -894,7 +871,7 @@
 "source": "https://fujixweekly.com/2020/06/29/fujifilm-x100v-film-simulation-recipe-fujicolor-superia-1600"
 },
 {
-"name": "Sepia: The Forgotten Film Simulation",
+"name": "Sepia Forgotten",
 "notes": {},
 "film_simulation": "sepia",
 "grain": "offLarge",
@@ -905,21 +882,7 @@
 "source": "https://fujixweekly.com/2020/07/01/sepia-the-forgotten-film-simulation"
 },
 {
-"name": "Bleach Bypass",
-"notes": {},
-"film_simulation": "classicNeg",
-"dynamic_range": "dr100",
-"highlight_tone": 2,
-"shadow_tone": 4,
-"color": -4,
-"sharpness": -1,
-"clarity": null,
-"noise_reduction": "m4",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/07/08/fujifilm-x100v-film-simulation-recipe-bleach-bypass"
-},
-{
-"name": "The Rockwell (Velvia)",
+"name": "Rockwell Velvia",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -1012,7 +975,7 @@
 "source": "https://fujixweekly.com/2020/08/10/fujifilm-x100v-film-simulation-recipe-kodak-ektar-100"
 },
 {
-"name": "Black & White Infrared",
+"name": "Black White Infrared",
 "notes": {},
 "film_simulation": "acros",
 "dynamic_range": "dr200",
@@ -1044,7 +1007,7 @@
 "source": "https://fujixweekly.com/2020/08/26/fujifilm-x100v-film-simulation-recipe-verano-tostado"
 },
 {
-"name": "Kodak T-Max 400",
+"name": "Kodak T Max 400",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -1066,7 +1029,7 @@
 "source": "https://fujixweekly.com/2020/08/31/fujifilm-x100v-film-simulation-recipe-kodak-t-max-400"
 },
 {
-"name": "Fujifilm Noir",
+"name": "Noir",
 "notes": {
 "exposure_compensation": "-2/3 to +2/3 (typically) ISO 3200"
 },
@@ -1086,7 +1049,7 @@
 "source": "https://fujixweekly.com/2020/09/09/fujifilm-noir"
 },
 {
-"name": "Bright Summer",
+"name": "Preet",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1 to +2 (typically)"
@@ -1180,7 +1143,7 @@
 "source": "https://fujixweekly.com/2020/09/30/fujifilm-x100v-film-simulation-recipe-nature-neon"
 },
 {
-"name": "B&W Superia",
+"name": "Bw Superia",
 "notes": {
 "iso": "Auto, up to ISO 12800",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -1202,7 +1165,7 @@
 "source": "https://fujixweekly.com/2020/10/05/fujifilm-x100v-film-simulation-recipe-bw-superia"
 },
 {
-"name": "CineStill 800T",
+"name": "Cinestill 800t",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +2/3 (typically)"
@@ -1296,7 +1259,7 @@
 "source": "https://fujixweekly.com/2020/12/07/fujifilm-x100v-film-simulation-recipe-superia-premium-400"
 },
 {
-"name": "Kodak Portra 400 v2",
+"name": "Kodak Portra 400 V2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -1388,7 +1351,7 @@
 "source": "https://fujixweekly.com/2021/01/24/fujifilm-x100v-film-simulation-recipe-ilford-ortho-plus-80"
 },
 {
-"name": "Snow Fun with & Fujinon 90mm + : Amanda’s Classic Negative",
+"name": "Snow Fun With Fujinon 90mm Amandas Classic Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1"
@@ -1411,7 +1374,7 @@
 "source": "https://fujixweekly.com/2021/01/27/snow-fun-with-fujifilm-x-t4-fujinon-90mm-new-film-simulation-recipe-amandas-classic-negative"
 },
 {
-"name": "Nostalgic Negative Film Simulation + Nostalgic Negative !",
+"name": "Nostalgic Negative Nostalgic Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -1434,7 +1397,7 @@
 "source": "https://fujixweekly.com/2021/02/07/new-nostalgic-negative-film-simulation-x-trans-iv-nostalgic-negative-recipe"
 },
 {
-"name": "() : Velvia v2",
+"name": "Velvia V2",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -1478,7 +1441,7 @@
 "source": "https://fujixweekly.com/2021/02/22/fujifilm-x100v-film-simulation-recipe-faded-negative"
 },
 {
-"name": "IV : Creamy Color",
+"name": "Creamy Color",
 "notes": {
 "iso": "up to ISO 5000",
 "exposure_compensation": "+1/3 (typically)"
@@ -1502,7 +1465,7 @@
 "source": "https://fujixweekly.com/2021/02/23/fujifilm-x-trans-iv-film-simulation-recipe-creamy-color"
 },
 {
-"name": "Two IV Film Simulation Recipes: Kodachrome II",
+"name": "Two Kodachrome Ii",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -1525,7 +1488,7 @@
 "source": "https://fujixweekly.com/2021/04/05/two-fujifilm-x-trans-iv-film-simulation-recipes-kodachrome-ii"
 },
 {
-"name": "IV : LomoChrome Metropolis",
+"name": "Lomochrome Metropolis",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -1548,7 +1511,7 @@
 "source": "https://fujixweekly.com/2021/04/11/fujifilm-x-trans-iv-film-simulation-recipe-lomochrome-metropolis"
 },
 {
-"name": "IV : Vintage Vibes",
+"name": "Vintage Vibes",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -1572,7 +1535,7 @@
 "source": "https://fujixweekly.com/2021/04/21/fujifilm-x-trans-iv-film-simulation-recipe-vintage-vibes"
 },
 {
-"name": "Ektachrome 320T",
+"name": "Ektachrome 320t",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -1595,7 +1558,7 @@
 "source": "https://fujixweekly.com/2021/04/26/fujifilm-x-e4-film-simulation-recipe-ektachrome-320t"
 },
 {
-"name": "IV : Eterna v2",
+"name": "Eterna V2",
 "notes": {},
 "film_simulation": "eterna",
 "dynamic_range": "dr400",
@@ -1613,7 +1576,7 @@
 "source": "https://fujixweekly.com/2021/04/27/fujifilm-x-trans-iv-film-simulation-recipe-eterna-v2"
 },
 {
-"name": "III + X-T30 & X-T3 : Chrome Bypass",
+"name": "Chrome Bypass",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -1634,7 +1597,7 @@
 "source": "https://fujixweekly.com/2021/05/02/fujifilm-x-trans-iii-x-t30-x-t3-film-simulation-recipe-chrome-bypass"
 },
 {
-"name": "() : Xpro ’62",
+"name": "Xpro 62",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +1/3 (typically)"
@@ -1657,7 +1620,7 @@
 "source": "https://fujixweekly.com/2021/05/03/fujifilm-x100v-x-trans-iv-film-simulation-recipe-xpro-62"
 },
 {
-"name": "() : Fujicolor Negative",
+"name": "Fujicolor Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 (typically)"
@@ -1680,7 +1643,7 @@
 "source": "https://fujixweekly.com/2021/05/09/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-negative"
 },
 {
-"name": "IV : Fujicolor C200",
+"name": "Fujicolor C200",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -1702,7 +1665,7 @@
 "source": "https://fujixweekly.com/2021/05/13/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-c200"
 },
 {
-"name": "() : Fujicolor Pro 400H",
+"name": "Fujicolor Pro 400h",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1 to +1 2/3 (typically), but try between +1/3 to +2 2/3"
@@ -1726,7 +1689,7 @@
 "source": "https://fujixweekly.com/2021/05/16/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-pro-400h"
 },
 {
-"name": "IV : Kodak Portra 800 v2",
+"name": "Kodak Portra 800 V2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-2/3 to +1 (typically)"
@@ -1749,7 +1712,7 @@
 "source": "https://fujixweekly.com/2021/05/17/fujifilm-x-trans-iv-film-simulation-recipe-kodak-portra-800-v2"
 },
 {
-"name": "() : Grizzly Ride",
+"name": "Grizzly Ride",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -1773,7 +1736,7 @@
 "source": "https://fujixweekly.com/2021/05/19/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-grizzly-ride"
 },
 {
-"name": "A Different Approach + 7 Fujicolor Pro 160NS Film Simulation Recipes! (Yes, 7!)",
+"name": "Fujicolor Pro 160ns 7",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -1794,28 +1757,7 @@
 "source": "https://fujixweekly.com/2021/05/24/a-different-approach-7-new-fujicolor-pro-160ns-film-simulation-recipes-yes-7"
 },
 {
-"name": "7 Fujicolor Pro 400H Film Simulation Recipes!",
-"notes": {
-"iso": "Auto up to ISO 6400",
-"exposure_compensation": "0 to +2/3 (typically)"
-},
-"film_simulation": "proNegHi",
-"dynamic_range": "dr400",
-"grain": "weakSmall",
-"color_chrome_effect": "strong",
-"white_balance": "daylight",
-"wb_shift_red": 1,
-"wb_shift_blue": -3,
-"highlight_tone": 0,
-"shadow_tone": 0,
-"color": 1,
-"sharpness": -3,
-"noise_reduction": "m4",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/05/25/7-new-fujicolor-pro-400h-film-simulation-recipes"
-},
-{
-"name": "IV (X-Pro3, X100V, X-T4, X-S10 & X-E4) : Fujicolor NPS 160 Pulled",
+"name": "Fujicolor Nps 160 Pulled",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 1/3 (typically)"
@@ -1837,7 +1779,7 @@
 "source": "https://fujixweekly.com/2021/05/30/fujifilm-x-trans-iv-x-pro3-x100v-x-t4-x-s10-x-e4-film-simulation-recipe-fujicolor-nps-160-pulled"
 },
 {
-"name": "() : Positive Film",
+"name": "Positive Film",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -1860,7 +1802,7 @@
 "source": "https://fujixweekly.com/2021/06/01/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-positive-film"
 },
 {
-"name": "Two IV Film Simulation Recipes: Expired Slide + Expired Slide v2",
+"name": "Two Expired Slide Expired Slide V2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +2/3 (typically)"
@@ -1884,7 +1826,7 @@
 "source": "https://fujixweekly.com/2021/06/21/two-fujifilm-x-trans-iv-film-simulation-recipes-expired-slide-expired-slide-v2"
 },
 {
-"name": "IV : Kodak Portra 400 Warm",
+"name": "Kodak Portra 400 Warm",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 1/3 (typically)"
@@ -1908,7 +1850,7 @@
 "source": "https://fujixweekly.com/2021/07/06/fujifilm-x-trans-iv-film-simulation-recipe-kodak-portra-400-warm"
 },
 {
-"name": "IV : Fujicolor Super HG (Part 1 of 3)",
+"name": "Fujicolor Super Hg",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -1931,7 +1873,7 @@
 "source": "https://fujixweekly.com/2021/07/24/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-super-hg-part-1-of-3"
 },
 {
-"name": "IV : Fujicolor Super HG v2 (Part 2 of 3)",
+"name": "Fujicolor Super Hg V2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 (typically)"
@@ -1954,7 +1896,7 @@
 "source": "https://fujixweekly.com/2021/07/26/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-super-hg-v2-part-2-of-3"
 },
 {
-"name": "IV : Super HG Astia (Part 3 of 3)",
+"name": "Super Hg Astia",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 (typically)"
@@ -1977,7 +1919,7 @@
 "source": "https://fujixweekly.com/2021/07/26/fujifilm-x-trans-iv-film-simulation-recipe-super-hg-astia-part-3-of-3"
 },
 {
-"name": "IV : AgfaChrome RS 100",
+"name": "Agfachrome Rs 100",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +1/3 (typically)"
@@ -2000,28 +1942,7 @@
 "source": "https://fujixweekly.com/2021/08/03/fujifilm-x-trans-iv-film-simulation-recipe-agfachrome-rs-100"
 },
 {
-"name": "& X-T30 : Kodak Portra 400 v2",
-"notes": {
-"iso": "Auto, up to ISO 6400",
-"exposure_compensation": "+2/3 to +1 (typically)"
-},
-"film_simulation": "classicChrome",
-"dynamic_range": "auto",
-"grain": "strongSmall",
-"color_chrome_effect": "strong",
-"white_balance": "daylight",
-"wb_shift_red": 2,
-"wb_shift_blue": -6,
-"highlight_tone": -1,
-"shadow_tone": -1,
-"color": 2,
-"sharpness": -2,
-"noise_reduction": "m4",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/08/17/fujifilm-x-t3-x-t30-film-simulation-recipe-kodak-portra-400-v2"
-},
-{
-"name": "(X-Trans III + ) : Monochrome Negative",
+"name": "Monochrome Negative",
 "notes": {},
 "film_simulation": "acros",
 "dynamic_range": "dr400",
@@ -2035,7 +1956,7 @@
 "source": "https://fujixweekly.com/2021/08/25/fujifilm-x100v-x-trans-iii-x-trans-iv-film-simulation-recipe-monochrome-negative"
 },
 {
-"name": "() : Portra-Style",
+"name": "Portra Style",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -2057,7 +1978,7 @@
 "source": "https://fujixweekly.com/2021/09/22/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-portra-style"
 },
 {
-"name": "() : Silver Summer",
+"name": "Silver Summer",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -2081,7 +2002,7 @@
 "source": "https://fujixweekly.com/2021/10/13/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-silver-summer"
 },
 {
-"name": "() : Muted Color",
+"name": "Muted Color",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -2104,7 +2025,7 @@
 "source": "https://fujixweekly.com/2021/10/18/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-muted-color"
 },
 {
-"name": "Eterna v3",
+"name": "Eterna V3",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3"
@@ -2125,7 +2046,7 @@
 "source": "https://fujixweekly.com/2021/10/31/fujifilm-x-t30-film-simulation-recipe-eterna-v3"
 },
 {
-"name": "IV : Elite Chrome 200",
+"name": "Elite Chrome 200",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -2148,7 +2069,7 @@
 "source": "https://fujixweekly.com/2021/11/01/fujifilm-x-trans-iv-film-simulation-recipe-elite-chrome-200"
 },
 {
-"name": "() : Ferrania Solaris FG 400",
+"name": "Ferrania Solaris Fg 400",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -2172,7 +2093,7 @@
 "source": "https://fujixweekly.com/2021/11/05/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-ferrania-solaris-fg-400"
 },
 {
-"name": "III + X-T30 & X-T3 : Eterna Bleach Bypass",
+"name": "Eterna Bleach Bypass",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -2193,7 +2114,7 @@
 "source": "https://fujixweekly.com/2021/11/11/fujifilm-x-trans-iii-x-t30-x-t3-film-simulation-recipe-eterna-bleach-bypass"
 },
 {
-"name": "III + X-T3 & X-T30 : Porto 200",
+"name": "Porto 200",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -2214,7 +2135,7 @@
 "source": "https://fujixweekly.com/2021/11/17/fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe-porto-200"
 },
 {
-"name": "IV : Retro Gold",
+"name": "Retro Gold",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to -2/3 (typically)"
@@ -2237,7 +2158,7 @@
 "source": "https://fujixweekly.com/2021/11/22/fujifilm-x-trans-iv-film-simulation-recipe-retro-gold"
 },
 {
-"name": "IV : Retro Gold Low Contrast",
+"name": "Retro Gold Low Contrast",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to -2/3 (typically)"
@@ -2283,7 +2204,7 @@
 "source": "https://fujixweekly.com/2021/11/30/fujifilm-x-e4-film-simulation-recipe-kodachrome-25"
 },
 {
-"name": "IV : Vintage Negative",
+"name": "Vintage Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -2306,7 +2227,7 @@
 "source": "https://fujixweekly.com/2021/11/30/fujifilm-x-trans-iv-film-simulation-recipe-vintage-negative"
 },
 {
-"name": "() : Kodak High Definition Plus 200",
+"name": "Kodak High Definition Plus 200",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -2330,7 +2251,7 @@
 "source": "https://fujixweekly.com/2021/12/14/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-kodak-high-definition-plus-200"
 },
 {
-"name": "IV : Fujicolor NPH",
+"name": "Fujicolor Nph",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -2399,7 +2320,7 @@
 "source": "https://fujixweekly.com/2022/01/10/fujifilm-x-e4-film-simulation-recipe-old-kodak"
 },
 {
-"name": "IV : Kodak Gold v2",
+"name": "Kodak Gold V2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -2423,7 +2344,7 @@
 "source": "https://fujixweekly.com/2022/01/18/fujifilm-x-trans-iv-film-simulation-recipe-kodak-gold-v2"
 },
 {
-"name": ", X-T30 & X-H1 : Negative Print",
+"name": "Negative Print",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3"
@@ -2444,7 +2365,7 @@
 "source": "https://fujixweekly.com/2022/01/21/fujifilm-x-t3-x-t30-x-h1-film-simulation-recipe-negative-print"
 },
 {
-"name": "() : Vintage Color",
+"name": "Vintage Color",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -2468,7 +2389,7 @@
 "source": "https://fujixweekly.com/2022/01/27/fujifilm-x100v-x-trans-iv-film-simulation-recipe-vintage-color"
 },
 {
-"name": "() : Vintage Color v2",
+"name": "Vintage Color V2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +1 (typically)"
@@ -2492,7 +2413,7 @@
 "source": "https://fujixweekly.com/2022/02/07/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-vintage-color-v2"
 },
 {
-"name": "() : Agfa Ultra 100",
+"name": "Agfa Ultra 100",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +1 (typically)"
@@ -2515,7 +2436,7 @@
 "source": "https://fujixweekly.com/2022/02/14/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-agfa-ultra-100"
 },
 {
-"name": "() : Standard Provia",
+"name": "Standard Provia",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -2538,7 +2459,7 @@
 "source": "https://fujixweekly.com/2022/02/17/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-standard-provia"
 },
 {
-"name": "() : Old Ektachrome",
+"name": "Old Ektachrome",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -2561,7 +2482,7 @@
 "source": "https://fujixweekly.com/2022/03/05/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-old-ektachrome"
 },
 {
-"name": "IV : Serr’s 500T",
+"name": "Serrs 500t",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +1/3 (typically)"
@@ -2585,7 +2506,7 @@
 "source": "https://fujixweekly.com/2022/03/20/fujifilm-x-trans-iv-film-simulation-recipe-serrs-500t"
 },
 {
-"name": "IV : Ilford HP5 Plus 400",
+"name": "Ilford Hp5 Plus 400",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-2/3 to +2/3 (typically)"
@@ -2607,7 +2528,7 @@
 "source": "https://fujixweekly.com/2022/03/23/fujifilm-x-trans-iv-film-simulation-recipe-ilford-hp5-plus-400"
 },
 {
-"name": "IV : Kodak Brilliance",
+"name": "Kodak Brilliance",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1 to 0 (typically)"
@@ -2630,7 +2551,7 @@
 "source": "https://fujixweekly.com/2022/03/29/fujifilm-x-trans-iv-film-simulation-recipe-kodak-brilliance"
 },
 {
-"name": "IV : Nostalgia Color",
+"name": "Nostalgia Color",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -2654,7 +2575,7 @@
 "source": "https://fujixweekly.com/2022/04/04/fujifilm-x-trans-iv-film-simulation-recipe-nostalgia-color"
 },
 {
-"name": "IV : Moody Monochrome",
+"name": "Moody Monochrome",
 "notes": {
 "iso": "3200",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -2676,7 +2597,7 @@
 "source": "https://fujixweekly.com/2022/04/05/fujifilm-x-trans-iv-film-simulation-recipe-moody-monochrome"
 },
 {
-"name": "III + X-T3 & X-T30 : Kodacolor VR",
+"name": "Kodacolor Vr",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -2698,7 +2619,7 @@
 "source": "https://fujixweekly.com/2022/04/11/fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe-kodacolor-vr"
 },
 {
-"name": "IV : CineStill 50D",
+"name": "Cinestill 50d",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -2746,7 +2667,7 @@
 "source": "https://fujixweekly.com/2022/05/06/fujifilm-x-e4-film-simulation-recipe-fujicolor-natura-1600"
 },
 {
-"name": "() : Vibrant Velvia",
+"name": "Vibrant Velvia",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 (typically)"
@@ -2769,7 +2690,7 @@
 "source": "https://fujixweekly.com/2022/05/15/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-vibrant-velvia"
 },
 {
-"name": "() : Pushed CineStill 800T",
+"name": "Pushed Cinestill 800t",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +2/3 (typically)"
@@ -2793,7 +2714,7 @@
 "source": "https://fujixweekly.com/2022/05/18/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-pushed-cinestill-800t"
 },
 {
-"name": "IV : Bright Kodak",
+"name": "Bright Kodak",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1 to +1 2/3 (typically)"
@@ -2816,7 +2737,7 @@
 "source": "https://fujixweekly.com/2022/06/10/fujifilm-x-trans-iv-film-simulation-recipe-bright-kodak"
 },
 {
-"name": "IV : Reggie’s Portra",
+"name": "Reggies Portra",
 "notes": {
 "iso": "Auto, up to ISO 6400"
 },
@@ -2838,7 +2759,7 @@
 "source": "https://fujixweekly.com/2022/06/11/fujifilm-x-trans-iv-film-simulation-recipe-reggies-portra"
 },
 {
-"name": "+ X-Pro3 : Pushed CineStill",
+"name": "Pushed Cinestill",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +2/3 (typically)"
@@ -2862,7 +2783,7 @@
 "source": "https://fujixweekly.com/2022/06/13/fujifilm-x100v-x-pro3-film-simulation-recipe-pushed-cinestill"
 },
 {
-"name": "IV : Low Key",
+"name": "Low Key",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-2/3 to -1 1/3 (typically)"
@@ -2885,7 +2806,7 @@
 "source": "https://fujixweekly.com/2022/06/15/fujifilm-x-trans-iv-film-simulation-recipe-low-key"
 },
 {
-"name": "() : Nostalgic Print",
+"name": "Nostalgic Print",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 (typically)"
@@ -2909,7 +2830,7 @@
 "source": "https://fujixweekly.com/2022/06/28/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-nostalgic-print"
 },
 {
-"name": "() : SantaColor",
+"name": "Santacolor",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 (typically)"
@@ -2933,7 +2854,7 @@
 "source": "https://fujixweekly.com/2022/06/29/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-santacolor"
 },
 {
-"name": "() : Pure Negative",
+"name": "Pure Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +1/3 (typically)"
@@ -2956,7 +2877,7 @@
 "source": "https://fujixweekly.com/2022/07/21/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-pure-negative"
 },
 {
-"name": "() : Arizona Analog",
+"name": "Arizona Analog",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -2979,7 +2900,7 @@
 "source": "https://fujixweekly.com/2022/08/02/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-arizona-analog"
 },
 {
-"name": "() : Pacific Blues",
+"name": "Pacific Blues",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 (typically)"
@@ -3003,7 +2924,7 @@
 "source": "https://fujixweekly.com/2022/08/04/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-pacific-blues"
 },
 {
-"name": "() : Fujicolor Analog",
+"name": "Fujicolor Analog",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +1 (typically)"
@@ -3027,7 +2948,7 @@
 "source": "https://fujixweekly.com/2022/08/17/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-analog"
 },
 {
-"name": "() : Kodak Max 800",
+"name": "Kodak Max 800",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -3051,7 +2972,7 @@
 "source": "https://fujixweekly.com/2022/08/23/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-kodak-max-800"
 },
 {
-"name": "III + X-T3 & X-T30 : Vintage Kodacolor",
+"name": "Vintage Kodacolor",
 "notes": {
 "iso": "Auto up to ISO 12800",
 "exposure_compensation": "-1/3 to +1/3"
@@ -3073,7 +2994,7 @@
 "source": "https://fujixweekly.com/2022/08/29/fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe-vintage-kodacolor"
 },
 {
-"name": "() : GAF 500",
+"name": "Gaf 500",
 "notes": {
 "iso": "12800",
 "exposure_compensation": "-2/3 to +2/3 (typically)"
@@ -3097,7 +3018,7 @@
 "source": "https://fujixweekly.com/2022/09/01/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-gaf-500"
 },
 {
-"name": "() : Vintage Analog",
+"name": "Vintage Analog",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +1/3 (typically)"
@@ -3121,7 +3042,7 @@
 "source": "https://fujixweekly.com/2022/09/07/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-vintage-analog"
 },
 {
-"name": "() : September Summer",
+"name": "September Summer",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +1 (typically)"
@@ -3168,7 +3089,7 @@
 "source": "https://fujixweekly.com/2022/09/27/fujifilm-x-e4-film-simulation-recipe-analog-gold"
 },
 {
-"name": "() : Fujichrome Provia 100F",
+"name": "Fujichrome Provia 100f",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -3191,7 +3112,7 @@
 "source": "https://fujixweekly.com/2022/10/05/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujichrome-provia-100f"
 },
 {
-"name": "Four IV Film Simulation Recipes: KodaNeg VC & NC",
+"name": "Four Kodaneg Vc Nc",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -3214,7 +3135,7 @@
 "source": "https://fujixweekly.com/2022/10/13/four-fujifilm-x-trans-iv-film-simulation-recipes-kodaneg-vc-nc"
 },
 {
-"name": "& X-T3 : Cinematic Negative",
+"name": "Cinematic Negative",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "0 to +2/3"
@@ -3235,7 +3156,7 @@
 "source": "https://fujixweekly.com/2022/10/21/fujifilm-x-t30-x-t3-film-simulation-recipe-cinematic-negative"
 },
 {
-"name": "() : Chrome Slide",
+"name": "Chrome Slide",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -3258,7 +3179,7 @@
 "source": "https://fujixweekly.com/2022/10/31/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-chrome-slide"
 },
 {
-"name": "(+X-T3 & X-Trans III) : Classic Kodak",
+"name": "Classic Kodak",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +1"
@@ -3279,7 +3200,7 @@
 "source": "https://fujixweekly.com/2022/11/08/fujifilm-x-t30-x-t3-x-trans-iii-film-simulation-recipe-classic-kodak"
 },
 {
-"name": "() : Fujicolor 100 Gold",
+"name": "Fujicolor 100 Gold",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 1/3 (typically)"
@@ -3302,7 +3223,7 @@
 "source": "https://fujixweekly.com/2022/11/29/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-100-gold"
 },
 {
-"name": "() : Timeless Negative",
+"name": "Timeless Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +1/3 (typically)"
@@ -3325,7 +3246,7 @@
 "source": "https://fujixweekly.com/2022/12/15/fujifilm-x100v-x-trans-iv-film-simulation-recipe-timeless-negative"
 },
 {
-"name": "() : Superia Summer",
+"name": "Superia Summer",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -3349,7 +3270,7 @@
 "source": "https://fujixweekly.com/2023/03/09/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-superia-summer"
 },
 {
-"name": "Using AI to Create Film Simulation Recipes + Urban Dreams X100V ()",
+"name": "Using Ai To Create Urban Dreams",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -3372,7 +3293,7 @@
 "source": "https://fujixweekly.com/2023/03/21/using-ai-to-create-film-simulation-recipes-urban-dreams-x100v-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "Expired Velvia — IV (X-Pro3, X100V, X-T4, X-S10, X-E4 & X-T30 II)",
+"name": "Expired Velvia Ii",
 "notes": {},
 "film_simulation": "velvia",
 "dynamic_range": "dr400",
@@ -3384,7 +3305,7 @@
 "source": "https://fujixweekly.com/2023/06/25/expired-velvia-fujifilm-x-trans-iv-x-pro3-x100v-x-t4-x-s10-x-e4-x-t30-ii-film-simulation-recipe"
 },
 {
-"name": "Magenta Negative — ()",
+"name": "Magenta Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -3408,38 +3329,7 @@
 "source": "https://fujixweekly.com/2023/08/21/magenta-negative-fujifilm-x-e4-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "Eterna Bleach Bypass — ()",
-"notes": {},
-"film_simulation": "eternaBleachBypass",
-"dynamic_range": "dr400",
-"highlight_tone": 2.5,
-"shadow_tone": -1.5,
-"color": -4,
-"sharpness": 0,
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2023/09/27/eterna-bleach-bypass-fujifilm-x-e4-x-trans-iv-film-simulation-recipe"
-},
-{
-"name": "Kodak Portra 160 — ()",
-"notes": {},
-"film_simulation": "classicChrome",
-"dynamic_range": "dr400",
-"grain": "weakSmall",
-"color_chrome_effect": "strong",
-"color_chrome_blue": "strong",
-"wb_kelvin": 4900,
-"white_balance": "colorTemp",
-"wb_shift_red": 4,
-"wb_shift_blue": -6,
-"highlight_tone": -1,
-"shadow_tone": -2,
-"color": 0,
-"sharpness": -2,
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2023/10/15/kodak-portra-160-fujifilm-x100v-x-trans-iv-film-simulation-recipe"
-},
-{
-"name": "Xpro — III + X-T3 & X-T30",
+"name": "Xpro",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 1/3 (typically)"
@@ -3461,18 +3351,7 @@
 "source": "https://fujixweekly.com/2023/11/21/xpro-fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe"
 },
 {
-"name": "Kodak Vision3 250D — ()",
-"notes": {},
-"film_simulation": "eterna",
-"dynamic_range": "dr100",
-"grain": "strongSmall",
-"color_chrome_effect": "strong",
-"color_chrome_blue": "off",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2023/11/23/kodak-vision3-250d-fujifilm-x-e4-x-trans-iv-film-simulation-recipe"
-},
-{
-"name": "Vintage Print — ()",
+"name": "Vintage Print",
 "notes": {},
 "film_simulation": "classicNeg",
 "dynamic_range": "dr200",
@@ -3483,7 +3362,7 @@
 "source": "https://fujixweekly.com/2024/01/12/vintage-print-fujifilm-x-e4-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "McCurry Kodachrome — A IV",
+"name": "Mccurry Kodachrome",
 "notes": {},
 "film_simulation": "classicChrome",
 "dynamic_range": "dr100",
@@ -3492,7 +3371,7 @@
 "source": "https://fujixweekly.com/2024/01/25/mccurry-kodachrome-a-fujifilm-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "Expired ECN-2 100T — IV & X-Trans V",
+"name": "Expired Ecn 2 100t",
 "notes": {},
 "film_simulation": "eternaBleachBypass",
 "dynamic_range": "dr400",
@@ -3503,7 +3382,7 @@
 "source": "https://fujixweekly.com/2024/02/01/expired-ecn-2-100t-fujifilm-x-trans-iv-x-trans-v-film-simulation-recipe"
 },
 {
-"name": "Vintage Eterna — V, , & X-H1 Film Simulation Recipes",
+"name": "Vintage Eterna",
 "notes": {},
 "film_simulation": "eterna",
 "dynamic_range": "dr100",
@@ -3513,7 +3392,7 @@
 "source": "https://fujixweekly.com/2024/02/05/vintage-eterna-fujifilm-x-trans-v-x-trans-iv-x-h1-film-simulation-recipes"
 },
 {
-"name": "Kodak Portra 800 v3 — (X-Trans V) & X-E4 ()",
+"name": "Kodak Portra 800 V3",
 "notes": {},
 "film_simulation": "classicChrome",
 "dynamic_range": "dr400",
@@ -3524,7 +3403,7 @@
 "source": "https://fujixweekly.com/2024/02/14/kodak-portra-800-v3-fujifilm-x-t5-x-trans-v-x-e4-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "Kodak Royal Gold 400 — IV & X-Trans V",
+"name": "Kodak Royal Gold 400",
 "notes": {},
 "film_simulation": "classicNeg",
 "dynamic_range": "dr400",
@@ -3542,7 +3421,7 @@
 "source": "https://fujixweekly.com/2024/03/06/kodak-royal-gold-400-fujifilm-x-trans-iv-x-trans-v-film-simulation-recipe"
 },
 {
-"name": "PRO Negative 160C for IV & X-Trans V",
+"name": "Pro Negative 160c",
 "notes": {},
 "film_simulation": "proNegHi",
 "dynamic_range": "dr400",
@@ -3560,7 +3439,7 @@
 "source": "https://fujixweekly.com/2024/03/28/pro-negative-160c-film-simulation-recipe-for-fujifilm-x-trans-iv-x-trans-v"
 },
 {
-"name": "Eterna Summer — IV & X-Trans V",
+"name": "Eterna Summer",
 "notes": {},
 "film_simulation": "eterna",
 "dynamic_range": "dr200",
@@ -3571,7 +3450,7 @@
 "source": "https://fujixweekly.com/2024/04/08/eterna-summer-fujifilm-x-trans-iv-x-trans-v-film-simulation-recipe"
 },
 {
-"name": "Classic Color — (X-Trans V) and X-E4 ()",
+"name": "Classic Color And",
 "notes": {},
 "film_simulation": "classicChrome",
 "dynamic_range": "dr400",
@@ -3582,7 +3461,7 @@
 "source": "https://fujixweekly.com/2024/04/22/classic-color-fujifilm-x-t5-x-trans-v-and-x-e4-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "1960 Chrome — (X-Trans V) & X-E4 ()",
+"name": "Chrome",
 "notes": {},
 "film_simulation": "eternaBleachBypass",
 "dynamic_range": "dr400",
@@ -3593,7 +3472,7 @@
 "source": "https://fujixweekly.com/2024/07/15/1960-chrome-fujifilm-x-t5-x-trans-v-x-e4-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "1981 Kodak — ()",
+"name": "Kodak",
 "notes": {},
 "film_simulation": "eterna",
 "dynamic_range": "dr200",
@@ -3611,26 +3490,7 @@
 "source": "https://fujixweekly.com/2025/01/22/1981-kodak-fujifilm-x100v-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "RedScale — IV & V",
-"notes": {},
-"film_simulation": "classicNeg",
-"dynamic_range": "dr200",
-"grain": "strongSmall",
-"color_chrome_effect": "strong",
-"color_chrome_blue": "off",
-"wb_kelvin": 10000,
-"white_balance": "colorTemp",
-"wb_shift_red": 9,
-"wb_shift_blue": -9,
-"highlight_tone": 0,
-"shadow_tone": 2,
-"color": 4,
-"sharpness": -2,
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2025/02/18/redscale-fujifilm-x-trans-iv-v-film-simulation-recipe"
-},
-{
-"name": "Kodak Portra do Sol — IV",
+"name": "Kodak Portra Do Sol",
 "notes": {},
 "film_simulation": "classicChrome",
 "dynamic_range": "dr400",
@@ -3648,7 +3508,7 @@
 "source": "https://fujixweekly.com/2025/04/23/kodak-portra-do-sol-fujifilm-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "Kodachrome Blue — ()",
+"name": "Kodachrome Blue",
 "notes": {},
 "film_simulation": "eternaBleachBypass",
 "dynamic_range": "dr200",
@@ -3667,7 +3527,7 @@
 "source": "https://fujixweekly.com/2025/05/19/kodachrome-blue-fujifilm-x-e4-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "Pro Neg — & X-T30 (+ X-Trans III)",
+"name": "Pro Neg",
 "notes": {},
 "film_simulation": "proNegHi",
 "dynamic_range": "dr400",
@@ -3685,7 +3545,7 @@
 "source": "https://fujixweekly.com/2025/07/22/pro-neg-fujifilm-x-t3-x-t30-x-trans-iii-film-simulation-recipe"
 },
 {
-"name": "BewareMyVelvia — A Fujifilm for & V",
+"name": "Bewaremyvelvia",
 "notes": {},
 "film_simulation": "velvia",
 "dynamic_range": "dr200",
@@ -3704,7 +3564,7 @@
 "source": "https://fujixweekly.com/2026/01/13/bewaremyvelvia-a-fujifilm-film-simulation-recipe-for-x-trans-iv-v"
 },
 {
-"name": "Fujicolor C200 v2 — ()",
+"name": "Fujicolor C200 V2",
 "notes": {},
 "film_simulation": "classicNeg",
 "dynamic_range": "dr100",
@@ -3722,7 +3582,7 @@
 "source": "https://fujixweekly.com/2026/01/19/fujicolor-c200-v2-fujifilm-x100v-x-trans-iv-film-simulation-recipe"
 },
 {
-"name": "Reggie’s Superia — A Fujifilm for & V Cameras",
+"name": "Reggies Superia",
 "notes": {},
 "film_simulation": "classicNeg",
 "dynamic_range": "auto",
