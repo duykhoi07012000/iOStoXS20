@@ -50,25 +50,25 @@ public enum FilmSimulation: UInt16, Codable, CaseIterable {
     case nostalgicNeg = 0x13, realaAce = 0x14
 }
 
-public enum GrainEffect: UInt16, Codable {
+public enum GrainEffect: UInt16, Codable, CaseIterable {
     case off = 1, weakSmall = 2, strongSmall = 3
     case weakLarge = 4, strongLarge = 5, offLarge = 7
 }
 
-public enum ColorChrome: UInt16, Codable {   // dùng chung Effect & Blue
+public enum ColorChrome: UInt16, Codable, CaseIterable {   // dùng chung Effect & Blue
     case off = 1, weak = 2, strong = 3
 }
 
-public enum NoiseReduction: UInt16, Codable {
+public enum NoiseReduction: UInt16, Codable, CaseIterable {
     case p4 = 0x5000, p3 = 0x6000, p2 = 0x0000, p1 = 0x1000, std = 0x2000
     case m1 = 0x3000, m2 = 0x4000, m3 = 0x7000, m4 = 0x8000
 }
 
-public enum DynamicRange: UInt16, Codable {   // X-S20: không có DR800
+public enum DynamicRange: UInt16, Codable, CaseIterable {   // X-S20: không có DR800
     case auto = 0xFFFF, dr100 = 100, dr200 = 200, dr400 = 400
 }
 
-public enum WhiteBalance: UInt16, Codable {
+public enum WhiteBalance: UInt16, Codable, CaseIterable {
     case auto = 0x0002, autoWhitePriority = 0x8020, autoAmbiencePriority = 0x8021
     case daylight = 0x0004, incandescent = 0x0006, underwater = 0x0008
     case fluorescent1 = 0x8001, fluorescent2 = 0x8002, fluorescent3 = 0x8003

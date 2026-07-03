@@ -17,6 +17,8 @@ targets:
     platform: iOS
     sources:
       - RecipeFlash/Sources
+      - path: RecipeFlash/Resources
+        buildPhase: resources
     dependencies:
       - package: FujiKit
     # XcodeGen TỰ sinh Info.plist đầy đủ (CFBundleIdentifier, CFBundleExecutable,
