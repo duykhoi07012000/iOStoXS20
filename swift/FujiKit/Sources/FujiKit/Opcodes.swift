@@ -29,6 +29,7 @@ enum Prop: UInt16 {
     case noiseReduction   = 0xD01C
     case dynamicRange     = 0xD007
     case whiteBalance     = 0x5005
+    case wbKelvin         = 0xD017   // số Kelvin khi WB = Color Temp (u16)
     case wbShiftRed       = 0xD00B
     case wbShiftBlue      = 0xD00C
     case highlightTone    = 0xD320

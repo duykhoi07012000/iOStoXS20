@@ -150,6 +150,7 @@ WIRE_PROP: dict[str, int | None] = {
     "noise_reduction": 0xD01C,      # enum 0x0..0x8000 (u16)
     "dynamic_range": 0xD007,        # enum [0xffff,100,200,400] (u16) — X-S20 max 400
     "white_balance": 0x5005,        # enum WB (u16, standard PTP)
+    "wb_kelvin": 0xD017,            # số Kelvin khi WB=ColorTemp (u16) — xác nhận trên máy
     "wb_shift_red": 0xD00B,         # range -9..9 (i16)
     "wb_shift_blue": 0xD00C,        # range -9..9 (i16)
     "highlight_tone": 0xD320,       # range -20..40 step 5 (i16, = -2.0..+4.0)

@@ -42,6 +42,7 @@ class Recipe:
     noise_reduction: Optional[oc.NoiseReduction] = None
     dynamic_range: Optional[oc.DynamicRange] = None
     white_balance: Optional[oc.WhiteBalance] = None
+    wb_kelvin: Optional[int] = None
     color_space: Optional[oc.ColorSpace] = None
 
     highlight_tone: Optional[float] = None
@@ -127,6 +128,8 @@ class Recipe:
 
         if self.white_balance is not None:
             add("white_balance", self.white_balance, "u16", f"WB={self.white_balance.name}")
+        if self.white_balance == oc.WhiteBalance.COLOR_TEMP and self.wb_kelvin is not None:
+            add("wb_kelvin", self.wb_kelvin, "u16", f"Kelvin={self.wb_kelvin}K")
         # WB shift là 2 property riêng (Red 0xD00B, Blue 0xD00C), i16, giá trị thô -9..9
         if self.wb_shift_red is not None:
             r = _clamp("wb_shift_red", self.wb_shift_red, oc.WB_SHIFT_RANGE)

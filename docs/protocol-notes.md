@@ -46,6 +46,7 @@ Nếu nối thẳng 15740 mà bỏ bước này → **refused**. Trình tự:
 | Noise Reduction | `0xD01C` | u16 | 0x0..0x8000 (bucket) |
 | Dynamic Range | `0xD007` | u16 | 0xffff=AUTO,100,200,400 (X-S20 KHÔNG có 800) |
 | White Balance | `0x5005` | u16 | enum WB (standard PTP) |
+| WB Kelvin (Color Temp) | `0xD017` | u16 | số Kelvin (2500–10000) khi WB=ColorTemp — xác nhận trên máy |
 | WB Shift Red | `0xD00B` | i16 | −9..9 (giá trị thô) |
 | WB Shift Blue | `0xD00C` | i16 | −9..9 (giá trị thô) |
 | Highlight Tone | `0xD320` | i16 | −20..40 step 5 (= −2.0..+4.0, value ×10) |

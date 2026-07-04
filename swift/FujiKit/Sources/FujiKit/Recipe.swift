@@ -71,7 +71,9 @@ public struct Recipe: Codable, Identifiable {
         if let v = dynamicRange      { add(.dynamicRange, Int(v.rawValue), .u16, "DR=\(v)") }
         if let v = whiteBalance {
             add(.whiteBalance, Int(v.rawValue), .u16, "WB=\(v)")
-            // TODO: khi map được property code Kelvin, set wbKelvin ở đây (whiteBalance == .colorTemp).
+            if v == .colorTemp, let k = wbKelvin {
+                add(.wbKelvin, k, .u16, "Kelvin=\(k)K")
+            }
         }
 
         if let v = highlightTone { add(.highlightTone, try clamp("highlightTone", Int((v*10).rounded()), -20...40), .i16, "Highlight=\(v)") }
