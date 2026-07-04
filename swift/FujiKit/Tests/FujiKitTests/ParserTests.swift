@@ -131,4 +131,69 @@ final class ParserTests: XCTestCase {
         XCTAssertEqual(r.wbShiftBlue, -4)
         XCTAssertEqual(r.dynamicRange, .dr200)
     }
+
+    // ---- Import từ ẢNH (OCR): dòng cột "HEADER value" cùng dòng, không dấu ':' ----
+
+    func testSplitLeadingHeader() {
+        func split(_ s: String) -> (String, String)? {
+            RecipeParser.splitLeadingHeader(s).map { ($0.header, $0.value) }
+        }
+        XCTAssertEqual(split("FILM SIMULATION Reala Ace")?.0, "FILM SIMULATION")
+        XCTAssertEqual(split("FILM SIMULATION Reala Ace")?.1, "Reala Ace")
+        // alias DÀI NHẤT trước: "…EFFECT BLUE" không bị "…EFFECT" nuốt
+        XCTAssertEqual(split("COLOR CHROME EFFECT BLUE Strong")?.0, "COLOR CHROME EFFECT BLUE")
+        XCTAssertEqual(split("COLOR CHROME EFFECT BLUE Strong")?.1, "Strong")
+        XCTAssertEqual(split("WB 5200K, +2 Red & -3 Blue")?.1, "5200K, +2 Red & -3 Blue")
+        XCTAssertEqual(split("NOISE REDUCTION/HIGH ISO NR -4")?.1, "-4")
+        XCTAssertNil(RecipeParser.splitLeadingHeader("DR400"))           // không có khoảng trắng
+        XCTAssertNil(RecipeParser.splitLeadingHeader("FILM SIMULATION")) // header trơ trọi (giữ 2 dòng)
+        XCTAssertNil(RecipeParser.splitLeadingHeader("Strong Small"))    // không phải header
+    }
+
+    /// Mô phỏng chuẩn hoá của RecipeOCR: tách "HEADER value" cùng dòng thành 2 dòng.
+    private func ocrNormalize(_ raw: String) -> String {
+        raw.split(separator: "\n").flatMap { line -> [String] in
+            let s = String(line)
+            if let (h, v) = RecipeParser.splitLeadingHeader(s) { return [h, v] }
+            return [s]
+        }.joined(separator: "\n")
+    }
+
+    func testKodakPro400FromImage() {
+        let raw = """
+        Kodak Pro 400
+        FILM SIMULATION Reala Ace
+        DYNAMIC RANGE DR400
+        GRAIN EFFECT Strong Small
+        COLOR CHROME EFFECT Off
+        COLOR CHROME EFFECT BLUE Strong
+        WB 5200K, +2 Red & -3 Blue
+        HIGHLIGHT -2
+        SHADOW 0
+        COLOR +1
+        SHARPNESS -2
+        NOISE REDUCTION/HIGH ISO NR -4
+        CLARITY -2
+        ISO up to ISO 6400
+        EXPOSURE COMPENSATION +1/3 to +1
+        """
+        let r = RecipeParser.parse(ocrNormalize(raw))
+        XCTAssertEqual(r.name, "Kodak Pro 400")
+        XCTAssertEqual(r.filmSimulation, .realaAce)
+        XCTAssertEqual(r.dynamicRange, .dr400)
+        XCTAssertEqual(r.grain, .strongSmall)
+        XCTAssertEqual(r.colorChromeEffect, .off)
+        XCTAssertEqual(r.colorChromeBlue, .strong)
+        XCTAssertEqual(r.whiteBalance, .colorTemp)
+        XCTAssertEqual(r.wbKelvin, 5200)
+        XCTAssertEqual(r.wbShiftRed, 2)
+        XCTAssertEqual(r.wbShiftBlue, -3)
+        XCTAssertEqual(r.highlightTone, -2)
+        XCTAssertEqual(r.shadowTone, 0)
+        XCTAssertEqual(r.color, 1)
+        XCTAssertEqual(r.sharpness, -2)
+        XCTAssertEqual(r.clarity, -2)
+        XCTAssertEqual(r.noiseReduction, .m4)
+        XCTAssertEqual(r.notes["iso"], "up to ISO 6400")
+    }
 }

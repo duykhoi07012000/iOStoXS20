@@ -1,19 +1,30 @@
 import SwiftUI
+import PhotosUI
 import FujiKit
 
-/// Dán text recipe (kiểu Fuji X Weekly) → parse → xem trước → lưu.
+/// Dán text recipe (kiểu Fuji X Weekly) HOẶC chọn ảnh screenshot → OCR → parse → xem trước → lưu.
 struct ImportView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var store: RecipeStore
     @State private var text = ""
     @State private var parsed: Recipe?
+    @State private var pickerItem: PhotosPickerItem?
+    @State private var ocrBusy = false
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 14) {
-                    Text("Dán nguyên đoạn text recipe (kiểu Fuji X Weekly) rồi bấm \"Đọc recipe\":")
+                    Text("Dán text recipe (kiểu Fuji X Weekly) hoặc chọn ảnh screenshot recipe, rồi bấm \"Đọc recipe\":")
                         .font(Theme.mono(13)).foregroundColor(Theme.textSoft)
+
+                    PhotosPicker(selection: $pickerItem, matching: .images) {
+                        Label(ocrBusy ? "Đang đọc ảnh…" : "Chọn ảnh recipe",
+                              systemImage: ocrBusy ? "hourglass" : "photo.on.rectangle")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.bordered).tint(Theme.accent).foregroundColor(Theme.text)
+                    .disabled(ocrBusy)
 
                     TextEditor(text: $text)
                         .font(Theme.mono(13)).frame(minHeight: 220)
@@ -29,7 +40,7 @@ struct ImportView: View {
                         Label("Đọc recipe", systemImage: "wand.and.stars").frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.borderedProminent).tint(Theme.accent).foregroundColor(Theme.text)
-                    .disabled(text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                    .disabled(text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || ocrBusy)
 
                     if let p = parsed {
                         Text("Xem trước").font(Theme.mono(14, .bold)).foregroundColor(Theme.text)
@@ -52,6 +63,23 @@ struct ImportView: View {
                         .tint(Theme.text).bold().disabled(parsed == nil)
                 }
             }
+            .onChange(of: pickerItem) { item in
+                guard let item else { return }
+                ocrBusy = true
+                Task {
+                    let ocr = await loadAndRecognize(item)
+                    await MainActor.run {
+                        if !ocr.isEmpty { text = ocr; parsed = nil }
+                        ocrBusy = false
+                    }
+                }
+            }
         }
+    }
+
+    private func loadAndRecognize(_ item: PhotosPickerItem) async -> String {
+        guard let data = try? await item.loadTransferable(type: Data.self),
+              let image = UIImage(data: data) else { return "" }
+        return await RecipeOCR.recognize(image)
     }
 }

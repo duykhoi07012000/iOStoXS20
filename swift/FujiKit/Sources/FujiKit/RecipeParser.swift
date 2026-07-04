@@ -86,6 +86,29 @@ public enum RecipeParser {
         return nil
     }
 
+    /// Alias phẳng, sắp DÀI NHẤT trước (để "COLOR CHROME EFFECT BLUE" không bị "COLOR CHROME
+    /// EFFECT" nuốt khi so tiền tố).
+    private static let aliasesLongestFirst: [String] =
+        headers.flatMap { $0.0 }.sorted { $0.count > $1.count }
+
+    /// Dòng OCR kiểu CỘT "FILM SIMULATION Reala Ace" (nhãn + giá trị cùng dòng, KHÔNG dấu ':')
+    /// → (header, value). Trả nil nếu dòng không mở đầu bằng header đã biết + theo sau là giá trị
+    /// (vd "DR400" không có khoảng trắng → nil; "FILM SIMULATION" trơ trọi → nil để giữ format 2 dòng).
+    public static func splitLeadingHeader(_ line: String) -> (header: String, value: String)? {
+        let trimmed = line.trimmingCharacters(in: .whitespaces)
+        let n = norm(trimmed)
+        for alias in aliasesLongestFirst {
+            guard n != alias, n.hasPrefix(alias + " ") else { continue }
+            let words = trimmed.split(separator: " ", omittingEmptySubsequences: true)
+            let headWords = alias.split(separator: " ").count
+            guard words.count > headWords else { return nil }
+            let value = words.dropFirst(headWords).joined(separator: " ")
+            guard !value.isEmpty else { return nil }
+            return (words.prefix(headWords).joined(separator: " "), value)
+        }
+        return nil
+    }
+
     private static func cleanName(_ s: String) -> String {
         let ascii = String(s.unicodeScalars.filter { $0.isASCII || $0 == " " })
         return ascii.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)

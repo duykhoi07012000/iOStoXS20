@@ -69,4 +69,32 @@ final class EncodingTests: XCTestCase {
         var r = Recipe(); r.clarity = 99
         XCTAssertThrowsError(try r.propertyWrites())
     }
+
+    // fullReset: field nil được ghi giá trị trung tính (0/OFF/Auto) → không dính recipe trước.
+    func testFullResetFillsDefaults() throws {
+        var r = Recipe(); r.filmSimulation = .provia   // chỉ set film sim, còn lại nil
+        let w = try r.propertyWrites(fullReset: true)
+        func find(_ code: UInt16) -> PropertyWrite? { w.first { $0.code == code } }
+
+        XCTAssertEqual(find(0xD001)?.value, 1)       // Film sim vẫn ghi (Provia)
+        XCTAssertEqual(find(0xD023)?.value, 1)       // Grain = off
+        XCTAssertEqual(find(0xD029)?.value, 1)       // Color Chrome FX = off
+        XCTAssertEqual(find(0xD030)?.value, 1)       // Color Chrome Blue = off
+        XCTAssertEqual(find(0xD01C)?.value, 0x2000)  // NR = std (0)
+        XCTAssertEqual(find(0xD007)?.value, 0xFFFF)  // DR = auto
+        XCTAssertEqual(find(0x5005)?.value, 0x0002)  // WB = auto
+        for code: UInt16 in [0xD320, 0xD321, 0xD008, 0x5015, 0xD032, 0xD00B, 0xD00C] {
+            XCTAssertEqual(find(code)?.value, 0, "prop \(String(format: "0x%04X", code)) phải reset về 0")
+        }
+        XCTAssertNil(find(0xD017))                   // WB=auto → KHÔNG ghi Kelvin
+    }
+
+    // partial (mặc định): field nil KHÔNG sinh lệnh ghi.
+    func testPartialSkipsUnset() throws {
+        var r = Recipe(); r.filmSimulation = .provia
+        let w = try r.propertyWrites()               // fullReset = false
+        XCTAssertNil(w.first { $0.code == 0xD032 })  // clarity không được ghi
+        XCTAssertNil(w.first { $0.code == 0xD007 })  // DR không được ghi
+        XCTAssertEqual(w.count, 1)                    // chỉ có Film Sim
+    }
 }

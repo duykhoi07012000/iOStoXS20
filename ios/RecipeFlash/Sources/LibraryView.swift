@@ -27,7 +27,7 @@ struct LibraryView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Menu {
-                        Button { showImport = true } label: { Label("Import từ text", systemImage: "doc.text") }
+                        Button { showImport = true } label: { Label("Import (text hoặc ảnh)", systemImage: "doc.text.viewfinder") }
                         Button { store.add(Recipe(name: "New Recipe")) } label: { Label("Recipe trống", systemImage: "plus") }
                     } label: {
                         Image(systemName: "plus.circle.fill").font(.title2).foregroundColor(Theme.accent)
