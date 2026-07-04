@@ -48,29 +48,47 @@ jobs:
             exit 1
           fi
         working-directory: ios
-      - name: Đóng gói .ipa chưa ký
+      - name: Đóng gói .ipa + sinh apps.json (SideStore source)
+        env:
+          VER: "1.0.${{ github.run_number }}"
+          BUILD: "${{ github.run_number }}"
         run: |
           cd ios/build/Build/Products/Release-iphoneos
+          # Bump version (unsigned nên vá Info.plist sau build thoải mái) → SideStore/AltStore
+          # phát hiện được bản mới để auto-update.
+          plutil -replace CFBundleShortVersionString -string "$VER" RecipeFlash.app/Info.plist
+          plutil -replace CFBundleVersion -string "$BUILD" RecipeFlash.app/Info.plist
           echo "--- App Info.plist (khóa quan trọng) ---"
-          plutil -p RecipeFlash.app/Info.plist | grep -E "CFBundleIdentifier|CFBundleExecutable|CFBundlePackageType|MinimumOSVersion|CFBundleSupportedPlatforms|UIDeviceFamily" || true
-          echo "--- App contents ---"
-          ls -la RecipeFlash.app
+          plutil -p RecipeFlash.app/Info.plist | grep -E "CFBundleIdentifier|CFBundleExecutable|CFBundlePackageType|MinimumOSVersion|CFBundleSupportedPlatforms|UIDeviceFamily|CFBundleShortVersionString|CFBundleVersion" || true
           mkdir -p Payload
           cp -R RecipeFlash.app Payload/
           zip -qr RecipeFlash-unsigned.ipa Payload
-          echo "--- IPA listing ---"
-          unzip -l RecipeFlash-unsigned.ipa | head -20
+          export SIZE=$(stat -f%z RecipeFlash-unsigned.ipa)
+          echo "IPA size = $SIZE bytes, version = $VER"
+          python3 "$GITHUB_WORKSPACE/ci/make_source.py" apps.json
+          echo "--- apps.json ---"; cat apps.json
+          echo "--- IPA listing ---"; unzip -l RecipeFlash-unsigned.ipa | head -20
       - uses: actions/upload-artifact@v4
         with:
           name: RecipeFlash-unsigned-ipa
           path: ios/build/Build/Products/Release-iphoneos/RecipeFlash-unsigned.ipa
       # Đính .ipa thẳng vào Release "latest" → tải trực tiếp .ipa (không zip, tải trên
       # điện thoại cũng được, không cần login).
-      - name: Publish .ipa lên Release
+      - name: Publish .ipa + apps.json lên Release
         if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: "RecipeFlash — bản mới nhất (.ipa)"
-          body: "Tải file .ipa bên dưới, cài bằng AltStore/SideStore. Build tự động từ commit mới nhất."
-          files: ios/build/Build/Products/Release-iphoneos/RecipeFlash-unsigned.ipa
+          body: |
+            **Cách 1 (khuyên dùng) — SideStore/AltStore Source (cài + auto-update 1 chạm):**
+            Thêm source URL này vào SideStore → Sources → +:
+            `https://github.com/duykhoi07012000/iOStoXS20/releases/download/latest/apps.json`
+
+            **Cách 2 — tải .ipa thủ công:** tải `RecipeFlash-unsigned.ipa` bên dưới rồi
+            SideStore → My Apps → + → chọn file. (ĐỪNG tải từ Actions/Artifacts — đó là .zip.)
+
+            Build tự động từ commit mới nhất.
+          files: |
+            ios/build/Build/Products/Release-iphoneos/RecipeFlash-unsigned.ipa
+            ios/build/Build/Products/Release-iphoneos/apps.json
