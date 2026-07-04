@@ -100,10 +100,54 @@ def scrape_one(url: str) -> dict | None:
     return r
 
 
+RECIPE_HREF = re.compile(r'href="(https?://fujixweekly\.com/\d{4}/\d{2}/\d{2}/[^"#?]+)"')
+
+
+def _norm_url(u: str) -> str:
+    return u.split("#")[0].split("?")[0].rstrip("/").lower()
+
+
+def index_urls(idx: str) -> list[str]:
+    """URL recipe theo ĐÚNG thứ tự xuất hiện trong nội dung chính của trang index
+    (cắt sidebar/related/footer), dedupe giữ lần đầu. Đây là 'thứ tự web' người dùng muốn."""
+    start = idx.find("entry-content")
+    body = idx[start:] if start != -1 else idx
+    for marker in ('class="entry-footer"', 'id="comments"', 'class="sharedaddy"', 'id="jp-post-flair"'):
+        cut = body.find(marker)
+        if cut != -1:
+            body = body[:cut]
+            break
+    seen, urls = set(), []
+    for u in RECIPE_HREF.findall(body):
+        u = u.rstrip("/")
+        if _norm_url(u) not in seen:
+            seen.add(_norm_url(u))
+            urls.append(u)
+    if not urls or "kodachrome" not in urls[0].lower() or not (120 <= len(urls) <= 320):
+        print(f"[CANH BAO] index_urls: {len(urls)} link, dau={urls[0] if urls else None!r} "
+              f"— cau truc trang co the khac, kiem tra moc cat.")
+    return urls
+
+
+def reorder_existing():
+    """Sắp lại recipes_bundled.json theo thứ tự trang index (dựa field 'source'),
+    KHÔNG cào lại từng trang. URL không khớp → dồn về cuối (giữ tương đối, không xoá)."""
+    idx = fetch(INDEX)
+    order = {_norm_url(u): i for i, u in enumerate(index_urls(idx))}
+    data = json.load(open(OUT, encoding="utf-8"))
+    BIG = len(order) + len(data)
+    rank = lambda r: order.get(_norm_url(r.get("source") or ""), BIG)
+    data.sort(key=rank)   # sort ổn định → phần không khớp giữ nguyên thứ tự, nằm cuối
+    json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    unmatched = [r["name"] for r in data if rank(r) == BIG]
+    print(f"XONG reorder: {len(data)} recipe -> {OUT}")
+    print(f"  10 dau : {[r['name'] for r in data[:10]]}")
+    print(f"  Unmatched (don cuoi): {len(unmatched)} -> {unmatched[:12]}")
+
+
 def main():
     idx = fetch(INDEX)
-    urls = sorted(set(re.findall(r'href="(https?://fujixweekly\.com/\d{4}/\d{2}/\d{2}/[^"#]+)"', idx)))
-    urls = [u.rstrip("/") for u in urls]
+    urls = index_urls(idx)   # theo thứ tự trang (KHÔNG sort theo ngày như trước)
     limit = int(sys.argv[1]) if len(sys.argv) > 1 else len(urls)
     urls = urls[:limit]
     print(f"Tong {len(urls)} link. Bat dau cao...")
@@ -132,4 +176,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if "--reorder" in sys.argv:
+        reorder_existing()     # chỉ sắp lại JSON có sẵn theo thứ tự web (nhanh, không cào lại)
+    else:
+        main()
