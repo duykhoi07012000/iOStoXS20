@@ -57,6 +57,11 @@ struct SettingsView: View {
                     NavigationLink { HelpView.travel } label: { Label("Du lịch: nối qua hotspot iPhone", systemImage: "personalhotspot") }
                     NavigationLink { HelpView.sideStore } label: { Label("Giữ app sống bằng SideStore", systemImage: "arrow.down.app") }
                 }
+                Section("Nâng cao") {
+                    NavigationLink { ProbeView() } label: { Label("Dò giao thức video", systemImage: "chevron.left.forwardslash.chevron.right") }
+                    Text("Tìm property code cho chế độ quay (X-S20 dùng bộ code riêng cho video). Chụp A → đổi tay 1 thông số trên máy → Chụp B → xem code đổi.")
+                        .font(.caption).foregroundColor(.secondary)
+                }
                 Section {
                     Text("Fuji Recipe Flash • v0.2").font(.caption).foregroundColor(.secondary)
                 }

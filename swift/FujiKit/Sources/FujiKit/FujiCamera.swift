@@ -80,6 +80,25 @@ public final class FujiCamera {
         return rc
     }
 
+    /// Đọc RAW payload 1 property (GetDevicePropValue 0x1015). nil nếu máy không hỗ trợ code đó
+    /// ở chế độ đang đứng (rc ≠ OK). Dùng để dò/diff (vd tìm code miền video).
+    public func getPropRaw(_ code: UInt16) async throws -> Data? {
+        let (rc, data) = try await transact(.getDevicePropValue, params: [UInt32(code)])
+        return rc == PTP_RC_OK ? data : nil
+    }
+
+    /// Dò nhiều property → map [code: hex] cho các code đọc được (bỏ code lỗi). Chụp 2 lần rồi
+    /// diff để tìm code của thông số vừa đổi tay trên máy.
+    public func dump(_ codes: [UInt16]) async -> [UInt16: String] {
+        var out: [UInt16: String] = [:]
+        for c in codes {
+            if let d = try? await getPropRaw(c), !d.isEmpty {
+                out[c] = d.map { String(format: "%02x", $0) }.joined()
+            }
+        }
+        return out
+    }
+
     /// Áp cả recipe. Trả danh sách (mô tả, thành công?).
     /// - fullReset: mặc định true → field recipe không set sẽ được đưa về trung tính (0/OFF/Auto)
     ///   để look không "dính" thông số recipe áp trước. Đặt false để áp một phần (giữ giá trị cũ).
