@@ -25,6 +25,8 @@ public struct Recipe: Codable, Identifiable {
     public var author: String?
     /// Ghi chú hiển thị (ISO, exposure compensation…) — KHÔNG flash xuống máy.
     public var notes: [String: String] = [:]
+    /// URL ảnh mẫu (Fuji X Weekly) để xem trước — app tải lazy, KHÔNG nhúng vào .ipa.
+    public var sampleImageURL: String?
 
     public var filmSimulation: FilmSimulation?
     public var grain: GrainEffect?

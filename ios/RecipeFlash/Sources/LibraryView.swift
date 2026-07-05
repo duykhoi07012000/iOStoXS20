@@ -42,20 +42,35 @@ struct LibraryView: View {
 struct RecipeCard: View {
     let recipe: Recipe
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(recipe.displayName).font(Theme.mono(17, .bold)).foregroundColor(Theme.text)
-            if let f = recipe.filmSimulation {
-                Text(f.display).font(Theme.mono(12, .medium)).foregroundColor(Theme.textSoft)
+        HStack(spacing: 12) {
+            thumb
+            VStack(alignment: .leading, spacing: 8) {
+                Text(recipe.displayName).font(Theme.mono(17, .bold)).foregroundColor(Theme.text)
+                if let f = recipe.filmSimulation {
+                    Text(f.display).font(Theme.mono(12, .medium)).foregroundColor(Theme.textSoft)
+                }
+                HStack(spacing: 6) {
+                    if let dr = recipe.dynamicRange { chip(dr.display) }
+                    if let g = recipe.grain { chip(g.display) }
+                    if let a = recipe.author { chip(a) }
+                }
             }
-            HStack(spacing: 6) {
-                if let dr = recipe.dynamicRange { chip(dr.display) }
-                if let g = recipe.grain { chip(g.display) }
-                if let a = recipe.author { chip(a) }
-            }
+            Spacer(minLength: 0)
         }
-        .padding(16)
+        .padding(12)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Theme.card.opacity(0.55), in: RoundedRectangle(cornerRadius: 18))
+    }
+    private var thumb: some View {
+        Group {
+            if let s = recipe.sampleImageURL, let u = URL(string: s) {
+                AsyncImage(url: u) { phase in
+                    if let img = phase.image { img.resizable().aspectRatio(contentMode: .fill) }
+                    else { Theme.pill }
+                }
+            } else { Theme.pill }
+        }
+        .frame(width: 60, height: 60).clipped().clipShape(RoundedRectangle(cornerRadius: 12))
     }
     private func chip(_ s: String) -> some View {
         Text(s).font(Theme.mono(10, .semibold)).foregroundColor(Theme.text)

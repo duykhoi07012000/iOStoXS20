@@ -16,8 +16,7 @@ struct RecipeDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                LinearGradient(colors: [Theme.pill, Theme.card], startPoint: .leading, endPoint: .trailing)
-                    .frame(height: 96).clipShape(RoundedRectangle(cornerRadius: 18))
+                heroImage
 
                 Text(recipe.displayName).font(Theme.title()).foregroundColor(Theme.text)
 
@@ -70,6 +69,20 @@ struct RecipeDetailView: View {
         .sheet(isPresented: $showEdit) {
             NavigationStack { RecipeEditView(recipe: recipe) { store.update($0) } }
         }
+    }
+
+    private var heroImage: some View {
+        let fallback = LinearGradient(colors: [Theme.pill, Theme.card], startPoint: .leading, endPoint: .trailing)
+        return Group {
+            if let s = recipe.sampleImageURL, let u = URL(string: s) {
+                AsyncImage(url: u) { phase in
+                    if let img = phase.image { img.resizable().aspectRatio(contentMode: .fill) }
+                    else { fallback }
+                }
+            } else { fallback }
+        }
+        .frame(height: 200).frame(maxWidth: .infinity)
+        .clipped().clipShape(RoundedRectangle(cornerRadius: 18))
     }
 
     private func pairCell(_ row: DisplayRow?) -> some View {

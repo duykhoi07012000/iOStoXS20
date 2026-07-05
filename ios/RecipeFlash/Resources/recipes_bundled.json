@@ -1,5 +1,29 @@
 [
 {
+"name": "Kodachrome 64",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "0 to +2/3 (typically)"
+},
+"film_simulation": "classicChrome",
+"dynamic_range": "dr200",
+"grain": "weakSmall",
+"color_chrome_effect": "strong",
+"color_chrome_blue": "weak",
+"white_balance": "daylight",
+"wb_shift_red": 2,
+"wb_shift_blue": -5,
+"highlight_tone": 0,
+"shadow_tone": 0,
+"color": 2,
+"sharpness": 1,
+"clarity": 3,
+"noise_reduction": "m4",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2020/05/27/my-fujifilm-x100v-kodachrome-64-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/05/49942445158_392418419d_c.jpg?w=800"
+},
+{
 "name": "Kodachrome 25",
 "notes": {
 "iso": "Auto, up to ISO 1600",
@@ -20,7 +44,8 @@
 "clarity": 3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/11/30/fujifilm-x-e4-film-simulation-recipe-kodachrome-25"
+"source": "https://fujixweekly.com/2021/11/30/fujifilm-x-e4-film-simulation-recipe-kodachrome-25",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/11/51716555924_ea348d08e2_c.jpg?w=800"
 },
 {
 "name": "Kodachrome 1",
@@ -43,10 +68,11 @@
 "clarity": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/09/14/fujifilm-x100v-film-simulation-recipe-kodachrome-1"
+"source": "https://fujixweekly.com/2020/09/14/fujifilm-x100v-film-simulation-recipe-kodachrome-1",
+"sample_image": "https://i0.wp.com/s0.wp.com/_si/?w=800"
 },
 {
-"name": "Two Kodachrome Ii",
+"name": "Kodachrome II",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -66,19 +92,82 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/04/05/two-fujifilm-x-trans-iv-film-simulation-recipes-kodachrome-ii"
+"source": "https://fujixweekly.com/2021/04/05/two-fujifilm-x-trans-iv-film-simulation-recipes-kodachrome-ii",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/04/51092346906_ac8aed154c_c.jpg?w=800"
 },
 {
-"name": "Mccurry Kodachrome",
+"name": "McCurry Kodachrome",
 "notes": {},
 "film_simulation": "classicChrome",
 "dynamic_range": "dr100",
 "grain": "weakSmall",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2024/01/25/mccurry-kodachrome-a-fujifilm-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2024/01/25/mccurry-kodachrome-a-fujifilm-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/01/53460229914_f91cfa021b_h.jpg?w=800"
 },
 {
-"name": "Kodak Portra 400 V2",
+"name": "Kodak Vision3 250D",
+"notes": {},
+"film_simulation": "eterna",
+"dynamic_range": "dr100",
+"grain": "strongSmall",
+"color_chrome_effect": "strong",
+"color_chrome_blue": "off",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2023/11/23/kodak-vision3-250d-fujifilm-x-e4-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/07/51992861493_0f12e99a44_h.jpg?w=800"
+},
+{
+"name": "Kodak Portra 160",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "0 to +1 (typically)"
+},
+"film_simulation": "classicChrome",
+"dynamic_range": "dr400",
+"grain": "weakSmall",
+"color_chrome_effect": "strong",
+"color_chrome_blue": "strong",
+"wb_kelvin": 4900,
+"white_balance": "colorTemp",
+"wb_shift_red": 4,
+"wb_shift_blue": -6,
+"highlight_tone": -1,
+"shadow_tone": -2,
+"color": 0,
+"sharpness": -2,
+"clarity": -3,
+"noise_reduction": "m4",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2023/10/15/kodak-portra-160-fujifilm-x100v-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/10/53203425217_48397eb97c_h.jpg?w=800"
+},
+{
+"name": "Kodak Portra 400",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "+1/3 to +1 (typically)"
+},
+"film_simulation": "classicChrome",
+"dynamic_range": "auto",
+"grain": "strongSmall",
+"color_chrome_effect": "strong",
+"color_chrome_blue": "weak",
+"white_balance": "daylight",
+"wb_shift_red": 3,
+"wb_shift_blue": -5,
+"highlight_tone": -1,
+"shadow_tone": -2,
+"color": 2,
+"sharpness": -2,
+"clarity": 2,
+"noise_reduction": "m4",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2020/06/10/fujifilm-x100v-film-simulation-kodak-portra-400",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/06/49962111552_5371f744ab_c.jpg?w=800"
+},
+{
+"name": "Kodak Portra 400 v2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -99,7 +188,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/12/30/fujifilm-x100v-film-simulation-recipe-kodak-portra-400-v2"
+"source": "https://fujixweekly.com/2020/12/30/fujifilm-x100v-film-simulation-recipe-kodak-portra-400-v2",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/12/50380670723_f9049cf414_c.jpg?w=800"
 },
 {
 "name": "Kodak Portra 400 Warm",
@@ -123,10 +213,11 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/07/06/fujifilm-x-trans-iv-film-simulation-recipe-kodak-portra-400-warm"
+"source": "https://fujixweekly.com/2021/07/06/fujifilm-x-trans-iv-film-simulation-recipe-kodak-portra-400-warm",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/07/51293904165_68ae23df12_c.jpg?w=800"
 },
 {
-"name": "Reggies Portra",
+"name": "Reggie’s Portra",
 "notes": {
 "iso": "Auto, up to ISO 6400"
 },
@@ -145,10 +236,11 @@
 "clarity": 0,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/06/11/fujifilm-x-trans-iv-film-simulation-recipe-reggies-portra"
+"source": "https://fujixweekly.com/2022/06/11/fujifilm-x-trans-iv-film-simulation-recipe-reggies-portra",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/06/52136636836_f0a243d005_c.jpg?w=800"
 },
 {
-"name": "Portra Style",
+"name": "Portra-Style",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -167,7 +259,8 @@
 "clarity": 3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/09/22/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-portra-style"
+"source": "https://fujixweekly.com/2021/09/22/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-portra-style",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/09/51487188429_23f3206d01_c.jpg?w=800"
 },
 {
 "name": "Kodak Portra 800",
@@ -191,10 +284,11 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/11/03/fujifilm-x100v-film-simulation-recipe-kodak-portra-800"
+"source": "https://fujixweekly.com/2020/11/03/fujifilm-x100v-film-simulation-recipe-kodak-portra-800",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/11/50561864987_688987ba85_c.jpg?w=800"
 },
 {
-"name": "Kodak Portra 800 V2",
+"name": "Kodak Portra 800 v2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-2/3 to +1 (typically)"
@@ -214,10 +308,11 @@
 "clarity": -5,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/05/17/fujifilm-x-trans-iv-film-simulation-recipe-kodak-portra-800-v2"
+"source": "https://fujixweekly.com/2021/05/17/fujifilm-x-trans-iv-film-simulation-recipe-kodak-portra-800-v2",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/05/51180149035_bd740ebc52_c.jpg?w=800"
 },
 {
-"name": "Kodak Portra 800 V3",
+"name": "Kodak Portra 800 v3",
 "notes": {},
 "film_simulation": "classicChrome",
 "dynamic_range": "dr400",
@@ -225,10 +320,11 @@
 "color_chrome_effect": "strong",
 "color_chrome_blue": "weak",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2024/02/14/kodak-portra-800-v3-fujifilm-x-t5-x-trans-v-x-e4-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2024/02/14/kodak-portra-800-v3-fujifilm-x-t5-x-trans-v-x-e4-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/02/53524156873_a60b1fef1c_h.jpg?w=800"
 },
 {
-"name": "Kodak Gold V2",
+"name": "Kodak Gold v2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -249,7 +345,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/01/18/fujifilm-x-trans-iv-film-simulation-recipe-kodak-gold-v2"
+"source": "https://fujixweekly.com/2022/01/18/fujifilm-x-trans-iv-film-simulation-recipe-kodak-gold-v2",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/01/51827899632_7d31f20b62_c.jpg?w=800"
 },
 {
 "name": "Kodak Ultramax 400",
@@ -272,7 +369,8 @@
 "clarity": 3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/08/09/fujifilm-x100v-film-simulation-recipe-kodak-ultramax-400"
+"source": "https://fujixweekly.com/2020/08/09/fujifilm-x100v-film-simulation-recipe-kodak-ultramax-400",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/08/50174272833_412c04112c_c.jpg?w=800"
 },
 {
 "name": "Kodak Max 800",
@@ -296,11 +394,15 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/08/23/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-kodak-max-800"
+"source": "https://fujixweekly.com/2022/08/23/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-kodak-max-800",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/08/52306720134_dffbedb519_c.jpg?w=800"
 },
 {
 "name": "Kodak Royal Gold 400",
-"notes": {},
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "+1/3 to +2/3 (typically)"
+},
 "film_simulation": "classicNeg",
 "dynamic_range": "dr400",
 "grain": "strongSmall",
@@ -313,8 +415,11 @@
 "shadow_tone": 1,
 "color": 4,
 "sharpness": -1,
+"clarity": -3,
+"noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2024/03/06/kodak-royal-gold-400-fujifilm-x-trans-iv-x-trans-v-film-simulation-recipe"
+"source": "https://fujixweekly.com/2024/03/06/kodak-royal-gold-400-fujifilm-x-trans-iv-x-trans-v-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/03/53571290427_0cee583444_c.jpg?w=800"
 },
 {
 "name": "Kodak Ektar 100",
@@ -338,7 +443,8 @@
 "clarity": 3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/08/10/fujifilm-x100v-film-simulation-recipe-kodak-ektar-100"
+"source": "https://fujixweekly.com/2020/08/10/fujifilm-x100v-film-simulation-recipe-kodak-ektar-100",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/08/50207058698_99041b012e_c.jpg?w=800"
 },
 {
 "name": "Elite Chrome 200",
@@ -361,7 +467,8 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/11/01/fujifilm-x-trans-iv-film-simulation-recipe-elite-chrome-200"
+"source": "https://fujixweekly.com/2021/11/01/fujifilm-x-trans-iv-film-simulation-recipe-elite-chrome-200",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/10/51645824989_52f01b8d6d_c.jpg?w=800"
 },
 {
 "name": "Kodak High Definition Plus 200",
@@ -385,7 +492,32 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/12/14/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-kodak-high-definition-plus-200"
+"source": "https://fujixweekly.com/2021/12/14/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-kodak-high-definition-plus-200",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/12/51745060046_c62da9f443_c.jpg?w=800"
+},
+{
+"name": "Kodak Emulsion",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "0 to +2/3 (typically)"
+},
+"film_simulation": "classicChrome",
+"dynamic_range": "dr400",
+"grain": "strongLarge",
+"color_chrome_effect": "strong",
+"color_chrome_blue": "off",
+"white_balance": "shade",
+"wb_shift_red": -2,
+"wb_shift_blue": 2,
+"highlight_tone": -2,
+"shadow_tone": -2,
+"color": 3,
+"sharpness": -2,
+"clarity": -3,
+"noise_reduction": "m4",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2026/05/02/kodak-emulsion-a-fujifilm-recipe-for-x-trans-iv-cameras",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/02/53505516414_9ac608109a_h.jpg?w=800"
 },
 {
 "name": "Old Kodak",
@@ -408,7 +540,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/01/10/fujifilm-x-e4-film-simulation-recipe-old-kodak"
+"source": "https://fujixweekly.com/2022/01/10/fujifilm-x-e4-film-simulation-recipe-old-kodak",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/01/51812772866_e2c216baaf_c.jpg?w=800"
 },
 {
 "name": "Old Ektachrome",
@@ -431,10 +564,11 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/03/05/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-old-ektachrome"
+"source": "https://fujixweekly.com/2022/03/05/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-old-ektachrome",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/03/51920402893_c7c79e3212_c.jpg?w=800"
 },
 {
-"name": "Four Kodaneg Vc Nc",
+"name": "KodaNeg VC & NC",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -454,7 +588,8 @@
 "clarity": 3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/10/13/four-fujifilm-x-trans-iv-film-simulation-recipes-kodaneg-vc-nc"
+"source": "https://fujixweekly.com/2022/10/13/four-fujifilm-x-trans-iv-film-simulation-recipes-kodaneg-vc-nc",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/10/52423451191_e68beb82f8_c.jpg?w=800"
 },
 {
 "name": "Kodak Brilliance",
@@ -477,10 +612,11 @@
 "clarity": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/03/29/fujifilm-x-trans-iv-film-simulation-recipe-kodak-brilliance"
+"source": "https://fujixweekly.com/2022/03/29/fujifilm-x-trans-iv-film-simulation-recipe-kodak-brilliance",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/03/51957857780_87edc43e5b_c.jpg?w=800"
 },
 {
-"name": "Classic Color And",
+"name": "Classic Color",
 "notes": {},
 "film_simulation": "classicChrome",
 "dynamic_range": "dr400",
@@ -488,10 +624,11 @@
 "color_chrome_effect": "strong",
 "color_chrome_blue": "strong",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2024/04/22/classic-color-fujifilm-x-t5-x-trans-v-and-x-e4-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2024/04/22/classic-color-fujifilm-x-t5-x-trans-v-and-x-e4-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/04/53597872816_c00d59f55f_h.jpg?w=800"
 },
 {
-"name": "Using Ai To Create Urban Dreams",
+"name": "Urban Dreams",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -511,7 +648,8 @@
 "clarity": 2,
 "noise_reduction": "m2",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2023/03/21/using-ai-to-create-film-simulation-recipes-urban-dreams-x100v-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2023/03/21/using-ai-to-create-film-simulation-recipes-urban-dreams-x100v-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/03/52761701842_c52f7f6a1a_c.jpg?w=800"
 },
 {
 "name": "Pure Negative",
@@ -534,7 +672,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/07/21/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-pure-negative"
+"source": "https://fujixweekly.com/2022/07/21/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-pure-negative",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/07/52231908506_52bda20b9c_c.jpg?w=800"
 },
 {
 "name": "Chrome Slide",
@@ -557,7 +696,8 @@
 "clarity": 3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/10/31/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-chrome-slide"
+"source": "https://fujixweekly.com/2022/10/31/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-chrome-slide",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/10/52468372049_8f042ed9dc_c.jpg?w=800"
 },
 {
 "name": "Positive Film",
@@ -580,7 +720,8 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/06/01/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-positive-film"
+"source": "https://fujixweekly.com/2021/06/01/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-positive-film",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/06/51203519003_9783252ef2_c.jpg?w=800"
 },
 {
 "name": "September Summer",
@@ -604,7 +745,8 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/09/26/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-september-summer"
+"source": "https://fujixweekly.com/2022/09/26/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-september-summer",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/09/52381524798_514d793365_c.jpg?w=800"
 },
 {
 "name": "Pacific Blues",
@@ -628,7 +770,8 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/08/04/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-pacific-blues"
+"source": "https://fujixweekly.com/2022/08/04/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-pacific-blues",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/08/52263460179_5aaaffa1e5_c.jpg?w=800"
 },
 {
 "name": "Nostalgia Color",
@@ -652,7 +795,8 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/04/04/fujifilm-x-trans-iv-film-simulation-recipe-nostalgia-color"
+"source": "https://fujixweekly.com/2022/04/04/fujifilm-x-trans-iv-film-simulation-recipe-nostalgia-color",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/04/51980411046_c1c26af6c2_c.jpg?w=800"
 },
 {
 "name": "Nostalgic Print",
@@ -676,10 +820,11 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/06/28/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-nostalgic-print"
+"source": "https://fujixweekly.com/2022/06/28/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-nostalgic-print",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/06/52178400324_c4de7eb00d_c.jpg?w=800"
 },
 {
-"name": "Nostalgic Negative Nostalgic Negative",
+"name": "Nostalgic Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -699,7 +844,8 @@
 "clarity": -5,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/02/07/new-nostalgic-negative-film-simulation-x-trans-iv-nostalgic-negative-recipe"
+"source": "https://fujixweekly.com/2021/02/07/new-nostalgic-negative-film-simulation-x-trans-iv-nostalgic-negative-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/02/50913099247_209a645f65_c.jpg?w=800"
 },
 {
 "name": "Vintage Negative",
@@ -722,7 +868,8 @@
 "clarity": -5,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/11/30/fujifilm-x-trans-iv-film-simulation-recipe-vintage-negative"
+"source": "https://fujixweekly.com/2021/11/30/fujifilm-x-trans-iv-film-simulation-recipe-vintage-negative",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/11/51713138227_b515f5ccb3_c.jpg?w=800"
 },
 {
 "name": "Vintage Color",
@@ -746,10 +893,11 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/01/27/fujifilm-x100v-x-trans-iv-film-simulation-recipe-vintage-color"
+"source": "https://fujixweekly.com/2022/01/27/fujifilm-x100v-x-trans-iv-film-simulation-recipe-vintage-color",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/05/51142296733_4732b363ed_c.jpg?w=800"
 },
 {
-"name": "Vintage Color V2",
+"name": "Vintage Color v2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +1 (typically)"
@@ -770,7 +918,8 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/02/07/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-vintage-color-v2"
+"source": "https://fujixweekly.com/2022/02/07/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-vintage-color-v2",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/02/51868428363_e3ef6ae7d7_c.jpg?w=800"
 },
 {
 "name": "Vintage Analog",
@@ -794,7 +943,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/09/07/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-vintage-analog"
+"source": "https://fujixweekly.com/2022/09/07/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-vintage-analog",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/09/52301979146_0f5e466e29_c.jpg?w=800"
 },
 {
 "name": "Vintage Print",
@@ -805,7 +955,8 @@
 "color_chrome_effect": "strong",
 "color_chrome_blue": "strong",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2024/01/12/vintage-print-fujifilm-x-e4-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2024/01/12/vintage-print-fujifilm-x-e4-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/01/52301967196_e271186062_h.jpg?w=800"
 },
 {
 "name": "Vintage Vibes",
@@ -829,7 +980,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/04/21/fujifilm-x-trans-iv-film-simulation-recipe-vintage-vibes"
+"source": "https://fujixweekly.com/2021/04/21/fujifilm-x-trans-iv-film-simulation-recipe-vintage-vibes",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/04/51121251025_9cbf297240_c.jpg?w=800"
 },
 {
 "name": "Timeless Negative",
@@ -852,7 +1004,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/12/15/fujifilm-x100v-x-trans-iv-film-simulation-recipe-timeless-negative"
+"source": "https://fujixweekly.com/2022/12/15/fujifilm-x100v-x-trans-iv-film-simulation-recipe-timeless-negative",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/12/52563488732_1689c90461_c.jpg?w=800"
 },
 {
 "name": "Eterna Summer",
@@ -863,10 +1016,11 @@
 "color_chrome_effect": "strong",
 "color_chrome_blue": "strong",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2024/04/08/eterna-summer-fujifilm-x-trans-iv-x-trans-v-film-simulation-recipe"
+"source": "https://fujixweekly.com/2024/04/08/eterna-summer-fujifilm-x-trans-iv-x-trans-v-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/04/53597009368_bfd6dc7fff_h.jpg?w=800"
 },
 {
-"name": "Eterna V2",
+"name": "Eterna v2",
 "notes": {},
 "film_simulation": "eterna",
 "dynamic_range": "dr400",
@@ -881,7 +1035,8 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/04/27/fujifilm-x-trans-iv-film-simulation-recipe-eterna-v2"
+"source": "https://fujixweekly.com/2021/04/27/fujifilm-x-trans-iv-film-simulation-recipe-eterna-v2",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/04/51143338835_b6e69d6287_c.jpg?w=800"
 },
 {
 "name": "Vintage Eterna",
@@ -891,7 +1046,8 @@
 "grain": "strongSmall",
 "color_chrome_effect": "off",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2024/02/05/vintage-eterna-fujifilm-x-trans-v-x-trans-iv-x-h1-film-simulation-recipes"
+"source": "https://fujixweekly.com/2024/02/05/vintage-eterna-fujifilm-x-trans-v-x-trans-iv-x-h1-film-simulation-recipes",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/02/53506782744_ebe6a6bb9f_c.jpg?w=800"
 },
 {
 "name": "Arizona Analog",
@@ -914,10 +1070,11 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/08/02/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-arizona-analog"
+"source": "https://fujixweekly.com/2022/08/02/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-arizona-analog",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/08/52259311075_1702bca4a7_c.jpg?w=800"
 },
 {
-"name": "Chrome",
+"name": "1960 Chrome",
 "notes": {},
 "film_simulation": "eternaBleachBypass",
 "dynamic_range": "dr400",
@@ -925,11 +1082,15 @@
 "color_chrome_effect": "strong",
 "color_chrome_blue": "weak",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2024/07/15/1960-chrome-fujifilm-x-t5-x-trans-v-x-e4-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2024/07/15/1960-chrome-fujifilm-x-t5-x-trans-v-x-e4-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/07/53598398750_33f79b3042_h.jpg?w=800"
 },
 {
-"name": "Kodak",
-"notes": {},
+"name": "1981 Kodak",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "-1/3 to +1/3 (typically)"
+},
 "film_simulation": "eterna",
 "dynamic_range": "dr200",
 "grain": "strongSmall",
@@ -942,8 +1103,11 @@
 "shadow_tone": 4,
 "color": -4,
 "sharpness": -2,
+"clarity": -4,
+"noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2025/01/22/1981-kodak-fujifilm-x100v-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2025/01/22/1981-kodak-fujifilm-x100v-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/06/52999270198_ce373851dc_c.jpg?w=800"
 },
 {
 "name": "Fujicolor Reala 100",
@@ -966,7 +1130,8 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/06/20/fujifilm-x100v-film-simulation-recipe-fujicolor-reala-100"
+"source": "https://fujixweekly.com/2020/06/20/fujifilm-x100v-film-simulation-recipe-fujicolor-reala-100",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/06/50013653888_8fac2170ab_c.jpg?w=800"
 },
 {
 "name": "Fujicolor Superia 100",
@@ -989,7 +1154,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/06/09/fujifilm-x100v-film-simulation-recipe-fujicolor-superia-100"
+"source": "https://fujixweekly.com/2020/06/09/fujifilm-x100v-film-simulation-recipe-fujicolor-superia-100",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/06/49970278763_92739c0610_c.jpg?w=800"
 },
 {
 "name": "Superia Xtra 400",
@@ -1012,7 +1178,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/11/10/fujifilm-x100v-film-simulation-recipe-superia-xtra-400"
+"source": "https://fujixweekly.com/2020/11/10/fujifilm-x100v-film-simulation-recipe-superia-xtra-400",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/11/50581805032_8d5ba26d1c_c.jpg?w=800"
 },
 {
 "name": "Superia Premium 400",
@@ -1036,7 +1203,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/12/07/fujifilm-x100v-film-simulation-recipe-superia-premium-400"
+"source": "https://fujixweekly.com/2020/12/07/fujifilm-x100v-film-simulation-recipe-superia-premium-400",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/12/50654707406_069f306c21_c.jpg?w=800"
 },
 {
 "name": "Fujicolor Superia 800",
@@ -1059,7 +1227,8 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/07/27/fujifilm-x100v-film-simulation-recipe-fujicolor-superia-800"
+"source": "https://fujixweekly.com/2020/07/27/fujifilm-x100v-film-simulation-recipe-fujicolor-superia-800",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/07/50149682498_b7222848fc_c.jpg?w=800"
 },
 {
 "name": "Fujicolor Superia 1600",
@@ -1081,7 +1250,8 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/06/29/fujifilm-x100v-film-simulation-recipe-fujicolor-superia-1600"
+"source": "https://fujixweekly.com/2020/06/29/fujifilm-x100v-film-simulation-recipe-fujicolor-superia-1600",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/06/50039472341_127cb1931d_c.jpg?w=800"
 },
 {
 "name": "Fujicolor Natura 1600",
@@ -1105,7 +1275,8 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/05/06/fujifilm-x-e4-film-simulation-recipe-fujicolor-natura-1600"
+"source": "https://fujixweekly.com/2022/05/06/fujifilm-x-e4-film-simulation-recipe-fujicolor-natura-1600",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/05/52053243293_b7147149fc_c.jpg?w=800"
 },
 {
 "name": "Superia Summer",
@@ -1129,10 +1300,11 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2023/03/09/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-superia-summer"
+"source": "https://fujixweekly.com/2023/03/09/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-superia-summer",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/03/52737496513_0fe0029e41_c.jpg?w=800"
 },
 {
-"name": "Fujicolor Nps 160 Pulled",
+"name": "Fujicolor NPS 160 Pulled",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 1/3 (typically)"
@@ -1151,7 +1323,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/05/30/fujifilm-x-trans-iv-x-pro3-x100v-x-t4-x-s10-x-e4-film-simulation-recipe-fujicolor-nps-160-pulled"
+"source": "https://fujixweekly.com/2021/05/30/fujifilm-x-trans-iv-x-pro3-x100v-x-t4-x-s10-x-e4-film-simulation-recipe-fujicolor-nps-160-pulled",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/05/dscf5254.jpg?w=800"
 },
 {
 "name": "Fujicolor 100 Gold",
@@ -1174,7 +1347,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/11/29/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-100-gold"
+"source": "https://fujixweekly.com/2022/11/29/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-100-gold",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/11/52532345803_635202515a_c.jpg?w=800"
 },
 {
 "name": "Magenta Negative",
@@ -1198,7 +1372,8 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2023/08/21/magenta-negative-fujifilm-x-e4-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2023/08/21/magenta-negative-fujifilm-x-e4-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/08/52144126029_71be9d4047_h.jpg?w=800"
 },
 {
 "name": "Fujicolor C200",
@@ -1220,11 +1395,15 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/05/13/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-c200"
+"source": "https://fujixweekly.com/2021/05/13/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-c200",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/05/51156028811_55c0b15f2b_c.jpg?w=800"
 },
 {
-"name": "Fujicolor C200 V2",
-"notes": {},
+"name": "Fujicolor C200 v2",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "0 to +2/3 (typically)"
+},
 "film_simulation": "classicNeg",
 "dynamic_range": "dr100",
 "grain": "weakSmall",
@@ -1237,11 +1416,14 @@
 "shadow_tone": -2,
 "color": 4,
 "sharpness": -1,
+"clarity": -2,
+"noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2026/01/19/fujicolor-c200-v2-fujifilm-x100v-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2026/01/19/fujicolor-c200-v2-fujifilm-x100v-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/01/53458081156_f68a9409eb_h.jpg?w=800"
 },
 {
-"name": "Fujicolor Pro 400h",
+"name": "Fujicolor Pro 400H",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1 to +1 2/3 (typically), but try between +1/3 to +2 2/3"
@@ -1262,10 +1444,11 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/05/16/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-pro-400h"
+"source": "https://fujixweekly.com/2021/05/16/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-pro-400h",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/05/51177884568_ffd2e14cd0_c.jpg?w=800"
 },
 {
-"name": "Fujicolor Nph",
+"name": "Fujicolor NPH",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -1286,7 +1469,8 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/12/23/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-nph"
+"source": "https://fujixweekly.com/2021/12/23/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-nph",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/12/51767899340_3d651545ff_c.jpg?w=800"
 },
 {
 "name": "Fujicolor Negative",
@@ -1309,7 +1493,8 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/05/09/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-negative"
+"source": "https://fujixweekly.com/2021/05/09/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-negative",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/05/51165495481_61c870a79e_c.jpg?w=800"
 },
 {
 "name": "Fujicolor Analog",
@@ -1333,10 +1518,11 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/08/17/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-analog"
+"source": "https://fujixweekly.com/2022/08/17/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujicolor-analog",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/08/52293123065_8bab26d81c_c.jpg?w=800"
 },
 {
-"name": "Fujicolor Super Hg",
+"name": "Fujicolor Super HG",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -1356,10 +1542,11 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/07/24/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-super-hg-part-1-of-3"
+"source": "https://fujixweekly.com/2021/07/24/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-super-hg-part-1-of-3",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/07/51316158211_c5522078a6_c.jpg?w=800"
 },
 {
-"name": "Fujicolor Super Hg V2",
+"name": "Fujicolor Super HG v2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 (typically)"
@@ -1379,10 +1566,11 @@
 "clarity": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/07/26/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-super-hg-v2-part-2-of-3"
+"source": "https://fujixweekly.com/2021/07/26/fujifilm-x-trans-iv-film-simulation-recipe-fujicolor-super-hg-v2-part-2-of-3",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/07/51325276863_4a6f013a9c_c.jpg?w=800"
 },
 {
-"name": "Super Hg Astia",
+"name": "Super HG Astia",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 (typically)"
@@ -1402,7 +1590,8 @@
 "clarity": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/07/26/fujifilm-x-trans-iv-film-simulation-recipe-super-hg-astia-part-3-of-3"
+"source": "https://fujixweekly.com/2021/07/26/fujifilm-x-trans-iv-film-simulation-recipe-super-hg-astia-part-3-of-3",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/07/51326081465_6aedd3a521_c.jpg?w=800"
 },
 {
 "name": "Standard Provia",
@@ -1425,10 +1614,11 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/02/17/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-standard-provia"
+"source": "https://fujixweekly.com/2022/02/17/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-standard-provia",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/02/51887259871_18b77b9606_c.jpg?w=800"
 },
 {
-"name": "Fujichrome Provia 100f",
+"name": "Fujichrome Provia 100F",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -1448,7 +1638,8 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/10/05/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujichrome-provia-100f"
+"source": "https://fujixweekly.com/2022/10/05/fujifilm-x100v-x-trans-iv-film-simulation-recipe-fujichrome-provia-100f",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/10/52407347030_a3f343a53e_c.jpg?w=800"
 },
 {
 "name": "Color Negative 400",
@@ -1471,11 +1662,15 @@
 "clarity": -5,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/01/04/fujifilm-x100v-film-simulation-recipe-color-negative-400"
+"source": "https://fujixweekly.com/2021/01/04/fujifilm-x100v-film-simulation-recipe-color-negative-400",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/01/50789021003_e13ec22cb3_c.jpg?w=800"
 },
 {
-"name": "Pro Negative 160c",
-"notes": {},
+"name": "PRO Negative 160C IV",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "0 to +2/3 (typically)"
+},
 "film_simulation": "proNegHi",
 "dynamic_range": "dr400",
 "grain": "weakSmall",
@@ -1488,11 +1683,14 @@
 "shadow_tone": -1.5,
 "color": 4,
 "sharpness": -1,
+"clarity": -2,
+"noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2024/03/28/pro-negative-160c-film-simulation-recipe-for-fujifilm-x-trans-iv-x-trans-v"
+"source": "https://fujixweekly.com/2024/03/28/pro-negative-160c-film-simulation-recipe-for-fujifilm-x-trans-iv-x-trans-v",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/03/53617292731_55675172d3_h.jpg?w=800"
 },
 {
-"name": "Agfachrome Rs 100",
+"name": "AgfaChrome RS 100",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +1/3 (typically)"
@@ -1512,7 +1710,8 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/08/03/fujifilm-x-trans-iv-film-simulation-recipe-agfachrome-rs-100"
+"source": "https://fujixweekly.com/2021/08/03/fujifilm-x-trans-iv-film-simulation-recipe-agfachrome-rs-100",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/08/51338651279_3491453e67_c.jpg?w=800"
 },
 {
 "name": "Agfa Ultra 100",
@@ -1535,7 +1734,8 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/02/14/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-agfa-ultra-100"
+"source": "https://fujixweekly.com/2022/02/14/fujifilm-x-pro3-x-trans-iv-film-simulation-recipe-agfa-ultra-100",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/02/51880800327_86c69c4293_c.jpg?w=800"
 },
 {
 "name": "Agfa Vista 100",
@@ -1559,10 +1759,11 @@
 "clarity": 3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/09/28/fujifilm-x100v-film-simulation-recipe-agfa-vista-100"
+"source": "https://fujixweekly.com/2020/09/28/fujifilm-x100v-film-simulation-recipe-agfa-vista-100",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/09/50302475993_ecdf407e5d_c.jpg?w=800"
 },
 {
-"name": "Classic Negative",
+"name": "[Not] Classic Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -1582,10 +1783,11 @@
 "clarity": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/06/01/not-my-fujifilm-x100v-classic-negative-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/06/01/not-my-fujifilm-x100v-classic-negative-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/05/49905396751_397fef7330_c.jpg?w=800"
 },
 {
-"name": "Snow Fun With Fujinon 90mm Amandas Classic Negative",
+"name": "Amanda’s Classic Negative",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1"
@@ -1605,7 +1807,8 @@
 "clarity": 0,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/01/27/snow-fun-with-fujifilm-x-t4-fujinon-90mm-new-film-simulation-recipe-amandas-classic-negative"
+"source": "https://fujixweekly.com/2021/01/27/snow-fun-with-fujifilm-x-t4-fujinon-90mm-new-film-simulation-recipe-amandas-classic-negative",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/01/50877420908_674151c41d_c.jpg?w=800"
 },
 {
 "name": "Retro Gold",
@@ -1628,7 +1831,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/11/22/fujifilm-x-trans-iv-film-simulation-recipe-retro-gold"
+"source": "https://fujixweekly.com/2021/11/22/fujifilm-x-trans-iv-film-simulation-recipe-retro-gold",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/11/51696760374_16cff23497_c.jpg?w=800"
 },
 {
 "name": "Retro Gold Low Contrast",
@@ -1651,10 +1855,11 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/11/23/fujifilm-x-trans-iv-film-simulation-recipe-retro-gold-low-contrast"
+"source": "https://fujixweekly.com/2021/11/23/fujifilm-x-trans-iv-film-simulation-recipe-retro-gold-low-contrast",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/11/51699683962_086030dd67_c.jpg?w=800"
 },
 {
-"name": "Santacolor",
+"name": "SantaColor",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+2/3 to +1 (typically)"
@@ -1675,7 +1880,8 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/06/29/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-santacolor"
+"source": "https://fujixweekly.com/2022/06/29/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-santacolor",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/06/52181097051_4bed0aa2e4_c.jpg?w=800"
 },
 {
 "name": "Creamy Color",
@@ -1699,7 +1905,8 @@
 "clarity": -5,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/02/23/fujifilm-x-trans-iv-film-simulation-recipe-creamy-color"
+"source": "https://fujixweekly.com/2021/02/23/fujifilm-x-trans-iv-film-simulation-recipe-creamy-color",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/02/50954603902_d1fa6b6c42_c.jpg?w=800"
 },
 {
 "name": "Nature Neon",
@@ -1722,7 +1929,8 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/09/30/fujifilm-x100v-film-simulation-recipe-nature-neon"
+"source": "https://fujixweekly.com/2020/09/30/fujifilm-x100v-film-simulation-recipe-nature-neon",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/09/50398413082_0ce27d325d_c.jpg?w=800"
 },
 {
 "name": "Grizzly Ride",
@@ -1746,7 +1954,8 @@
 "clarity": -5,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/05/19/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-grizzly-ride"
+"source": "https://fujixweekly.com/2021/05/19/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-grizzly-ride",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/05/51160461101_d26bca1ed1_c.jpg?w=800"
 },
 {
 "name": "Analog Gold",
@@ -1769,10 +1978,11 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/09/27/fujifilm-x-e4-film-simulation-recipe-analog-gold"
+"source": "https://fujixweekly.com/2022/09/27/fujifilm-x-e4-film-simulation-recipe-analog-gold",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/09/52387217185_ef517f7610_c.jpg?w=800"
 },
 {
-"name": "Gaf 500",
+"name": "GAF 500",
 "notes": {
 "iso": "12800",
 "exposure_compensation": "-2/3 to +2/3 (typically)"
@@ -1793,7 +2003,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/09/01/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-gaf-500"
+"source": "https://fujixweekly.com/2022/09/01/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-gaf-500",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/09/52326217660_e4951fce02_c.jpg?w=800"
 },
 {
 "name": "Low Key",
@@ -1816,10 +2027,11 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/06/15/fujifilm-x-trans-iv-film-simulation-recipe-low-key"
+"source": "https://fujixweekly.com/2022/06/15/fujifilm-x-trans-iv-film-simulation-recipe-low-key",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/06/52148113392_b5d93e4209_c.jpg?w=800"
 },
 {
-"name": "Rockwell Velvia",
+"name": "The Rockwell (Velvia)",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -1839,7 +2051,8 @@
 "clarity": 5,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/07/18/fujifilm-x100v-film-simulation-recipe-the-rockwell-velvia"
+"source": "https://fujixweekly.com/2020/07/18/fujifilm-x100v-film-simulation-recipe-the-rockwell-velvia",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/07/50082230662_ee04889e7f_c.jpg?w=800"
 },
 {
 "name": "Vibrant Velvia",
@@ -1862,7 +2075,47 @@
 "clarity": 4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/05/15/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-vibrant-velvia"
+"source": "https://fujixweekly.com/2022/05/15/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-vibrant-velvia",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/05/52073617700_eab114fec4_c.jpg?w=800"
+},
+{
+"name": "Bleach Bypass",
+"notes": {},
+"film_simulation": "classicNeg",
+"dynamic_range": "dr100",
+"highlight_tone": 2,
+"shadow_tone": 4,
+"color": -4,
+"sharpness": -1,
+"clarity": null,
+"noise_reduction": "m4",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2020/07/08/fujifilm-x100v-film-simulation-recipe-bleach-bypass",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/07/49984661643_78f5943a16_c.jpg?w=800"
+},
+{
+"name": "Eterna Bleach Bypass",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "-2/3 to -1 1/3 (typically)"
+},
+"film_simulation": "eternaBleachBypass",
+"dynamic_range": "dr400",
+"grain": "weakSmall",
+"color_chrome_effect": "off",
+"color_chrome_blue": "strong",
+"white_balance": "daylight",
+"wb_shift_red": 0,
+"wb_shift_blue": 0,
+"highlight_tone": 2.5,
+"shadow_tone": -1.5,
+"color": -4,
+"sharpness": 0,
+"clarity": 2,
+"noise_reduction": "m4",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2023/09/27/eterna-bleach-bypass-fujifilm-x-e4-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/09/53218437225_8c3a8ecc2f_c.jpg?w=800"
 },
 {
 "name": "Muted Color",
@@ -1885,10 +2138,11 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/10/18/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-muted-color"
+"source": "https://fujixweekly.com/2021/10/18/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-muted-color",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/10/51596503808_3a2f7c579d_c.jpg?w=800"
 },
 {
-"name": "Ferrania Solaris Fg 400",
+"name": "Ferrania Solaris FG 400",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -1909,10 +2163,11 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/11/05/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-ferrania-solaris-fg-400"
+"source": "https://fujixweekly.com/2021/11/05/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-ferrania-solaris-fg-400",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/11/51654268462_e9375dac82_c.jpg?w=800"
 },
 {
-"name": "Lomochrome Metropolis",
+"name": "LomoChrome Metropolis",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -1932,7 +2187,8 @@
 "clarity": 4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/04/11/fujifilm-x-trans-iv-film-simulation-recipe-lomochrome-metropolis"
+"source": "https://fujixweekly.com/2021/04/11/fujifilm-x-trans-iv-film-simulation-recipe-lomochrome-metropolis",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/04/51030063882_6f6f6f7618_c.jpg?w=800"
 },
 {
 "name": "Silver Summer",
@@ -1956,11 +2212,15 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/10/13/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-silver-summer"
+"source": "https://fujixweekly.com/2021/10/13/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-silver-summer",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/07/51289725328_789618d08d_c.jpg?w=800"
 },
 {
 "name": "Kodachrome Blue",
-"notes": {},
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "-2/3 to 0 (typically)"
+},
 "film_simulation": "eternaBleachBypass",
 "dynamic_range": "dr200",
 "grain": "weakSmall",
@@ -1974,11 +2234,14 @@
 "shadow_tone": -0.5,
 "color": 4,
 "sharpness": 1,
+"clarity": 3,
+"noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2025/05/19/kodachrome-blue-fujifilm-x-e4-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2025/05/19/kodachrome-blue-fujifilm-x-e4-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/08/53127781371_9505dfa303_h.jpg?w=800"
 },
 {
-"name": "Ektachrome 320t",
+"name": "Ektachrome 320T",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -1998,10 +2261,11 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/04/26/fujifilm-x-e4-film-simulation-recipe-ektachrome-320t"
+"source": "https://fujixweekly.com/2021/04/26/fujifilm-x-e4-film-simulation-recipe-ektachrome-320t",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/04/51141410014_1d35d1f2a5_c.jpg?w=800"
 },
 {
-"name": "Expired Ecn 2 100t",
+"name": "Expired ECN-2 100T",
 "notes": {},
 "film_simulation": "eternaBleachBypass",
 "dynamic_range": "dr400",
@@ -2009,7 +2273,8 @@
 "color_chrome_effect": "strong",
 "color_chrome_blue": "strong",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2024/02/01/expired-ecn-2-100t-fujifilm-x-trans-iv-x-trans-v-film-simulation-recipe"
+"source": "https://fujixweekly.com/2024/02/01/expired-ecn-2-100t-fujifilm-x-trans-iv-x-trans-v-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/02/53501713655_6d50e3d3d6_c.jpg?w=800"
 },
 {
 "name": "Faded Negative",
@@ -2032,10 +2297,11 @@
 "clarity": 0,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/02/22/fujifilm-x100v-film-simulation-recipe-faded-negative"
+"source": "https://fujixweekly.com/2021/02/22/fujifilm-x100v-film-simulation-recipe-faded-negative",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/02/50957935201_086141cfbe_c.jpg?w=800"
 },
 {
-"name": "Cinestill 50d",
+"name": "CineStill 50D",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -2056,11 +2322,15 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/04/20/fujifilm-x-trans-iv-film-simulation-recipe-cinestill-50d"
+"source": "https://fujixweekly.com/2022/04/20/fujifilm-x-trans-iv-film-simulation-recipe-cinestill-50d",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/04/52017254780_fb184223dd_c.jpg?w=800"
 },
 {
-"name": "Kodak Portra Do Sol",
-"notes": {},
+"name": "Kodak Portra do Sol",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "+1/3 to +1 1/3 (typically)"
+},
 "film_simulation": "classicChrome",
 "dynamic_range": "dr400",
 "grain": "off",
@@ -2073,8 +2343,11 @@
 "shadow_tone": -2,
 "color": 3,
 "sharpness": -2,
+"clarity": -1,
+"noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2025/04/23/kodak-portra-do-sol-fujifilm-x-trans-iv-film-simulation-recipe"
+"source": "https://fujixweekly.com/2025/04/23/kodak-portra-do-sol-fujifilm-x-trans-iv-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2025/04/54471450909_7a26a7d7e3_h.jpg?w=800"
 },
 {
 "name": "Bright Kodak",
@@ -2097,10 +2370,11 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/06/10/fujifilm-x-trans-iv-film-simulation-recipe-bright-kodak"
+"source": "https://fujixweekly.com/2022/06/10/fujifilm-x-trans-iv-film-simulation-recipe-bright-kodak",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/06/52135444143_3b00f03c73_c.jpg?w=800"
 },
 {
-"name": "Preet",
+"name": "Bright Summer",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1 to +2 (typically)"
@@ -2121,22 +2395,36 @@
 "clarity": -5,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/09/12/fujifilm-x100v-film-simulation-recipe-preet"
+"source": "https://fujixweekly.com/2020/09/12/fujifilm-x100v-film-simulation-recipe-preet",
+"sample_image": "https://i0.wp.com/s0.wp.com/_si/?w=800"
 },
 {
-"name": "Expired Velvia Ii",
-"notes": {},
-"film_simulation": "velvia",
+"name": "Expired Velvia",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "-1 to -1/3 (typically)"
+},
+"film_simulation": "classicNeg",
 "dynamic_range": "dr400",
+"grain": "weakSmall",
+"color_chrome_effect": "strong",
+"color_chrome_blue": "off",
+"wb_kelvin": 6400,
+"white_balance": "colorTemp",
+"wb_shift_red": -1,
+"wb_shift_blue": 8,
 "highlight_tone": 2,
 "shadow_tone": -2,
 "color": 3,
 "sharpness": -2,
+"clarity": -4,
+"noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2023/06/25/expired-velvia-fujifilm-x-trans-iv-x-pro3-x100v-x-t4-x-s10-x-e4-x-t30-ii-film-simulation-recipe"
+"source": "https://fujixweekly.com/2023/06/25/expired-velvia-fujifilm-x-trans-iv-x-pro3-x100v-x-t4-x-s10-x-e4-x-t30-ii-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/06/52957431687_f29fb8dda9_c.jpg?w=800"
 },
 {
-"name": "Two Expired Slide Expired Slide V2",
+"name": "Expired Slide + Expired Slide v2",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +2/3 (typically)"
@@ -2157,10 +2445,36 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/06/21/two-fujifilm-x-trans-iv-film-simulation-recipes-expired-slide-expired-slide-v2"
+"source": "https://fujixweekly.com/2021/06/21/two-fujifilm-x-trans-iv-film-simulation-recipes-expired-slide-expired-slide-v2",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/06/51262466123_5c5caaa9ba_c.jpg?w=800"
 },
 {
-"name": "Xpro 62",
+"name": "RedScale",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "0 to +2/3 (typically)"
+},
+"film_simulation": "classicNeg",
+"dynamic_range": "dr200",
+"grain": "strongSmall",
+"color_chrome_effect": "strong",
+"color_chrome_blue": "off",
+"wb_kelvin": 10000,
+"white_balance": "colorTemp",
+"wb_shift_red": 9,
+"wb_shift_blue": -9,
+"highlight_tone": 0,
+"shadow_tone": 2,
+"color": 4,
+"sharpness": -2,
+"clarity": -3,
+"noise_reduction": "m4",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2025/02/18/redscale-fujifilm-x-trans-iv-v-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2025/02/54335042673_4b13cd16a1_h.jpg?w=800"
+},
+{
+"name": "Xpro ’62",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +1/3 (typically)"
@@ -2180,11 +2494,15 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/05/03/fujifilm-x100v-x-trans-iv-film-simulation-recipe-xpro-62"
+"source": "https://fujixweekly.com/2021/05/03/fujifilm-x100v-x-trans-iv-film-simulation-recipe-xpro-62",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/05/51131507144_0c61c3ea49_c.jpg?w=800"
 },
 {
-"name": "Bewaremyvelvia",
-"notes": {},
+"name": "BewareMyVelvia",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "0 to +2/3 (typically)"
+},
 "film_simulation": "velvia",
 "dynamic_range": "dr200",
 "grain": "weakSmall",
@@ -2198,8 +2516,11 @@
 "shadow_tone": 2,
 "color": 4,
 "sharpness": 1,
+"clarity": 0,
+"noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2026/01/13/bewaremyvelvia-a-fujifilm-film-simulation-recipe-for-x-trans-iv-v"
+"source": "https://fujixweekly.com/2026/01/13/bewaremyvelvia-a-fujifilm-film-simulation-recipe-for-x-trans-iv-v",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2026/01/55031800589_f8bf935dd0_h.jpg?w=800"
 },
 {
 "name": "Cine Teal",
@@ -2223,10 +2544,11 @@
 "clarity": -5,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/06/08/my-fujifilm-x100v-cine-teal-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/06/08/my-fujifilm-x100v-cine-teal-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/06/49957209748_67e793e124_c.jpg?w=800"
 },
 {
-"name": "Cinestill 800t",
+"name": "CineStill 800T",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +2/3 (typically)"
@@ -2246,10 +2568,11 @@
 "clarity": -5,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/10/06/fujifilm-x100v-film-simulation-recipe-cinestill-800t"
+"source": "https://fujixweekly.com/2020/10/06/fujifilm-x100v-film-simulation-recipe-cinestill-800t",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/10/50353517918_9ee23965f4_c.jpg?w=800"
 },
 {
-"name": "Pushed Cinestill 800t",
+"name": "Pushed CineStill 800T",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +2/3 (typically)"
@@ -2270,10 +2593,11 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/05/18/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-pushed-cinestill-800t"
+"source": "https://fujixweekly.com/2022/05/18/fujifilm-x-e4-x-trans-iv-film-simulation-recipe-pushed-cinestill-800t",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/10/51584287351_0eaf3de56e_c.jpg?w=800"
 },
 {
-"name": "Pushed Cinestill",
+"name": "Pushed CineStill",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +2/3 (typically)"
@@ -2294,10 +2618,11 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/06/13/fujifilm-x100v-x-pro3-film-simulation-recipe-pushed-cinestill"
+"source": "https://fujixweekly.com/2022/06/13/fujifilm-x100v-x-pro3-film-simulation-recipe-pushed-cinestill",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/10/51603007031_94b246c042_c.jpg?w=800"
 },
 {
-"name": "Serrs 500t",
+"name": "Serr’s 500T",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-1/3 to +1/3 (typically)"
@@ -2318,10 +2643,34 @@
 "clarity": 0,
 "noise_reduction": "m2",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/03/20/fujifilm-x-trans-iv-film-simulation-recipe-serrs-500t"
+"source": "https://fujixweekly.com/2022/03/20/fujifilm-x-trans-iv-film-simulation-recipe-serrs-500t",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/03/51949764317_4dfc780154_c.jpg?w=800"
 },
 {
-"name": "Kodak Tri X 400",
+"name": "Kodak Plus-X 125",
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "-1/3 to -2/3 (typically)"
+},
+"film_simulation": "acros",
+"dynamic_range": "dr200",
+"grain": "weakLarge",
+"color_chrome_effect": "strong",
+"color_chrome_blue": "off",
+"white_balance": "daylight",
+"wb_shift_red": 9,
+"wb_shift_blue": 9,
+"highlight_tone": -1,
+"shadow_tone": 1,
+"sharpness": -1,
+"clarity": 2,
+"noise_reduction": "m4",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2025/09/21/kodak-plus-x-125-fujifilm-x-trans-iv-x-trans-v-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2025/09/54798793760_d950cdfc74_h.jpg?w=800"
+},
+{
+"name": "Kodak Tri-X 400",
 "notes": {
 "iso": "ISO 1600 – 12800",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -2340,10 +2689,35 @@
 "clarity": 4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/06/18/fujifilm-x100v-film-simulation-recipe-kodak-tri-x-400"
+"source": "https://fujixweekly.com/2020/06/18/fujifilm-x100v-film-simulation-recipe-kodak-tri-x-400",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/06/49971039192_d7a340ab28_c.jpg?w=800"
 },
 {
-"name": "Kodak T Max 400",
+"name": "Kodak T-Max P3200",
+"notes": {
+"iso": "up to ISO 12800",
+"exposure_compensation": "0 to +2/3 (typically)"
+},
+"film_simulation": "acros",
+"dynamic_range": "dr400",
+"grain": "strongLarge",
+"color_chrome_effect": "off",
+"color_chrome_blue": "off",
+"wb_kelvin": 5500,
+"white_balance": "colorTemp",
+"wb_shift_red": 4,
+"wb_shift_blue": 7,
+"highlight_tone": 1,
+"shadow_tone": 3,
+"sharpness": 2,
+"clarity": 1,
+"noise_reduction": "m4",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2023/05/18/kodak-t-max-p3200-a-fujifilm-film-simulation-recipe-for-x-trans-iv-v",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/05/52907279786_5c08b9c2b6_c.jpg?w=800"
+},
+{
+"name": "Kodak T-Max 400",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -2362,10 +2736,11 @@
 "clarity": 3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/08/31/fujifilm-x100v-film-simulation-recipe-kodak-t-max-400"
+"source": "https://fujixweekly.com/2020/08/31/fujifilm-x100v-film-simulation-recipe-kodak-t-max-400",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/08/50291440636_4ec07510ab_c.jpg?w=800"
 },
 {
-"name": "Bw Superia",
+"name": "B&W Superia",
 "notes": {
 "iso": "Auto, up to ISO 12800",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -2384,7 +2759,8 @@
 "clarity": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/10/05/fujifilm-x100v-film-simulation-recipe-bw-superia"
+"source": "https://fujixweekly.com/2020/10/05/fujifilm-x100v-film-simulation-recipe-bw-superia",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/10/50423387066_ce78d2219d_c.jpg?w=800"
 },
 {
 "name": "Classic Monochrome",
@@ -2406,7 +2782,8 @@
 "clarity": 4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/01/11/fujifilm-x100v-film-simulation-recipe-classic-monochrome"
+"source": "https://fujixweekly.com/2021/01/11/fujifilm-x100v-film-simulation-recipe-classic-monochrome",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/01/50812123116_22ab647b98_c.jpg?w=800"
 },
 {
 "name": "Monochrome Negative",
@@ -2420,10 +2797,34 @@
 "clarity": 0,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/08/25/fujifilm-x100v-x-trans-iii-x-trans-iv-film-simulation-recipe-monochrome-negative"
+"source": "https://fujixweekly.com/2021/08/25/fujifilm-x100v-x-trans-iii-x-trans-iv-film-simulation-recipe-monochrome-negative",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/08/51400261196_a7e7f305f8_c.jpg?w=800"
 },
 {
-"name": "Ilford Hp5 Plus 400",
+"name": "Kentmere Pan 400",
+"notes": {
+"iso": "up to ISO 12800",
+"exposure_compensation": "0 to +2/3 (typically)"
+},
+"film_simulation": "acros",
+"dynamic_range": "auto",
+"grain": "strongLarge",
+"color_chrome_effect": "off",
+"color_chrome_blue": "off",
+"white_balance": "auto",
+"wb_shift_red": 7,
+"wb_shift_blue": 6,
+"highlight_tone": 1,
+"shadow_tone": 1,
+"sharpness": 3,
+"clarity": 1,
+"noise_reduction": "m4",
+"author": "Fuji X Weekly",
+"source": "https://fujixweekly.com/2024/03/15/kentmere-pan-400-fujifilm-x100v-x-trans-iv-v-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2024/03/53586373248_c2e71cffbe_h.jpg?w=800"
+},
+{
+"name": "Ilford HP5 Plus 400",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "-2/3 to +2/3 (typically)"
@@ -2442,7 +2843,8 @@
 "clarity": 0,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/03/23/fujifilm-x-trans-iv-film-simulation-recipe-ilford-hp5-plus-400"
+"source": "https://fujixweekly.com/2022/03/23/fujifilm-x-trans-iv-film-simulation-recipe-ilford-hp5-plus-400",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/03/51957049543_672ffdd8d0_c.jpg?w=800"
 },
 {
 "name": "Ilford Pan F Plus 50",
@@ -2464,7 +2866,8 @@
 "clarity": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/01/02/fujifilm-x100v-film-simulation-recipe-ilford-pan-f-plus-50"
+"source": "https://fujixweekly.com/2022/01/02/fujifilm-x100v-film-simulation-recipe-ilford-pan-f-plus-50",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/01/51791468087_695b150992_c.jpg?w=800"
 },
 {
 "name": "Ilford Ortho Plus 80",
@@ -2487,7 +2890,8 @@
 "clarity": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/01/24/fujifilm-x100v-film-simulation-recipe-ilford-ortho-plus-80"
+"source": "https://fujixweekly.com/2021/01/24/fujifilm-x100v-film-simulation-recipe-ilford-ortho-plus-80",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/01/50867932653_de5d821000_c.jpg?w=800"
 },
 {
 "name": "Moody Monochrome",
@@ -2509,20 +2913,22 @@
 "clarity": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/04/05/fujifilm-x-trans-iv-film-simulation-recipe-moody-monochrome"
+"source": "https://fujixweekly.com/2022/04/05/fujifilm-x-trans-iv-film-simulation-recipe-moody-monochrome",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/04/51976731705_0aac168a14_c.jpg?w=800"
 },
 {
-"name": "Black White Infrared",
+"name": "Black & White Infrared",
 "notes": {},
 "film_simulation": "acros",
 "dynamic_range": "dr200",
 "highlight_tone": 4,
 "shadow_tone": 3,
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/08/11/fujifilm-x100v-film-simulation-recipe-black-white-infrared"
+"source": "https://fujixweekly.com/2020/08/11/fujifilm-x100v-film-simulation-recipe-black-white-infrared",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/08/50197351577_520f4d92b0_c.jpg?w=800"
 },
 {
-"name": "Sepia Forgotten",
+"name": "Sepia: The Forgotten",
 "notes": {},
 "film_simulation": "sepia",
 "grain": "offLarge",
@@ -2530,28 +2936,8 @@
 "clarity": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/07/01/sepia-the-forgotten-film-simulation"
-},
-{
-"name": "Kodachrome 64",
-"notes": {
-"iso": "Auto, up to ISO 6400",
-"exposure_compensation": "+1/3 to +1 (typically)"
-},
-"film_simulation": "classicChrome",
-"dynamic_range": "dr400",
-"grain": "weakSmall",
-"color_chrome_effect": "weak",
-"white_balance": "daylight",
-"wb_shift_red": 2,
-"wb_shift_blue": -5,
-"highlight_tone": 1,
-"shadow_tone": 2,
-"color": 0,
-"sharpness": 2,
-"noise_reduction": "m4",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/08/02/my-fujifilm-x-t30-kodachrome-64-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/07/01/sepia-the-forgotten-film-simulation",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/06/50063612832_ddff4d1716_c.jpg?w=800"
 },
 {
 "name": "Kodak Gold 200",
@@ -2572,70 +2958,8 @@
 "sharpness": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/04/16/my-fujifilm-x-t30-kodak-gold-200-film-simulation-recipe"
-},
-{
-"name": "Kodak Portra 400",
-"notes": {
-"iso": "Auto, up to ISO 6400",
-"exposure_compensation": "+2/3 to +1 (typically)"
-},
-"film_simulation": "classicChrome",
-"dynamic_range": "auto",
-"grain": "strongSmall",
-"color_chrome_effect": "strong",
-"white_balance": "daylight",
-"wb_shift_red": 4,
-"wb_shift_blue": -5,
-"highlight_tone": -1,
-"shadow_tone": -1,
-"color": 2,
-"sharpness": -2,
-"noise_reduction": "m4",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/05/10/my-fujifilm-x-t30-kodak-portra-400-film-simulation-recipe"
-},
-{
-"name": "Kodak Portra 160",
-"notes": {
-"iso": "Auto, up to ISO 6400",
-"exposure_compensation": "+2/3 to +1 1/3 (typically)"
-},
-"film_simulation": "classicChrome",
-"dynamic_range": "auto",
-"grain": "weakSmall",
-"color_chrome_effect": "off",
-"white_balance": "daylight",
-"wb_shift_red": 4,
-"wb_shift_blue": -5,
-"highlight_tone": -2,
-"shadow_tone": -2,
-"color": 1,
-"sharpness": -2,
-"noise_reduction": "m4",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/04/03/my-fujifilm-x-t30-kodak-portra-160-film-simulation-recipe"
-},
-{
-"name": "Kodak Vision3 250d",
-"notes": {
-"iso": "Auto up to ISO 6400",
-"exposure_compensation": "+1/3 to +2/3 (typically)"
-},
-"film_simulation": "eterna",
-"dynamic_range": "dr100",
-"grain": "strongSmall",
-"color_chrome_effect": "strong",
-"white_balance": "daylight",
-"wb_shift_red": -3,
-"wb_shift_blue": -1,
-"highlight_tone": 3,
-"shadow_tone": 4,
-"color": 3,
-"sharpness": -2,
-"noise_reduction": "m4",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/05/11/my-fujifilm-x-t30-kodak-vision3-250d-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/04/16/my-fujifilm-x-t30-kodak-gold-200-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/04/49775102993_b3afa9e2ef_c.jpg?w=800"
 },
 {
 "name": "Eterna",
@@ -2655,7 +2979,8 @@
 "sharpness": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/04/12/my-fujifilm-x-t30-eterna-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/04/12/my-fujifilm-x-t30-eterna-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/04/32619233077_52b1379050_c.jpg?w=800"
 },
 {
 "name": "Expired Eterna",
@@ -2675,10 +3000,11 @@
 "sharpness": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/06/06/my-fujifilm-x-t30-expired-eterna-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/06/06/my-fujifilm-x-t30-expired-eterna-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/06/47990867693_a2280a6ed4_c.jpg?w=800"
 },
 {
-"name": "Eterna Low Contrast",
+"name": "Eterna Low-Contrast",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -2697,10 +3023,11 @@
 "sharpness": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/08/16/my-fujifilm-x-t30-eterna-low-contrast-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/08/16/my-fujifilm-x-t30-eterna-low-contrast-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/08/48524796097_26ce8cb759_c.jpg?w=800"
 },
 {
-"name": "Eterna V3",
+"name": "Eterna v3",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3"
@@ -2718,7 +3045,8 @@
 "sharpness": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/10/31/fujifilm-x-t30-film-simulation-recipe-eterna-v3"
+"source": "https://fujixweekly.com/2021/10/31/fujifilm-x-t30-film-simulation-recipe-eterna-v3",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/10/51641192840_27ecde010a_c.jpg?w=800"
 },
 {
 "name": "Cinematic Negative",
@@ -2739,7 +3067,8 @@
 "sharpness": -1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/10/21/fujifilm-x-t30-x-t3-film-simulation-recipe-cinematic-negative"
+"source": "https://fujixweekly.com/2022/10/21/fujifilm-x-t30-x-t3-film-simulation-recipe-cinematic-negative",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/10/52440997539_33660d713f_c.jpg?w=800"
 },
 {
 "name": "Polaroid",
@@ -2760,10 +3089,11 @@
 "sharpness": -1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/04/11/my-fujifilm-x-t30-polaroid-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/04/11/my-fujifilm-x-t30-polaroid-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/04/49727091223_1999d955ac_c.jpg?w=800"
 },
 {
-"name": "Polaroid Ii",
+"name": "Polaroid II",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to -1 (typically)"
@@ -2781,7 +3111,8 @@
 "sharpness": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/04/12/my-fujifilm-x-t30-polaroid-ii-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/04/12/my-fujifilm-x-t30-polaroid-ii-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/04/49761863671_d03122c734_c.jpg?w=800"
 },
 {
 "name": "Analog Color",
@@ -2802,7 +3133,8 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/03/08/my-fujifilm-x-t30-analog-color-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/03/08/my-fujifilm-x-t30-analog-color-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/03/49631745412_e23908642d_c.jpg?w=800"
 },
 {
 "name": "Jeff Davenport Night",
@@ -2821,7 +3153,8 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/03/23/my-fujifilm-x-t30-jeff-davenport-night-recipe"
+"source": "https://fujixweekly.com/2020/03/23/my-fujifilm-x-t30-jeff-davenport-night-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/03/49683278076_6fa46610c7_c.jpg?w=800"
 },
 {
 "name": "Faded Color",
@@ -2840,7 +3173,8 @@
 "sharpness": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/06/15/my-fujifilm-x-t30-faded-color-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/06/15/my-fujifilm-x-t30-faded-color-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/06/48052973038_2d4c6a475b_c.jpg?w=800"
 },
 {
 "name": "Vintage Color Fade",
@@ -2861,7 +3195,8 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/02/25/my-fujifilm-x-t30-vintage-color-fade-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/02/25/my-fujifilm-x-t30-vintage-color-fade-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/02/49571409416_4b712fbc93_c.jpg?w=800"
 },
 {
 "name": "Kodak Elite Chrome 200 Color Fade",
@@ -2876,7 +3211,8 @@
 "sharpness": -4,
 "noise_reduction": "p2",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/09/21/my-fujifilm-x-t30-kodak-elite-chrome-200-color-fade-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/09/21/my-fujifilm-x-t30-kodak-elite-chrome-200-color-fade-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/09/48760678311_dd0c4da2f2_c.jpg?w=800"
 },
 {
 "name": "Negative Print",
@@ -2897,7 +3233,8 @@
 "sharpness": -1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/01/21/fujifilm-x-t3-x-t30-x-h1-film-simulation-recipe-negative-print"
+"source": "https://fujixweekly.com/2022/01/21/fujifilm-x-t3-x-t30-x-h1-film-simulation-recipe-negative-print",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/01/51835014745_a516c81b94_c.jpg?w=800"
 },
 {
 "name": "Color Negative",
@@ -2905,11 +3242,15 @@
 "film_simulation": "proNegHi",
 "dynamic_range": null,
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/10/26/my-fujifilm-x-t30-color-negative-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/10/26/my-fujifilm-x-t30-color-negative-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/10/48961963988_a9d22be9c7_c.jpg?w=800"
 },
 {
 "name": "Pro Neg",
-"notes": {},
+"notes": {
+"iso": "Auto, up to ISO 6400",
+"exposure_compensation": "+1/3 to +1 (typically)"
+},
 "film_simulation": "proNegHi",
 "dynamic_range": "dr400",
 "grain": "weakSmall",
@@ -2922,11 +3263,13 @@
 "shadow_tone": 1,
 "color": 1,
 "sharpness": -1,
+"noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2025/07/22/pro-neg-fujifilm-x-t3-x-t30-x-trans-iii-film-simulation-recipe"
+"source": "https://fujixweekly.com/2025/07/22/pro-neg-fujifilm-x-t3-x-t30-x-trans-iii-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/11/53344008514_65313fc0b5_h.jpg?w=800"
 },
 {
-"name": "Provia Fujichrome Sensia 100",
+"name": "Provia (Fujichrome Sensia 100)",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -2943,10 +3286,11 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/11/01/my-fujifilm-x-t30-provia-film-simulation-recipe-fujichrome-sensia-100"
+"source": "https://fujixweekly.com/2019/11/01/my-fujifilm-x-t30-provia-film-simulation-recipe-fujichrome-sensia-100",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/11/48971869012_670172e2e7_c.jpg?w=800"
 },
 {
-"name": "Fujicolor Pro 160ns 7",
+"name": "Fujicolor Pro 160NS",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "0 to +2/3 (typically)"
@@ -2964,10 +3308,11 @@
 "sharpness": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/05/24/a-different-approach-7-new-fujicolor-pro-160ns-film-simulation-recipes-yes-7"
+"source": "https://fujixweekly.com/2021/05/24/a-different-approach-7-new-fujicolor-pro-160ns-film-simulation-recipes-yes-7",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/05/51197195927_d52d947fc3_c.jpg?w=800"
 },
 {
-"name": "Fujicolor Pro 400h Overexposed",
+"name": "Fujicolor Pro 400H Overexposed",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1 2/3 to +2 1/3 (typically)"
@@ -2985,10 +3330,11 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/02/26/my-fujifilm-x-t30-fujicolor-pro-400h-overexposed-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/02/26/my-fujifilm-x-t30-fujicolor-pro-400h-overexposed-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/02/49585858977_20fa99ee00_c.jpg?w=800"
 },
 {
-"name": "Warm Contrast",
+"name": "[Not] “Warm Contrast”",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -3006,7 +3352,8 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/08/24/not-my-fujifilm-x-t30-warm-contrast-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/08/24/not-my-fujifilm-x-t30-warm-contrast-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/08/48602784507_0840b7d863_c.jpg?w=800"
 },
 {
 "name": "Porto 200",
@@ -3027,10 +3374,11 @@
 "sharpness": 0,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/11/17/fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe-porto-200"
+"source": "https://fujixweekly.com/2021/11/17/fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe-porto-200",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/11/51684898396_f29f3037c0_c.jpg?w=800"
 },
 {
-"name": "Bleach Bypass",
+"name": "“Bleach Bypass”",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3 (typically) Exposure 2 Acros"
@@ -3048,28 +3396,8 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/02/24/my-fujifilm-bleach-bypass-film-simulation-recipe"
-},
-{
-"name": "Eterna Bleach Bypass",
-"notes": {
-"iso": "Auto up to ISO 6400",
-"exposure_compensation": "0 to +2/3 (typically)"
-},
-"film_simulation": "proNegStd",
-"dynamic_range": "dr400",
-"grain": "weakSmall",
-"color_chrome_effect": "off",
-"white_balance": "incandescent",
-"wb_shift_red": 8,
-"wb_shift_blue": -9,
-"highlight_tone": 3,
-"shadow_tone": 3,
-"color": -4,
-"sharpness": 0,
-"noise_reduction": "m4",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/11/11/fujifilm-x-trans-iii-x-t30-x-t3-film-simulation-recipe-eterna-bleach-bypass"
+"source": "https://fujixweekly.com/2020/02/24/my-fujifilm-bleach-bypass-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/02/49571652152_2812eac172_c.jpg?w=800"
 },
 {
 "name": "Chrome Bypass",
@@ -3090,7 +3418,8 @@
 "sharpness": -1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/05/02/fujifilm-x-trans-iii-x-t30-x-t3-film-simulation-recipe-chrome-bypass"
+"source": "https://fujixweekly.com/2021/05/02/fujifilm-x-trans-iii-x-t30-x-t3-film-simulation-recipe-chrome-bypass",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/05/51145724343_bc7966d35f_c.jpg?w=800"
 },
 {
 "name": "Kodacolor",
@@ -3112,10 +3441,11 @@
 "sharpness": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/07/19/my-fujifilm-x-t30-kodacolor-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/07/19/my-fujifilm-x-t30-kodacolor-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/07/48312528247_ae30db5d73_c.jpg?w=800"
 },
 {
-"name": "Kodacolor Vr",
+"name": "Kodacolor VR",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -3134,7 +3464,8 @@
 "sharpness": -1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/04/11/fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe-kodacolor-vr"
+"source": "https://fujixweekly.com/2022/04/11/fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe-kodacolor-vr",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/08/51383917040_f44e1480bd_c.jpg?w=800"
 },
 {
 "name": "Vintage Kodacolor",
@@ -3156,10 +3487,11 @@
 "sharpness": -1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/08/29/fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe-vintage-kodacolor"
+"source": "https://fujixweekly.com/2022/08/29/fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe-vintage-kodacolor",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/08/52318302453_b55dc8a424_c.jpg?w=800"
 },
 {
-"name": "Kodacolor Ii 126",
+"name": "Kodacolor II 126",
 "notes": {},
 "film_simulation": "classicChrome",
 "dynamic_range": "dr200",
@@ -3171,7 +3503,8 @@
 "sharpness": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/04/28/my-fujifilm-x-t30-kodacolor-ii-126-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/04/28/my-fujifilm-x-t30-kodacolor-ii-126-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/04/49822797703_81ab4cd6fc_c.jpg?w=800"
 },
 {
 "name": "Classic Kodak",
@@ -3192,7 +3525,8 @@
 "sharpness": -1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2022/11/08/fujifilm-x-t30-x-t3-x-trans-iii-film-simulation-recipe-classic-kodak"
+"source": "https://fujixweekly.com/2022/11/08/fujifilm-x-t30-x-t3-x-trans-iii-film-simulation-recipe-classic-kodak",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2022/11/52464503358_9479a50b54_c.jpg?w=800"
 },
 {
 "name": "Classic Slide",
@@ -3213,10 +3547,11 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/03/21/my-fujifilm-x-t30-classic-slide-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/03/21/my-fujifilm-x-t30-classic-slide-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/03/49650424676_835cc593b7_c.jpg?w=800"
 },
 {
-"name": "X Urban Vintage Chrome",
+"name": "[Not] Urban Vintage Chrome",
 "notes": {
 "iso": "Auto, up to ISO 3200",
 "exposure_compensation": "+1/3 to +2/3 (typically)"
@@ -3235,7 +3570,8 @@
 "sharpness": 0,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/08/24/not-my-fujifilm-x-urban-vintage-chrome-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/08/24/not-my-fujifilm-x-urban-vintage-chrome-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/08/48611403853_ed05c636c7_h.jpg?w=800"
 },
 {
 "name": "Fujicolor 100 Industrial",
@@ -3257,10 +3593,11 @@
 "sharpness": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/06/13/my-fujifilm-x-t30-fujicolor-100-industrial-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/06/13/my-fujifilm-x-t30-fujicolor-100-industrial-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/06/48030778656_15801862fa_c.jpg?w=800"
 },
 {
-"name": "Lomography Color 100",
+"name": "Lomography Color 100 Setting",
 "notes": {
 "iso": "Auto, up to ISO 6400",
 "exposure_compensation": "+1/3 to +2/3"
@@ -3278,7 +3615,8 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/10/31/my-fujifilm-x-t30-lomography-color-100-film-simulation-setting"
+"source": "https://fujixweekly.com/2019/10/31/my-fujifilm-x-t30-lomography-color-100-film-simulation-setting",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/10/48983266448_e6c08bc9c0_c.jpg?w=800"
 },
 {
 "name": "Velvia",
@@ -3299,10 +3637,11 @@
 "sharpness": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/04/25/my-fujifilm-x-t30-velvia-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/04/25/my-fujifilm-x-t30-velvia-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/04/40660339113_38c71dc567_c.jpg?w=800"
 },
 {
-"name": "Velvia V2",
+"name": "Velvia v2",
 "notes": {
 "iso": "Auto up to ISO 6400",
 "exposure_compensation": "+1/3 to +1 (typically)"
@@ -3320,29 +3659,8 @@
 "sharpness": 0,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2021/02/16/fujifilm-x-t30-x-trans-iv-film-simulation-recipe-velvia-v2"
-},
-{
-"name": "Redscale",
-"notes": {
-"iso": "Auto up to ISO 6400",
-"exposure_compensation": "-1/3 to +1/3 (typically)"
-},
-"film_simulation": "astia",
-"dynamic_range": "dr200",
-"grain": "strongSmall",
-"color_chrome_effect": "strong",
-"wb_kelvin": 10000,
-"white_balance": "colorTemp",
-"wb_shift_red": 9,
-"wb_shift_blue": 0,
-"highlight_tone": 1,
-"shadow_tone": 2,
-"color": -2,
-"sharpness": -2,
-"noise_reduction": "m4",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/06/22/my-fujifilm-x-t30-redscale-film-simulation-recipe"
+"source": "https://fujixweekly.com/2021/02/16/fujifilm-x-t30-x-trans-iv-film-simulation-recipe-velvia-v2",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2021/02/50930964278_1b2a2fa072_c.jpg?w=800"
 },
 {
 "name": "Cross Process",
@@ -3364,7 +3682,8 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/03/24/my-fujifilm-x-t30-cross-process-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/03/24/my-fujifilm-x-t30-cross-process-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/03/49691653333_2a66e49294_c.jpg?w=800"
 },
 {
 "name": "Xpro",
@@ -3386,10 +3705,11 @@
 "sharpness": -1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2023/11/21/xpro-fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe"
+"source": "https://fujixweekly.com/2023/11/21/xpro-fujifilm-x-trans-iii-x-t3-x-t30-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2023/11/53344007869_3cf136a311_c.jpg?w=800"
 },
 {
-"name": "Acros Agfa Apx 400",
+"name": "Acros (Agfa APX 400)",
 "notes": {
 "iso": "Auto up to ISO 12800",
 "exposure_compensation": "+2/3 to +1-1/3 (typically)"
@@ -3403,7 +3723,8 @@
 "sharpness": 4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/04/18/my-fujifilm-x-t30-acros-film-simulation-recipe-agfa-apx-400"
+"source": "https://fujixweekly.com/2019/04/18/my-fujifilm-x-t30-acros-film-simulation-recipe-agfa-apx-400",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/04/46702179015_a498b1c0b0_c.jpg?w=800"
 },
 {
 "name": "Monochrome Kodachrome",
@@ -3422,10 +3743,11 @@
 "sharpness": 1,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/03/16/my-fujifilm-x-t30-monochrome-kodachrome-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/03/16/my-fujifilm-x-t30-monochrome-kodachrome-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/03/49649898123_1b70706493_c.jpg?w=800"
 },
 {
-"name": "Ilford Hp5 Plus 400 Push Process",
+"name": "Ilford HP5 Plus 400 Push-Process",
 "notes": {
 "iso": "25600 or 51200",
 "exposure_compensation": "+1/3 (typically)"
@@ -3439,10 +3761,11 @@
 "sharpness": -2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/05/29/my-fujifilm-x-t30-ilford-hp5-plus-400-push-process-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/05/29/my-fujifilm-x-t30-ilford-hp5-plus-400-push-process-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/05/47955333106_ed34979d87_c.jpg?w=800"
 },
 {
-"name": "Ilford Delta Push Process",
+"name": "[Not] Ilford Delta Push-Process",
 "notes": {
 "exposure_compensation": "+1/3 to +2/3 (typically) ISO 12800"
 },
@@ -3455,7 +3778,8 @@
 "sharpness": -3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/04/24/not-my-fujifilm-x-t30-ilford-delta-push-process-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/04/24/not-my-fujifilm-x-t30-ilford-delta-push-process-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/04/49799174896_78383b5ddb_c.jpg?w=800"
 },
 {
 "name": "Dramatic Monochrome",
@@ -3472,7 +3796,8 @@
 "sharpness": 3,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/02/11/my-fujifilm-x-t30-dramatic-monochrome-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/02/11/my-fujifilm-x-t30-dramatic-monochrome-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/02/49521192566_94ec9fbbd2_c.jpg?w=800"
 },
 {
 "name": "Noir",
@@ -3492,7 +3817,8 @@
 "sharpness": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/09/09/fujifilm-noir"
+"source": "https://fujixweekly.com/2020/09/09/fujifilm-noir",
+"sample_image": "https://i0.wp.com/img.youtube.com/vi/JJTPjG3nPCE/0.jpg?w=800"
 },
 {
 "name": "Faded Monochrome",
@@ -3509,17 +3835,19 @@
 "sharpness": 2,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2019/06/21/my-fujifilm-x-t30-faded-monochrome-film-simulation-recipe"
+"source": "https://fujixweekly.com/2019/06/21/my-fujifilm-x-t30-faded-monochrome-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2019/06/48059148458_1e0795b89b_c.jpg?w=800"
 },
 {
-"name": "Split Toned Bw",
+"name": "Split-Toned B&W",
 "notes": {},
 "film_simulation": "acros",
 "dynamic_range": "dr200",
 "highlight_tone": 4,
 "shadow_tone": 4,
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/02/24/my-fujifilm-x-t30-split-toned-bw-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/02/24/my-fujifilm-x-t30-split-toned-bw-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/02/49562522163_b0a92754db_c.jpg?w=800"
 },
 {
 "name": "Cyanotype",
@@ -3537,7 +3865,8 @@
 "sharpness": -4,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/04/12/my-fujifilm-x-t30-cyanotype-film-simulation-recipe"
+"source": "https://fujixweekly.com/2020/04/12/my-fujifilm-x-t30-cyanotype-film-simulation-recipe",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/04/49729137671_c6834a2cd1_c.jpg?w=800"
 },
 {
 "name": "Verano Tostado",
@@ -3559,44 +3888,7 @@
 "clarity": 0,
 "noise_reduction": "m4",
 "author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2020/08/26/fujifilm-x100v-film-simulation-recipe-verano-tostado"
-},
-{
-"name": "Dramatic Classic Chrome",
-"notes": {
-"iso": "Auto up to 12800",
-"exposure_compensation": "+1/3 or +2/3 (typically)"
-},
-"film_simulation": "classicChrome",
-"dynamic_range": "auto",
-"grain": "strongSmall",
-"white_balance": "auto",
-"wb_shift_red": -1,
-"wb_shift_blue": 1,
-"highlight_tone": 3,
-"shadow_tone": 3,
-"color": 0,
-"sharpness": 1,
-"noise_reduction": "m3",
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2018/05/22/my-fujifilm-x-pro2-dramatic-classic-chrome-film-simulation-recipe"
-},
-{
-"name": "Reggies Superia",
-"notes": {},
-"film_simulation": "classicNeg",
-"dynamic_range": "auto",
-"grain": "strongLarge",
-"color_chrome_effect": "strong",
-"color_chrome_blue": "strong",
-"white_balance": "auto",
-"wb_shift_red": 1,
-"wb_shift_blue": -3,
-"highlight_tone": -2,
-"shadow_tone": -1,
-"color": 1,
-"sharpness": -2,
-"author": "Fuji X Weekly",
-"source": "https://fujixweekly.com/2026/03/12/reggies-superia-a-fujifilm-recipe-for-x-trans-iv-v-cameras"
+"source": "https://fujixweekly.com/2020/08/26/fujifilm-x100v-film-simulation-recipe-verano-tostado",
+"sample_image": "https://i0.wp.com/fujixweekly.com/wp-content/uploads/2020/08/50238183911_c1ff0617b9_c.jpg?w=800"
 }
 ]

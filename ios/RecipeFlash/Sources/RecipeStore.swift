@@ -10,9 +10,20 @@ final class RecipeStore: ObservableObject {
         return dir.appendingPathComponent("recipes.json")
     }()
 
+    /// Tăng khi bộ recipe nạp sẵn đổi (tên chuẩn/ảnh/thêm recipe) → re-seed bản cài cũ.
+    private static let bundleVer = 2
+
     init() {
         load()
-        if recipes.isEmpty { recipes = Self.defaults; save() }
+        if recipes.isEmpty {
+            recipes = Self.defaults
+        } else if UserDefaults.standard.integer(forKey: "bundleVer") < Self.bundleVer {
+            // Thay bộ Fuji X Weekly (tên chuẩn + ảnh mẫu + đủ recipe), GIỮ recipe người dùng tự thêm.
+            let mine = recipes.filter { $0.author != "Fuji X Weekly" }
+            recipes = BundledRecipes.all + mine
+        }
+        UserDefaults.standard.set(Self.bundleVer, forKey: "bundleVer")
+        save()
     }
 
     func add(_ r: Recipe) { recipes.insert(r, at: 0); save() }

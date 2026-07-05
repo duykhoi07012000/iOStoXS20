@@ -64,6 +64,7 @@ private struct RecipeSeed: Decodable {
     var clarity: Int?
     var wb_shift_red: Int?
     var wb_shift_blue: Int?
+    var sample_image: String?
 
     func toRecipe() -> Recipe? {
         guard let name, !name.isEmpty else { return nil }
@@ -81,6 +82,7 @@ private struct RecipeSeed: Decodable {
         r.highlightTone = highlight_tone; r.shadowTone = shadow_tone
         r.color = color; r.sharpness = sharpness; r.clarity = clarity
         r.wbShiftRed = wb_shift_red; r.wbShiftBlue = wb_shift_blue
+        r.sampleImageURL = sample_image
         return r
     }
 }

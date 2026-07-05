@@ -23,7 +23,7 @@ OUT = Path(__file__).parent.parent / "ios" / "RecipeFlash" / "Resources" / "reci
 
 UA = {"User-Agent": "Mozilla/5.0 (recipe-import; personal use)"}
 FILMISH = r"(?i)^(film simulation|classic|provia|velvia|astia|acros|eterna|pro ?neg|monochrome|sepia|nostalgic|reala|standard)"
-SETTING = re.compile(r"(?i)^(dynamic range|d-range|highlight|shadow|colou?r(?! chrome)|noise reduction|sharp|clarity|grain|colou?r chrome|white balance|wb|iso|exposure|toning|tone curve|" + FILMISH[5:] + ")")
+SETTING = re.compile(r"(?i)^(dynamic range|d-range|highlight|shadow|colou?r(?! chrome)|noise reduction|high iso|sharp|clarity|grain|colou?r chrome|white balance|wb|iso|exposure|toning|tone curve|monochromatic|" + FILMISH[5:] + ")")
 
 
 def fetch(url: str) -> str:
@@ -69,17 +69,67 @@ def recipe_name(html: str) -> str:
     return re.sub(r"\s+", " ", title).strip(" -–—:•")
 
 
+def clean_title(html: str) -> str | None:
+    """Tên recipe từ og:title (fallback <title>) — TÊN CHUẨN thay cho URL slug. Xử nhiều format:
+    'NAME — … Recipe' (lấy trước gạch dài); '… Recipe: NAME' (sau 'Recipe:'); '… + NAME …' (sau '+')."""
+    m = re.search(r'<meta property="og:title" content="([^"]*)"', html)
+    t = H.unescape(m.group(1)) if m and m.group(1).strip() else ""
+    if not t:
+        m = re.search(r"<title>(.*?)</title>", html, re.S)
+        t = H.unescape(m.group(1)) if m else ""
+    t = re.split(r"(?i)\s*\|\s*FUJI X WEEKLY", t)[0].strip()
+    if re.search(r"(?i)recipes?\s*:", t):
+        t = re.split(r"(?i)recipes?\s*:", t)[-1]
+    else:
+        t = re.split(r"\s+[–—]\s+", t)[0]
+        if "+" in t:
+            t = t.split("+")[-1]
+    t = re.sub(r"(?i)\s*\(\s*(?:part \d+ of \d+|yes[^)]*)\)", "", t)   # bỏ cruft ngoặc "(Part 2 of 3)"/"(Yes, 7!)"
+    t = re.sub(r"(?i)\bfilm simulation( recipes?)?\b", "", t)
+    t = re.sub(r"(?i)\brecipes?\b", "", t)
+    t = re.sub(r"(?i)\ba fujifilm\b", "", t)
+    t = re.sub(r"(?i)fujifilm\s+x[\w.\-]*", "", t)
+    t = re.sub(r"(?i)x100\w*|x-?pro\d\w*|x-?t\d+\w*|x-?e\d+\w*|x-?h\d+\w*|x-?s\d+\w*|x-?a\d+\w*", "", t)
+    t = re.sub(r"(?i)\(?\s*x-?trans\s+(?:iv|v|iii)\s*\)?", "", t)
+    t = re.sub(r"(?i)\bcameras?\b|\bfor\b|\b(?:new|my|not my)\b", "", t)
+    t = re.sub(r"(?i)^\s*fujifilm\b", "", t)                            # "Fujifilm Noir" → "Noir"
+    t = re.sub(r"^\s*\d{1,2}\s+", "", t)                                # bỏ số đếm đầu post gộp ("7 "), giữ năm 4 số (1960)
+    t = re.sub(r"\s+", " ", t).strip(" -–—:•&,!.")
+    return t or None
+
+
+def sample_image(html: str) -> str | None:
+    """URL ảnh mẫu: og:image (bỏ logo 'cropped-*'), đưa qua CDN i0.wp.com với ?w=800."""
+    m = re.search(r'<meta property="og:image" content="([^"]+)"', html)
+    url = m.group(1).strip() if m else ""
+    if not url or "cropped-" in url:
+        start = html.find("entry-content")
+        body = html[start:] if start != -1 else html
+        url = next((u for u in re.findall(
+            r'https://i0\.wp\.com/fujixweekly\.com/wp-content/uploads/[^"\' ]+?\.(?:jpe?g|png)', body, re.I)
+            if "cropped-" not in u), "")
+        if not url:
+            return None
+    path = re.sub(r"^https?://(?:i0\.wp\.com/)?", "", url).split("?")[0].split("#")[0]
+    return f"https://i0.wp.com/{path}?w=800"
+
+
 def extract_block(lines: list[str]) -> list[str] | None:
     for i, l in enumerate(lines):
         if re.match(r"(?i)^(dynamic range|d-range)\b", l) and \
-           any(re.match(r"(?i)^(grain|white balance|clarity|colou?r chrome)", lines[k]) for k in range(i, min(i + 18, len(lines)))):
-            block: list[str] = []
-            for b in range(i - 1, max(-1, i - 4), -1):   # film sim line phía trên
-                if re.match(FILMISH, lines[b]):
-                    block.append(lines[b]); break
-            j = i
-            while j < len(lines) and (SETTING.match(lines[j]) or re.match(FILMISH, lines[j])):
-                block.append(lines[j]); j += 1
+           any(re.match(r"(?i)^(grain|white balance|clarity|colou?r chrome|noise reduction)", lines[k])
+               for k in range(max(0, i - 10), min(i + 18, len(lines)))):
+            top = i                                    # quét LÊN: gom Film Sim/Grain/Color Chrome đứng TRƯỚC DR
+            while top - 1 >= 0 and (SETTING.match(lines[top - 1]) or re.match(FILMISH, lines[top - 1])):
+                top -= 1
+            bot = i                                    # quét XUỐNG
+            while bot < len(lines) and (SETTING.match(lines[bot]) or re.match(FILMISH, lines[bot])):
+                bot += 1
+            block = lines[top:bot]
+            if not any(re.match(FILMISH, x) for x in block):   # film sim bị tách trên (vd dòng Toning chen) → tìm thêm
+                for b in range(top - 1, max(-1, top - 12), -1):
+                    if re.match(FILMISH, lines[b]):
+                        block = [lines[b]] + block; break
             return block
     return None
 
@@ -89,14 +139,15 @@ def scrape_one(url: str) -> dict | None:
     block = extract_block(clean_lines(html))
     if not block:
         return None
-    name = name_from_url(url) or recipe_name(html)
-    r = parse(name + "\n" + "\n".join(block))
+    name = clean_title(html) or name_from_url(url)
+    r = parse((name or "") + "\n" + "\n".join(block))
     if not r.get("film_simulation"):
         return None
-    if name:                       # tên = URL slug (sạch, tránh trộn film sim vào tên)
+    if name:                       # tên = tiêu đề trang (chuẩn), không dùng slug
         r["name"] = name
     r["author"] = "Fuji X Weekly"
     r["source"] = url
+    r["sample_image"] = sample_image(html)
     return r
 
 
