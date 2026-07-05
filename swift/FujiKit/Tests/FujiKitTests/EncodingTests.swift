@@ -97,4 +97,33 @@ final class EncodingTests: XCTestCase {
         XCTAssertNil(w.first { $0.code == 0xD007 })  // DR không được ghi
         XCTAssertEqual(w.count, 1)                    // chỉ có Film Sim
     }
+
+    // target=.video → dùng block code 0xD2xx (giải mã từ máy), bỏ field video không có.
+    func testVideoTargetUsesVideoCodes() throws {
+        var r = Recipe()
+        r.filmSimulation = .provia; r.dynamicRange = .dr400
+        r.highlightTone = 1.0; r.color = 2; r.noiseReduction = .m4
+        r.whiteBalance = .colorTemp; r.wbKelvin = 7000
+        r.grain = .strongSmall; r.clarity = 3        // video KHÔNG có → phải bị bỏ
+        let w = try r.propertyWrites(target: .video)
+        func find(_ c: UInt16) -> PropertyWrite? { w.first { $0.code == c } }
+        XCTAssertEqual(find(0xD270)?.value, 1)        // Film Sim video
+        XCTAssertEqual(find(0xD271)?.value, 400)      // DR video
+        XCTAssertEqual(find(0xD276)?.value, 10)       // Highlight ×10
+        XCTAssertEqual(find(0xD278)?.value, 20)       // Color ×10
+        XCTAssertEqual(find(0xD27A)?.value, 0x8000)   // NR = m4
+        XCTAssertEqual(find(0xD26C)?.value, Int(WhiteBalance.colorTemp.rawValue))
+        XCTAssertEqual(find(0xD26F)?.value, 7000)     // Kelvin video
+        XCTAssertNil(find(0xD023))                    // grain (code ảnh) KHÔNG ghi
+        XCTAssertNil(find(0xD032))                    // clarity KHÔNG ghi
+        XCTAssertNil(find(0xD001))                    // KHÔNG dùng code ẢNH
+    }
+
+    // Video không set được DR-Auto → bỏ qua (không phát sinh lệnh lỗi).
+    func testVideoSkipsDynamicRangeAuto() throws {
+        var r = Recipe(); r.filmSimulation = .eterna; r.dynamicRange = .auto
+        let w = try r.propertyWrites(target: .video)
+        XCTAssertNil(w.first { $0.code == 0xD271 })   // DR video bị bỏ khi = Auto
+        XCTAssertEqual(w.first { $0.code == 0xD270 }?.value, Int(FilmSimulation.eterna.rawValue))
+    }
 }

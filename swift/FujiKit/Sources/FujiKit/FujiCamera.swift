@@ -103,9 +103,10 @@ public final class FujiCamera {
     /// - fullReset: mặc định true → field recipe không set sẽ được đưa về trung tính (0/OFF/Auto)
     ///   để look không "dính" thông số recipe áp trước. Đặt false để áp một phần (giữ giá trị cũ).
     @discardableResult
-    public func apply(_ recipe: Recipe, fullReset: Bool = true) async throws -> [(label: String, ok: Bool)] {
+    public func apply(_ recipe: Recipe, fullReset: Bool = true,
+                      target: RecipeTarget = .photo) async throws -> [(label: String, ok: Bool)] {
         var results: [(String, Bool)] = []
-        for w in try recipe.propertyWrites(fullReset: fullReset) {
+        for w in try recipe.propertyWrites(fullReset: fullReset, target: target) {
             let rc = try await setProp(w.code, value: w.value, type: w.type)
             results.append((w.label, rc == PTP_RC_OK))
         }

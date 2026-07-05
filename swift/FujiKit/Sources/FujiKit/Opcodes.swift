@@ -39,6 +39,33 @@ enum Prop: UInt16 {
     case clarity          = 0xD032
 }
 
+/// Recipe áp cho miền ẢNH (stills) hay VIDEO. Value encoding y hệt nhau — chỉ khác PROPERTY CODE
+/// (X-S20 dùng block 0xD2xx riêng cho video; giải mã trực tiếp từ máy qua GetDevicePropDesc).
+public enum RecipeTarget { case photo, video }
+
+extension Prop {
+    /// Code tương ứng khi áp cho VIDEO. nil = video KHÔNG có field này (Grain/Color Chrome/Clarity)
+    /// → bỏ qua khi target = .video.
+    static let videoCode: [Prop: UInt16] = [
+        .filmSimulation: 0xD270,
+        .dynamicRange:   0xD271,
+        .whiteBalance:   0xD26C,
+        .wbKelvin:       0xD26F,
+        .wbShiftRed:     0xD26D,
+        .wbShiftBlue:    0xD26E,
+        .highlightTone:  0xD276,
+        .shadowTone:     0xD277,
+        .color:          0xD278,
+        .sharpness:      0xD279,
+        .noiseReduction: 0xD27A,
+    ]
+
+    /// Property code theo target: photo = rawValue; video = videoCode (nil nếu video không hỗ trợ).
+    func code(for target: RecipeTarget) -> UInt16? {
+        target == .video ? Prop.videoCode[self] : rawValue
+    }
+}
+
 // Kiểu dữ liệu value truyền qua PTP (khớp datatype máy trả trong GetDevicePropDesc).
 public enum PropType { case u16, i16 }
 

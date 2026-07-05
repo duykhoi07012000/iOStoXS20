@@ -59,10 +59,12 @@ public struct Recipe: Codable, Identifiable {
     /// Chuỗi lệnh ghi theo thứ tự an toàn. Ném lỗi nếu giá trị ngoài dải.
     /// - fullReset: field == nil sẽ được ghi giá trị TRUNG TÍNH (0/OFF/Auto) để không "dính"
     ///   thông số recipe áp trước đó (máy X-S20 sticky). Film Sim không có "off" nên nil thì bỏ qua.
-    func propertyWrites(fullReset: Bool = false) throws -> [PropertyWrite] {
+    /// - target: áp cho ẢNH hay VIDEO (video dùng property code riêng; field video không có sẽ bị bỏ).
+    func propertyWrites(fullReset: Bool = false, target: RecipeTarget = .photo) throws -> [PropertyWrite] {
         var w: [PropertyWrite] = []
         func add(_ p: Prop, _ value: Int, _ t: PropType, _ label: String) {
-            w.append(PropertyWrite(code: p.rawValue, value: value, type: t, label: label))
+            guard let c = p.code(for: target) else { return }   // video không có field này → bỏ
+            w.append(PropertyWrite(code: c, value: value, type: t, label: label))
         }
 
         if let v = filmSimulation    { add(.filmSimulation, Int(v.rawValue), .u16, "FilmSim=\(v)") }
@@ -76,8 +78,13 @@ public struct Recipe: Codable, Identifiable {
         else if fullReset            { add(.colorChromeBlue, Int(ColorChrome.off.rawValue), .u16, "ColorChromeBlue=off↺") }
         if let v = noiseReduction    { add(.noiseReduction, Int(v.rawValue), .u16, "NR=\(v)") }
         else if fullReset            { add(.noiseReduction, Int(NoiseReduction.std.rawValue), .u16, "NR=std↺") }
-        if let v = dynamicRange      { add(.dynamicRange, Int(v.rawValue), .u16, "DR=\(v)") }
-        else if fullReset            { add(.dynamicRange, Int(DynamicRange.auto.rawValue), .u16, "DR=auto↺") }
+        if let v = dynamicRange {
+            if !(target == .video && v == .auto) {              // video KHÔNG set được DR-Auto
+                add(.dynamicRange, Int(v.rawValue), .u16, "DR=\(v)")
+            }
+        } else if fullReset, target == .photo {                 // video không có DR trung tính → bỏ
+            add(.dynamicRange, Int(DynamicRange.auto.rawValue), .u16, "DR=auto↺")
+        }
         if let v = whiteBalance {
             add(.whiteBalance, Int(v.rawValue), .u16, "WB=\(v)")
             if v == .colorTemp, let k = wbKelvin {

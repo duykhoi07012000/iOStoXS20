@@ -94,31 +94,41 @@ struct RecipeDetailView: View {
     }
 
     private var applyButton: some View {
-        Button(action: flash) {
-            Group {
-                if isFlashing { ProgressView().tint(Theme.text) }
-                else { Text("Apply Recipe").font(.headline).frame(maxWidth: .infinity) }
-            }.frame(maxWidth: .infinity).padding(.vertical, 4)
+        Group {
+            if isFlashing {
+                ProgressView().tint(Theme.text).frame(maxWidth: .infinity).padding(.vertical, 10)
+            } else {
+                HStack(spacing: 10) {
+                    applyBtn("Ảnh", "camera.fill", .photo)
+                    applyBtn("Video", "video.fill", .video)
+                }
+            }
         }
-        .buttonStyle(.borderedProminent).tint(Theme.accent).controlSize(.large)
-        .foregroundColor(Theme.text)
-        .disabled(isFlashing)
+        .controlSize(.large)
         .padding()
         .background(Theme.bg)
     }
 
-    private func flash() {
+    private func applyBtn(_ title: String, _ icon: String, _ target: RecipeTarget) -> some View {
+        Button { flash(target: target) } label: {
+            Label(title, systemImage: icon).font(.headline).frame(maxWidth: .infinity).padding(.vertical, 4)
+        }
+        .buttonStyle(.borderedProminent).tint(Theme.accent).foregroundColor(Theme.text)
+    }
+
+    private func flash(target: RecipeTarget) {
         let ip = cameraIP.trimmingCharacters(in: .whitespaces)
+        let mode = target == .video ? "video" : "ảnh"
         isFlashing = true; results = []
-        status = ip.isEmpty ? "Đang tìm máy trên mạng…" : "Đang kết nối \(ip)…"
+        status = (ip.isEmpty ? "Đang tìm máy trên mạng…" : "Đang kết nối \(ip)…") + " (\(mode))"
         Task { @MainActor in
             let cam = FujiCamera(cameraIP: ip.isEmpty ? nil : ip)
             do {
                 try await cam.connect()
-                status = "Đã kết nối, đang áp recipe…"
-                results = try await cam.apply(recipe)
+                status = "Đã kết nối, đang áp recipe (\(mode))…"
+                results = try await cam.apply(recipe, target: target)
                 await cam.close()
-                status = results.allSatisfy { $0.ok } ? "Xong — đã áp \(results.count) thông số ✅" : "Xong, có lỗi ❌"
+                status = results.allSatisfy { $0.ok } ? "Xong — đã áp \(results.count) thông số (\(mode)) ✅" : "Xong, có lỗi (\(mode)) ❌"
             } catch {
                 await cam.close(); status = "Lỗi: \(error)"
             }

@@ -62,3 +62,24 @@ Nếu nối thẳng 15740 mà bỏ bước này → **refused**. Trình tự:
 2. Với enum[1,2,3] trùng nhau (grain/color chrome): `snapshot.py` chụp trước/sau khi
    đổi tay thông số đó trên máy → **diff** ra đúng code.
 3. Đối chiếu thêm `libgphoto2 camlibs/ptp2` (`PTP_DPC_FUJI_*`) nếu cần.
+
+## Property codes VIDEO (Movie mode) — giải mã bằng `prototype-python/probe_props.py`
+Áp recipe khi máy ở **Movie mode**: code ẢNH (0xD001…) **bị từ chối** (không tồn tại ở miền
+video). Video dùng **block `0xD2xx` RIÊNG** — dò bằng `GetDevicePropDesc (0x1014)` + diff (đổi tay
+WB→ColorTemp 7000K thấy `0xD26F=0x1B58`), xác nhận bằng ghi thử `0xD270=6` → **video chuyển đen
+trắng**. **Value encoding GIỐNG HỆT ảnh** (cùng enum/scale) → app chỉ cần đổi property code.
+
+| Trường | Code ẢNH | **Code VIDEO** | Ghi chú |
+|---|---|---|---|
+| Film Simulation | 0xD001 | **0xD270** | enum 1..0x14 (đã test đen trắng) |
+| Dynamic Range | 0xD007 | **0xD271** | {100,200,400} — video KHÔNG có AUTO |
+| White Balance | 0x5005 | **0xD26C** | enum WB (auto/daylight/…/0x8007 colortemp/custom) |
+| WB Kelvin | 0xD017 | **0xD26F** | số Kelvin khi WB=ColorTemp |
+| WB Shift Red / Blue | 0xD00B / 0xD00C | **0xD26D / 0xD26E** | i16 −9..9 |
+| Highlight / Shadow | 0xD320 / 0xD321 | **0xD276 / 0xD277** | i16 −20..40 /5 |
+| Color / Sharpness | 0xD008 / 0x5015 | **0xD278 / 0xD279** | i16 −40..40 /10 |
+| Noise Reduction | 0xD01C | **0xD27A** | enum {0,0x1000..0x8000} |
+| Grain / Color Chrome / Clarity | 0xD023/0xD029/0xD030/0xD032 | — | **Video KHÔNG có các mục này** |
+
+Công cụ: `probe_props.py snapshot out.json --ip <cam>` (dump descriptor), `... diff a b` (so),
+`... set <code> <val> --ip <cam> [--i16]` (ghi thử). Chạy trên PC cùng Wi-Fi với máy, đóng app điện thoại.
